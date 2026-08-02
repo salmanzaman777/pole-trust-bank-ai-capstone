@@ -1855,6 +1855,32 @@ html[data-theme="dark"] .nav-scrim{background:linear-gradient(90deg,rgba(0,4,12,
 .app-header .search-shell input{padding:7px 0;font-size:12px;}
 .app-utilities .theme-toggle,.app-utilities .search-nav{min-height:28px;padding:5px 8px;}
 
+/* Navigation toggle: deliberately effect-free except for one restrained
+   bright-silver diagonal sweep that travels across and back every two seconds. */
+.app-nav-toggle{
+  overflow:hidden;
+  border:1px solid rgba(211,222,228,.78);
+  background:linear-gradient(145deg,rgba(35,67,83,.98),rgba(20,46,63,.98));
+  box-shadow:none;
+  animation:none;
+}
+.app-nav-toggle::before{
+  content:'';position:absolute;z-index:2;top:-35%;left:0;width:22%;height:170%;
+  border-radius:999px;pointer-events:none;opacity:.98;filter:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.98),rgba(214,224,229,.98),transparent);
+  transform:translateX(-180%) rotate(-30deg);
+  animation:nav-toggle-silver-sweep 2s ease-in-out infinite;
+}
+.app-nav-toggle::after{display:none;}
+.app-nav-toggle:hover,.app-nav-toggle:focus-visible,.app-nav-toggle[aria-expanded="true"]{
+  border-color:rgba(229,237,241,.92);box-shadow:none;outline:none;
+}
+@keyframes nav-toggle-silver-sweep{
+  0%{transform:translateX(-180%) rotate(-30deg);}
+  50%{transform:translateX(560%) rotate(-30deg);}
+  100%{transform:translateX(-180%) rotate(-30deg);}
+}
+
 .print-charter{display:none;}
 
 @media print{
