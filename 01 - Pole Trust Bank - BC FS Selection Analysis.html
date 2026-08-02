@@ -1860,12 +1860,12 @@ html[data-theme="dark"] .nav-scrim{background:linear-gradient(90deg,rgba(0,4,12,
 .app-nav-toggle{
   overflow:hidden;
   border:1px solid rgba(211,222,228,.78);
-  background:linear-gradient(145deg,rgba(35,67,83,.98),rgba(20,46,63,.98));
+  background:linear-gradient(145deg,rgba(152,218,217,.30),rgba(55,139,137,.34) 48%,rgba(35,75,91,.98));
   box-shadow:none;
   animation:none;
 }
 .app-nav-toggle::before{
-  content:'';position:absolute;z-index:2;top:-35%;left:0;width:22%;height:170%;
+  content:'';position:absolute;z-index:2;top:-35%;left:0;width:11%;height:170%;
   border-radius:999px;pointer-events:none;opacity:.98;filter:none;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.98),rgba(214,224,229,.98),transparent);
   transform:translateX(-180%) rotate(-30deg);
@@ -3341,7 +3341,7 @@ function setNavigation(open,restoreFocus){
 
 function toggleNavigation(){
   var sidebar=document.getElementById('document-navigation');
-  setNavigation(!(sidebar&&sidebar.classList.contains('open')),false);
+  if(sidebar&&!sidebar.classList.contains('open')){setNavigation(true,false);}
 }
 
 function prepareResponsiveTables(){
@@ -3368,7 +3368,6 @@ function switchDoc(doc,shouldScroll){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
-  setNavigation(false,false);
   if(shouldScroll!==false){window.scrollTo({top:0,behavior:'smooth'});}
 }
 
