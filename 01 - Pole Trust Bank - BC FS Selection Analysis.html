@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pole Trust Bank — AI Project Selection & Draft Charter</title>
+<title>Pole Trust Bank — Approved AI Decision, Charter & Planning Baselines</title>
 <script>
 (function(){
   try{
@@ -1443,6 +1443,402 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
   .app-header::after{animation:none;background-position:50% 50%;}
 }
 
+/* Planning-document components */
+.control-banner{
+  display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+  margin:0 0 22px;padding:18px 20px;border:1px solid rgba(47,163,131,.28);
+  border-radius:16px;background:linear-gradient(135deg,rgba(47,163,131,.10),rgba(99,92,246,.055));
+}
+.control-banner .control-mark{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+  background:var(--emerald-soft);border:1px solid rgba(47,163,131,.30);color:var(--emerald);font-weight:800;
+}
+.control-banner h3{margin:0 0 5px;font-family:var(--serif);font-size:17px;color:var(--text);}
+.control-banner p{margin:0;font-size:13.5px;line-height:1.65;color:var(--text-dim);}
+.source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.source-links a{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid var(--border);
+  border-radius:10px;background:var(--glass);font-family:var(--mono);font-size:10.5px;text-decoration:none;
+}
+.section-title{margin:30px 0 14px;font-family:var(--serif);font-size:18px;color:var(--text);}
+.pi-matrix{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0;}
+.pi-cell{
+  min-height:180px;padding:20px;border:1px solid var(--border);border-radius:18px;
+  background:linear-gradient(145deg,var(--glass-hi),var(--glass));box-shadow:var(--shadow-soft);
+}
+.pi-cell h3{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 8px;font-family:var(--serif);font-size:17px;color:var(--text);}
+.pi-cell h3 span{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-mute);}
+.pi-cell p{margin:0 0 12px;font-size:12.5px;line-height:1.55;color:var(--text-dim);}
+.stake-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.stake-tags span{padding:5px 8px;border:1px solid var(--border);border-radius:999px;background:var(--glass-hi);font-family:var(--mono);font-size:9.5px;color:var(--text-dim);}
+.pi-cell.manage{border-top:3px solid var(--emerald);}
+.pi-cell.satisfy{border-top:3px solid var(--gold);}
+.pi-cell.inform{border-top:3px solid #625cf6;}
+.pi-cell.monitor{border-top:3px solid var(--text-mute);}
+.wbs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px;}
+.wbs-branch{position:relative;padding:18px 18px 16px 52px;border:1px solid var(--border);border-radius:16px;background:var(--glass);}
+.wbs-code{
+  position:absolute;left:14px;top:16px;width:28px;height:28px;display:grid;place-items:center;border-radius:9px;
+  background:rgba(99,92,246,.11);border:1px solid rgba(99,92,246,.22);font:700 10px var(--mono);color:#5651c5;
+}
+.wbs-branch h3{margin:0 0 8px;font-family:var(--serif);font-size:16px;color:var(--text);}
+.wbs-branch ul{margin:0;padding-left:17px;}
+.wbs-branch li{margin:0 0 5px;font-size:12.5px;line-height:1.5;color:var(--text-dim);}
+.process-flow{display:grid;grid-template-columns:repeat(7,minmax(110px,1fr));gap:8px;margin:20px 0;overflow-x:auto;padding-bottom:6px;}
+.process-step{position:relative;padding:15px 12px;border:1px solid var(--border);border-radius:14px;background:var(--glass);min-height:104px;}
+.process-step:not(:last-child)::after{content:'›';position:absolute;right:-8px;top:37px;z-index:2;color:var(--gold);font-size:22px;font-weight:700;}
+.process-step strong{display:block;margin-bottom:6px;font:700 10px var(--mono);letter-spacing:.07em;color:var(--gold);}
+.process-step span{display:block;font-size:12px;line-height:1.45;color:var(--text-dim);}
+.definition-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
+.definition-item{padding:15px;border:1px solid var(--border);border-radius:14px;background:var(--glass);}
+.definition-item b{display:block;margin-bottom:5px;color:var(--text);font-size:12px;}
+.definition-item span{display:block;color:var(--text-dim);font-size:11.5px;line-height:1.5;}
+html[data-theme="dark"] .wbs-code{color:#aaa6ff;background:rgba(143,136,255,.14);border-color:rgba(143,136,255,.28);}
+@media(max-width:840px){
+  .pi-matrix,.wbs-grid,.definition-grid{grid-template-columns:1fr;}
+  .process-flow{grid-template-columns:repeat(7,150px);}
+}
+@media(max-width:520px){
+  .control-banner{grid-template-columns:1fr;}
+  .pi-cell,.wbs-branch{padding:16px;}
+  .wbs-branch{padding-left:50px;}
+}
+
+/* ---------- Space-optimized application shell ---------- */
+html,body{overflow-x:clip;}
+.shell{display:block;max-width:1680px;}
+.main{width:100%;max-width:100%;}
+.app-header{overflow:visible;}
+.app-header-inner{
+  padding:8px 78px 8px 18px;
+  grid-template-columns:82px minmax(330px,1.12fr) minmax(230px,.72fr) minmax(220px,.74fr) minmax(300px,1fr);
+  gap:12px;
+}
+.app-logo-zone,.app-project-identity,.app-meta-group{padding-right:12px;}
+.app-ned-logo{width:74px;height:74px;border-radius:17px;}
+.app-project-identity{
+  display:flex;flex-direction:column;align-content:normal;align-items:stretch;
+}
+.app-project-identity>strong{font-size:17px;line-height:1.1;}
+.app-project-name{margin-top:0;font-size:10px;line-height:1.22;}
+.app-case-note{margin-top:5px;padding:3px 6px;font-size:7px;}
+.app-meta-group{gap:4px;}
+.app-academic-group,.app-people-group{
+  grid-template-columns:minmax(0,1fr) 1px minmax(0,1.18fr);grid-template-rows:1fr;
+  align-items:center;align-content:center;gap:8px;
+}
+.app-academic-group .app-meta-separator,.app-people-group .app-meta-separator{
+  width:1px;height:40px;
+  background:linear-gradient(180deg,transparent,rgba(102,187,221,.60) 20%,rgba(150,205,222,.36) 70%,transparent);
+}
+.app-academic-group .app-meta-separator::before,.app-people-group .app-meta-separator::before{left:-1.5px;top:4px;}
+.app-meta-item strong,.app-meta-item a{font-size:10px;line-height:1.22;}
+.app-academic-group .app-meta-item:first-child strong{font-size:11.3px;}
+.app-meta-item small{margin-top:1px;font-size:8px;line-height:1.18;}
+.app-eyebrow{margin-bottom:2px;font-size:7.5px;}
+.app-utilities .search-shell{height:34px;min-height:34px;padding:4px 10px;}
+.app-header .search-shell input{padding:6px 0;font-size:12px;}
+.app-utilities .theme-toggle{height:28px;min-height:28px;padding:4px 8px;}
+.app-utilities .search-nav{width:28px;min-width:28px;height:28px;min-height:28px;padding:4px;}
+
+/* Professional navigation control: restrained spectrum glow and precise motion. */
+.app-nav-toggle{
+  position:absolute;right:18px;top:50%;transform:translateY(-50%);z-index:5;
+  display:inline-flex!important;align-items:center;justify-content:center;gap:8px;
+  min-width:46px;height:46px;padding:0 12px;border:1px solid rgba(155,218,231,.46);border-radius:14px;
+  background:linear-gradient(145deg,rgba(235,249,251,.18),rgba(68,153,177,.12));
+  color:#e8f7fa;box-shadow:0 10px 26px rgba(0,24,45,.30),inset 0 1px rgba(255,255,255,.18),0 0 0 1px rgba(98,210,210,.08);
+  font:650 8.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+  isolation:isolate;transition:width .28s ease,border-color .28s ease,box-shadow .28s ease,background .28s ease;
+}
+.app-nav-toggle::before{
+  content:'';position:absolute;z-index:-2;inset:-4px;border-radius:17px;pointer-events:none;
+  background:conic-gradient(from 25deg,rgba(66,133,244,.72),rgba(123,97,255,.58),rgba(52,168,83,.62),rgba(37,183,211,.68),rgba(66,133,244,.72));
+  opacity:.30;filter:blur(7px);animation:nav-toggle-glow 5.8s linear infinite;
+}
+.app-nav-toggle::after{
+  content:'';position:absolute;z-index:-1;inset:0;border-radius:13px;pointer-events:none;
+  background:linear-gradient(145deg,rgba(10,57,77,.96),rgba(7,91,101,.94));
+}
+.app-nav-toggle:hover,.app-nav-toggle:focus-visible{
+  border-color:rgba(177,235,239,.78);box-shadow:0 12px 32px rgba(0,28,52,.34),0 0 20px rgba(45,191,200,.20),inset 0 1px rgba(255,255,255,.22);outline:none;
+}
+.app-nav-toggle[aria-expanded="true"]{border-color:rgba(185,235,232,.76);box-shadow:0 12px 34px rgba(0,28,52,.38),0 0 22px rgba(48,183,191,.22),inset 0 1px rgba(255,255,255,.20);}
+.nav-toggle-icon{position:relative;display:grid;gap:4px;width:18px;flex:none;}
+.nav-toggle-icon span{display:block;width:18px;height:1.5px;border-radius:3px;background:currentColor;transform-origin:center;transition:transform .25s ease,opacity .2s ease;}
+.app-nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
+.app-nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(2){opacity:0;}
+.app-nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
+.nav-toggle-label{max-width:0;overflow:hidden;opacity:0;white-space:nowrap;transition:max-width .28s ease,opacity .22s ease;}
+.app-nav-toggle:hover .nav-toggle-label,.app-nav-toggle:focus-visible .nav-toggle-label,.app-nav-toggle[aria-expanded="true"] .nav-toggle-label{max-width:88px;opacity:1;}
+@keyframes nav-toggle-glow{to{transform:rotate(360deg);}}
+
+/* The drawer overlays content, preserving the full main-page width. */
+.sidebar{
+  position:fixed;left:0;top:var(--app-header-height);z-index:230;
+  width:min(316px,88vw);height:calc(100vh - var(--app-header-height));flex:none;
+  padding:20px 18px 30px 24px;overflow-y:auto;overflow-x:hidden;
+  transform:translateX(calc(-100% - 26px));opacity:0;visibility:visible;pointer-events:none;
+  border-right:1px solid transparent;border-image:linear-gradient(180deg,rgba(66,133,244,.18),rgba(96,92,246,.62) 38%,rgba(31,169,148,.68) 72%,rgba(37,183,211,.16)) 1;
+  box-shadow:22px 0 56px rgba(22,42,80,.14),inset -1px 0 rgba(255,255,255,.62);
+  contain:layout paint;
+  transition:transform .34s cubic-bezier(.22,.78,.22,1),opacity .25s ease;
+  scrollbar-width:thin;scrollbar-color:rgba(89,103,186,.52) transparent;
+}
+.sidebar.open{transform:translateX(0);opacity:1;pointer-events:auto;}
+.sidebar::-webkit-scrollbar{width:4px;}
+.sidebar::-webkit-scrollbar-track{background:transparent;}
+.sidebar::-webkit-scrollbar-thumb{background:linear-gradient(180deg,rgba(98,92,246,.58),rgba(31,169,148,.58));border-radius:999px;}
+.sidebar::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,rgba(98,92,246,.78),rgba(31,169,148,.78));}
+.sidebar-heading{margin-bottom:14px;padding-bottom:11px;border-bottom:0;position:relative;}
+.sidebar-heading::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,rgba(98,92,246,.72),rgba(31,169,148,.42),transparent);box-shadow:0 0 8px rgba(98,92,246,.14);}
+.sidebar-close{display:grid;width:30px;height:30px;place-items:center;border:1px solid var(--border);border-radius:9px;background:var(--glass);font-size:21px;line-height:1;}
+.nav-scrim{
+  position:fixed;z-index:220;inset:var(--app-header-height) 0 0 0;border:0;padding:0;
+  background:linear-gradient(90deg,rgba(7,14,28,.18),rgba(7,14,28,.055) 48%,transparent 78%);
+  opacity:0;visibility:hidden;pointer-events:none;cursor:pointer;backdrop-filter:blur(1.5px);-webkit-backdrop-filter:blur(1.5px);
+  transition:opacity .25s ease,visibility 0s linear .25s;
+}
+body.nav-open .nav-scrim{opacity:1;visibility:visible;pointer-events:auto;transition-delay:0s;}
+html[data-theme="dark"] .sidebar{box-shadow:24px 0 64px rgba(0,0,0,.38),inset -1px 0 rgba(255,255,255,.05);scrollbar-color:rgba(129,124,234,.58) transparent;}
+html[data-theme="dark"] .nav-scrim{background:linear-gradient(90deg,rgba(0,4,12,.46),rgba(0,4,12,.16) 52%,transparent 82%);}
+
+/* Fully visible tables: wrapping on wide screens, labelled cards on compact screens. */
+.table-wrap{width:100%;max-width:100%;overflow:visible;}
+.table-wrap table{width:100%;max-width:100%;min-width:0;table-layout:auto;}
+.table-wrap th,.table-wrap td{white-space:normal!important;overflow-wrap:anywhere;word-break:normal;hyphens:auto;padding:10px clamp(7px,1vw,14px);line-height:1.48;}
+.table-wrap thead th{font-size:clamp(8px,.66vw,10.2px);}
+.table-wrap .badge{max-width:100%;white-space:normal;text-align:center;justify-content:center;line-height:1.25;}
+
+@media(max-width:1180px) and (min-width:921px){
+  .app-header-inner{grid-template-columns:72px minmax(220px,1.1fr) minmax(180px,.7fr) minmax(190px,.8fr);gap:10px;padding:7px 74px 7px 14px;}
+  .app-ned-logo{width:66px;height:66px;border-radius:15px;}
+  .app-logo-zone,.app-project-identity,.app-meta-group{padding-right:10px;}
+  .app-utilities .utility-dock{gap:5px;}
+  .table-wrap th,.table-wrap td{padding:9px 8px;font-size:11.5px;}
+}
+
+@media(max-width:1080px){
+  .table-wrap{border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;}
+  .table-wrap table,.table-wrap thead,.table-wrap tbody,.table-wrap tr,.table-wrap th,.table-wrap td{display:block;width:100%;max-width:100%;}
+  .table-wrap thead{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+  .table-wrap tbody{display:grid;gap:12px;}
+  .table-wrap tbody tr{overflow:hidden;border:1px solid var(--border);border-radius:14px;background:var(--glass);box-shadow:var(--shadow-soft);}
+  .table-wrap tbody td{
+    display:grid;grid-template-columns:minmax(112px,31%) minmax(0,1fr);gap:12px;align-items:start;
+    padding:9px 12px;border-bottom:1px solid var(--border);font-size:12px;line-height:1.48;
+  }
+  .table-wrap tbody td:last-child{border-bottom:0;}
+  .table-wrap tbody td::before{content:attr(data-label);font:650 8.5px/1.38 var(--mono);letter-spacing:.055em;text-transform:uppercase;color:var(--gold);overflow-wrap:anywhere;}
+  .table-wrap table.totals tbody tr:last-child td,.table-wrap table tr.total-row td{background:transparent;}
+  .table-wrap table.totals tbody tr:last-child,.table-wrap table tr.total-row{background:rgba(217,180,106,.07);}
+  html[data-theme="dark"] .table-wrap tbody tr{background:rgba(255,255,255,.028);border-color:rgba(255,255,255,.08);}
+}
+
+@media(max-width:920px){
+  .app-header-inner{grid-template-columns:62px minmax(0,1fr) minmax(190px,.76fr) 42px;gap:8px;padding:8px 12px;}
+  .app-ned-logo{width:58px;height:58px;border-radius:14px;}
+  .app-project-identity>strong{font-size:15.5px;}
+  .app-nav-toggle{position:static;grid-column:4;grid-row:1;transform:none;width:42px;min-width:42px;height:42px;padding:0;border-radius:12px;}
+  .app-nav-toggle::before{inset:-3px;border-radius:14px;filter:blur(6px);}
+  .app-nav-toggle::after{border-radius:11px;}
+  .app-nav-toggle .nav-toggle-label{display:none;}
+  .sidebar{top:0;height:100vh;width:min(316px,90vw);padding-top:18px;}
+  .nav-scrim{inset:0;}
+}
+
+@media(max-width:640px){
+  .app-header-inner{grid-template-columns:58px minmax(0,1fr) 40px;gap:7px;padding:7px 10px;}
+  .app-ned-logo{width:52px;height:52px;border-radius:13px;}
+  .app-project-identity>strong{font-size:14.5px;}
+  .app-project-name{font-size:8.8px;}
+  .app-case-note{margin-top:3px;padding:2px 5px;font-size:6.6px;}
+  .app-meta-group{gap:3px;padding-top:1px;}
+  .app-meta-item strong,.app-meta-item a{font-size:9.2px;line-height:1.18;}
+  .app-academic-group .app-meta-item:first-child strong{font-size:10.2px;}
+  .app-meta-item small{font-size:7.3px;}
+  .app-eyebrow{font-size:6.9px;margin-bottom:1px;}
+  .app-utilities .utility-dock{gap:4px;}
+  .app-utilities .search-shell{height:31px;min-height:31px;padding:3px 9px;}
+  .app-header .search-shell input{padding:5px 0;font-size:11.5px;}
+  .app-utilities .theme-toggle,.app-utilities .search-nav{height:27px;min-height:27px;}
+  .app-nav-toggle{grid-column:3;width:40px;min-width:40px;height:40px;}
+  .table-wrap tbody td{grid-template-columns:1fr;gap:5px;padding:9px 11px;}
+  .table-wrap tbody td::before{font-size:8px;}
+}
+
+@media(max-width:420px){
+  .app-header-inner{grid-template-columns:54px minmax(0,1fr) 38px;padding:6px 9px;}
+  .app-ned-logo{width:48px;height:48px;border-radius:12px;}
+  .app-nav-toggle{width:38px;min-width:38px;height:38px;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .app-nav-toggle::before{animation:none;}
+  .sidebar,.nav-scrim,.nav-toggle-icon span,.nav-toggle-label{transition:none;}
+}
+
+/* ---------- Restore the original shared application header ----------
+   The navigation drawer remains optimized, but the common header retains
+   its original height, spacing, typography and responsive information layout. */
+.app-header{overflow:visible;}
+.app-header-inner{
+  padding:10px 22px;
+  grid-template-columns:98px minmax(290px,1.25fr) minmax(150px,.62fr) minmax(220px,.82fr) minmax(300px,1.15fr);
+  gap:14px;
+}
+.app-logo-zone,.app-project-identity,.app-meta-group{padding-right:14px;}
+.app-ned-logo{width:88px;height:88px;border-radius:20px;}
+.app-project-identity{
+  align-self:stretch;display:flex;flex-direction:column;justify-content:center;
+}
+.app-project-identity>strong{font-size:18px;line-height:1.14;}
+.app-project-name{margin-top:3px;font-size:10.5px;line-height:1.3;}
+.app-case-note{margin-top:7px;padding:4px 7px;font-size:7.5px;line-height:1.25;}
+.app-meta-group{gap:5px;}
+.app-academic-group,.app-people-group{
+  grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1px auto;
+  align-items:stretch;align-content:center;gap:5px;
+}
+.app-academic-group .app-meta-separator,.app-people-group .app-meta-separator{width:100%;height:1px;}
+.app-academic-group .app-meta-separator::before,.app-people-group .app-meta-separator::before{left:0;top:-1.5px;}
+.app-eyebrow{margin-bottom:3px;font-size:8px;line-height:1.3;}
+.app-meta-item strong,.app-meta-item a{font-size:10.5px;line-height:1.3;}
+.app-academic-group .app-meta-item:first-child strong{font-size:12px;}
+.app-meta-item small{margin-top:2px;font-size:8.5px;line-height:1.25;}
+.app-utilities .search-shell{height:auto;min-height:37px;padding:6px 11px;}
+.app-header .search-shell input{padding:11px 0;font-size:13px;}
+.app-utilities .theme-toggle{height:auto;min-height:30px;padding:6px 9px;font-size:8px;}
+.app-utilities .search-nav{width:auto;min-width:30px;height:auto;min-height:30px;padding:5px;}
+
+/* The professional drawer toggle sits at the extreme left, immediately below the header. */
+.app-nav-toggle{
+  position:fixed;left:8px;right:auto;top:calc(var(--app-header-height) + 4px);z-index:260;
+  transform:none;display:inline-flex!important;
+  border-color:rgba(205,246,250,.72);
+  background:linear-gradient(145deg,rgba(244,253,255,.34),rgba(78,174,194,.22));
+  box-shadow:0 8px 22px rgba(0,24,45,.24),0 0 16px rgba(163,239,242,.42),inset 0 1px rgba(255,255,255,.34);
+}
+.app-nav-toggle::before{opacity:.68;filter:blur(8px);animation:nav-toggle-glow 4.8s linear infinite;}
+.app-nav-toggle::after{background:linear-gradient(145deg,rgba(18,82,101,.98),rgba(23,125,135,.96));}
+@media(max-width:920px){
+  .app-nav-toggle{position:fixed;left:7px;right:auto;top:calc(var(--app-header-height) + 4px);z-index:260;transform:none;width:42px;min-width:42px;height:42px;}
+}
+@media(max-width:640px){
+  .app-nav-toggle{left:6px;top:calc(var(--app-header-height) + 3px);width:40px;min-width:40px;height:40px;}
+}
+@media(max-width:420px){
+  .app-nav-toggle{left:5px;top:calc(var(--app-header-height) + 3px);width:38px;min-width:38px;height:38px;}
+}
+
+/* Expanded navigation works as a parallel desktop workspace: the main page
+   contracts responsively beside the drawer, with no scrim blur or vagueness. */
+@media(min-width:921px){
+  .sidebar{width:min(284px,88vw);}
+  body.nav-open .shell{padding-left:284px;transition:padding-left .34s cubic-bezier(.22,.78,.22,1);}
+  body.nav-open .nav-scrim{opacity:0;visibility:hidden;pointer-events:none;backdrop-filter:none;-webkit-backdrop-filter:none;}
+}
+
+/* Original responsive header breakpoints, retained after the header restoration. */
+@media(max-width:1180px) and (min-width:921px){
+  .app-header-inner{
+    grid-template-columns:86px minmax(270px,1.2fr) minmax(165px,.65fr) minmax(220px,.9fr);
+    gap:12px;padding-top:9px;padding-bottom:9px;
+  }
+  .app-logo-zone{grid-column:1;grid-row:1/3;}
+  .app-ned-logo{width:78px;height:78px;border-radius:18px;}
+  .app-academic-group{grid-column:2;grid-row:1;}
+  .app-project-identity{grid-column:3;grid-row:1;}
+  .app-people-group{grid-column:4;grid-row:1;border-right:0;padding-right:0;}
+  .app-utilities{grid-column:2/-1;grid-row:2;}
+  .app-utilities .utility-dock{grid-template-columns:minmax(260px,1fr) auto auto auto auto;}
+  .app-utilities .search-shell{grid-column:1;grid-row:1;}
+  .app-utilities .search-meta{grid-column:2;grid-row:1;white-space:nowrap;}
+  .app-utilities #search-prev{grid-column:3;grid-row:1;}
+  .app-utilities #search-next{grid-column:4;grid-row:1;}
+  .app-utilities .theme-toggle{grid-column:5;grid-row:1;}
+}
+@media(max-width:920px){
+  .app-header{position:relative;top:auto;}
+  .app-header-inner{grid-template-columns:76px minmax(0,1fr) minmax(210px,.8fr) auto;gap:10px;padding:10px 14px;}
+  .app-logo-zone{grid-column:1;grid-row:1;padding-right:10px;}
+  .app-ned-logo{width:68px;height:68px;border-radius:17px;}
+  .app-academic-group{grid-column:2/4;grid-row:1;}
+  .app-project-identity{grid-column:1/3;grid-row:2;border-right:0;padding-right:0;}
+  .app-project-identity>strong{font-size:17px;}
+  .app-people-group{grid-column:3/5;grid-row:2;border-right:0;padding-right:0;}
+  .app-utilities{grid-column:1/-1;grid-row:3;}
+  .app-utilities .utility-dock{grid-template-columns:minmax(0,1fr) auto auto auto auto;}
+  .app-utilities .search-shell{grid-column:1;grid-row:1;}
+  .app-utilities .search-meta{grid-column:2;grid-row:1;white-space:nowrap;}
+  .app-utilities #search-prev{grid-column:3;grid-row:1;}
+  .app-utilities #search-next{grid-column:4;grid-row:1;}
+  .app-utilities .theme-toggle{grid-column:5;grid-row:1;}
+  .sidebar{top:0;z-index:240;height:100vh;padding-top:18px;}
+  .sidebar-close{display:grid;}
+  .main{padding-top:24px;}
+}
+@media(max-width:640px){
+  .app-header-inner{grid-template-columns:70px minmax(0,1fr) auto;padding:9px 12px;}
+  .app-ned-logo{width:62px;height:62px;border-radius:15px;}
+  .app-project-name{font-size:9.5px;}
+  .app-case-note{font-size:7px;margin-top:5px;}
+  .app-academic-group{grid-column:2;grid-row:1;border-right:0;padding-right:0;}
+  .app-project-identity{grid-column:1/-1;grid-row:2;border-right:0;padding-right:0;}
+  .app-people-group{grid-column:1/-1;grid-row:3;border-right:0;padding-right:0;}
+  .app-utilities{grid-column:1/-1;grid-row:4;}
+  .app-meta-group{gap:6px;padding-top:3px;}
+  .app-utilities .utility-dock{grid-template-columns:minmax(0,1fr) auto auto auto;}
+  .app-utilities .search-shell{grid-column:1/-1;grid-row:1;}
+  .app-utilities .search-meta{grid-column:1;grid-row:2;}
+  .app-utilities #search-prev{grid-column:2;grid-row:2;}
+  .app-utilities #search-next{grid-column:3;grid-row:2;}
+  .app-utilities .theme-toggle{grid-column:4;grid-row:2;}
+}
+@media(max-width:420px){
+  .app-header-inner{grid-template-columns:70px minmax(0,1fr) auto;padding-left:10px;padding-right:10px;}
+  .app-ned-logo{width:62px;height:62px;border-radius:15px;}
+  .app-project-identity>strong{font-size:15.5px;}
+  .app-project-name{font-size:9px;}
+  .theme-toggle .theme-label{display:none;}
+}
+
+/* Final navigation workspace alignment: left-edge luminous control and a
+   sharp, parallel desktop layout when the drawer is expanded. */
+.app-nav-toggle{left:8px;top:calc(var(--app-header-height) + 10px);}
+.app-nav-toggle{
+  transform-origin:left center;
+  border-color:#4285f4;
+  animation:nav-toggle-border 1s linear infinite;
+}
+.app-nav-toggle::before{
+  opacity:.82;filter:blur(8px);
+  background:linear-gradient(120deg,rgba(113,197,255,.95),rgba(110,245,190,.96),rgba(227,238,244,.98),rgba(113,197,255,.95));
+  background-size:260% 100%;
+  transform-origin:left center;
+  animation:nav-toggle-shimmer 1s linear infinite,nav-toggle-halo 1s ease-in-out infinite;
+}
+.app-nav-toggle::after{background:linear-gradient(135deg,rgba(21,86,121,.98),rgba(24,139,123,.97),rgba(74,112,132,.98));}
+.app-nav-toggle[aria-expanded="true"]{animation:none;border-color:rgba(185,235,232,.82);}
+.app-nav-toggle[aria-expanded="true"]::before{animation:none;background:linear-gradient(120deg,rgba(113,197,255,.78),rgba(110,245,190,.80),rgba(227,238,244,.84));}
+@keyframes nav-toggle-shimmer{0%{background-position:0% 50%;opacity:.58;}50%{background-position:100% 50%;opacity:1;}100%{background-position:200% 50%;opacity:.58;}}
+@keyframes nav-toggle-halo{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+@keyframes nav-toggle-border{
+  0%{border-color:#4285f4;box-shadow:0 8px 22px rgba(0,24,45,.24),0 0 14px rgba(66,133,244,.55),inset 0 1px rgba(255,255,255,.34);}
+  25%{border-color:#ea4335;box-shadow:0 8px 22px rgba(0,24,45,.24),0 0 14px rgba(234,67,53,.50),inset 0 1px rgba(255,255,255,.34);}
+  50%{border-color:#fbbc05;box-shadow:0 8px 22px rgba(0,24,45,.24),0 0 14px rgba(251,188,5,.52),inset 0 1px rgba(255,255,255,.34);}
+  75%{border-color:#34a853;box-shadow:0 8px 22px rgba(0,24,45,.24),0 0 14px rgba(52,168,83,.52),inset 0 1px rgba(255,255,255,.34);}
+  100%{border-color:#4285f4;box-shadow:0 8px 22px rgba(0,24,45,.24),0 0 14px rgba(66,133,244,.55),inset 0 1px rgba(255,255,255,.34);}
+}
+@media(min-width:921px){
+  .sidebar{width:min(284px,88vw);}
+  body.nav-open .shell{padding-left:284px;transition:padding-left .34s cubic-bezier(.22,.78,.22,1);}
+  body.nav-open .nav-scrim{opacity:0;visibility:visible;pointer-events:none;backdrop-filter:none;-webkit-backdrop-filter:none;}
+}
+@media(max-width:920px){.app-nav-toggle{left:7px;top:calc(var(--app-header-height) + 10px);}}
+@media(max-width:640px){.app-nav-toggle{left:6px;top:calc(var(--app-header-height) + 9px);}}
+@media(max-width:420px){.app-nav-toggle{left:5px;top:calc(var(--app-header-height) + 9px);}}
+
 .print-charter{display:none;}
 
 @media print{
@@ -1566,9 +1962,9 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
     </section>
 
     <section class="app-project-identity" aria-label="Project identity">
-      <span class="app-eyebrow">Capstone Decision Pack</span>
+      <span class="app-eyebrow">Capstone Governance &amp; Planning Pack</span>
       <strong>Pole Trust Bank</strong>
-      <span class="app-project-name">AI Project Selection &amp; Draft Charter</span>
+      <span class="app-project-name">Approved Decision, Charter &amp; Planning Baselines</span>
       <span class="app-case-note">Synthetic classroom case &middot; not real-bank data</span>
     </section>
 
@@ -1604,15 +2000,18 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
       </div>
     </div>
 
-    <button class="app-nav-toggle" type="button" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Open document navigation">&#9776; Navigate</button>
+    <button class="app-nav-toggle" id="app-nav-toggle" type="button" onclick="toggleNavigation()" aria-label="Open document navigation" aria-controls="document-navigation" aria-expanded="false">
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="nav-toggle-label">Navigation</span>
+    </button>
   </div>
 </header>
 
 <div class="shell">
-  <aside class="sidebar">
+  <aside class="sidebar" id="document-navigation" aria-label="Document navigation" aria-hidden="true">
     <div class="sidebar-heading">
       <span>Document navigation</span>
-      <button class="sidebar-close" type="button" onclick="document.querySelector('.sidebar').classList.remove('open')" aria-label="Close document navigation">&times;</button>
+      <button class="sidebar-close" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation">&times;</button>
     </div>
 
     <div class="doc-switch">
@@ -1622,7 +2021,15 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
       </button>
       <button data-doc="charter" onclick="switchDoc('charter')">
         <span class="dt">Document 02 &middot; PTB-CHARTER-001</span>
-        <span class="dn">Draft Project Charter</span>
+        <span class="dn">Sponsor-Approved Project Charter</span>
+      </button>
+      <button data-doc="stakeholders" onclick="switchDoc('stakeholders')">
+        <span class="dt">Document 03 &middot; PTB-STK-001</span>
+        <span class="dn">Stakeholder Register &amp; Analysis</span>
+      </button>
+      <button data-doc="scope" onclick="switchDoc('scope')">
+        <span class="dt">Document 04 &middot; PTB-SCOPE-001</span>
+        <span class="dn">Scope Management Plan</span>
       </button>
     </div>
 
@@ -1640,7 +2047,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
     </nav>
 
     <nav class="toc" id="toc-charter" style="display:none;">
-      <div class="toc-group">Draft Charter &middot; Six Elements</div>
+      <div class="toc-group">Sponsor-Approved Charter &middot; Six Elements</div>
       <a href="#c-control"><span class="num">00</span>Document Control</a>
       <a href="#c-1"><span class="num">01</span>Purpose &amp; Objectives</a>
       <a href="#c-2"><span class="num">02</span>High-Level Scope</a>
@@ -1649,19 +2056,42 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
       <a href="#c-5"><span class="num">05</span>Authority</a>
       <a href="#c-6"><span class="num">06</span>Approval</a>
     </nav>
+
+    <nav class="toc" id="toc-stakeholders" style="display:none;">
+      <div class="toc-group">Planning &middot; People and Influence</div>
+      <a href="#st-control"><span class="num">00</span>Document Control</a>
+      <a href="#st-method"><span class="num">01</span>Method &amp; Principles</a>
+      <a href="#st-register"><span class="num">02</span>Stakeholder Register</a>
+      <a href="#st-matrix"><span class="num">03</span>Power–Interest Map</a>
+      <a href="#st-engagement"><span class="num">04</span>Engagement Analysis</a>
+      <a href="#st-raci"><span class="num">05</span>RACI Interface</a>
+      <a href="#st-review"><span class="num">06</span>Review &amp; Acceptance</a>
+    </nav>
+
+    <nav class="toc" id="toc-scope" style="display:none;">
+      <div class="toc-group">Planning &middot; Drawing the Line</div>
+      <a href="#s-control"><span class="num">00</span>Document Control</a>
+      <a href="#s-approach"><span class="num">01</span>Scope Approach</a>
+      <a href="#s-boundaries"><span class="num">02</span>Scope Boundaries</a>
+      <a href="#s-deliverables"><span class="num">03</span>Deliverables</a>
+      <a href="#s-wbs"><span class="num">04</span>WBS</a>
+      <a href="#s-acceptance"><span class="num">05</span>Acceptance &amp; Traceability</a>
+      <a href="#s-controls"><span class="num">06</span>Controls &amp; Validation</a>
+    </nav>
   </aside>
+  <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
 
   <main class="main">
     <div class="doc-page active" id="page-business">
       <div class="hero">
         <div class="hero-eyebrow">Project Selection Analysis &middot; Source-Locked Edition &middot; 31 July 2026</div>
         <h1 class="hero-title">Pole Trust Bank<br>AI Project Selection</h1>
-        <p class="hero-sub">A traceable comparison of all five Business Case/Feasibility Study pairs, followed by a conditional recommendation to advance Pair 5 into charter approval.</p>
+        <p class="hero-sub">A traceable comparison of all five Business Case/Feasibility Study pairs. Pair 5 and the resulting Project Charter were approved by the Project Sponsor on 1 August 2026 for progression into planning.</p>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">5 / 5</div><div class="sl">Options Assessed</div></div>
           <div class="stat-card"><div class="sv em">92 / 100</div><div class="sl">Pair 5 Weighted Score</div></div>
           <div class="stat-card"><div class="sv">USD 27.5M</div><div class="sl">Pair 5 Five-Year TCO</div></div>
-          <div class="stat-card"><div class="sv" id="business-review-status">Draft</div><div class="sl">Review Status</div></div>
+          <div class="stat-card"><div class="sv" id="business-review-status">Approved</div><div class="sl">Review Status</div></div>
         </div>
       </div>
 
@@ -1676,8 +2106,9 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
             <tbody>
               <tr><td>Organization and dataset</td><td>Pole Trust Bank; 2.1M customers, 4,800 employees, 160 branches and five regional markets, all synthetic.</td></tr>
               <tr><td>Decision required</td><td>Select one priority initiative from the five supplied BC/FS pairs.</td></tr>
-              <tr><td>Recommendation status</td><td><span class="badge conditional" id="selection-status-badge">CONDITIONAL RECOMMENDATION</span> <span id="selection-status-copy">Pair 5 may proceed to charter approval, subject to validation gates.</span></td></tr>
-              <tr><td>Authorization status</td><td><span class="badge amber">NO EXECUTION AUTHORITY</span> No funding or delivery authority exists until the draft charter is completed and signed.</td></tr>
+              <tr><td>Decision status</td><td><span class="badge go" id="selection-status-badge">PAIR 5 APPROVED</span> <span id="selection-status-copy">The Sponsor approved the selection, BC/FS and Project Charter by email on 1 August 2026 and directed the project to proceed next.</span></td></tr>
+              <tr><td>Approval interpretation</td><td>That Sponsor approval is treated as consolidated approval by all pertinent internal stakeholders for the submitted BC/FS, selection decision and Charter.</td></tr>
+              <tr><td>Authorization status</td><td><span class="badge go">PLANNING AUTHORIZED</span> Salman Zaman’s working PM role is active. PTB-DEC-001 controls formal delegation, funding release, appointments and execution decisions.</td></tr>
               <tr><td>Charter design reference</td><td><a href="Project%20Charter%20-%20Key%20Elements.jpeg">Project Charter &mdash; Key Elements.jpeg</a>: purpose/objectives, high-level scope, milestones/budget, top risks/assumptions, authority and approval.</td></tr>
             </tbody>
           </table>
@@ -1828,6 +2259,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
               <li>35% reduction in lending documentation rework.</li>
               <li>25% reduction in fraud false positives in pilot scope.</li>
               <li>Above 60% adoption in target groups and zero critical compliance breaches during pilots.</li>
+              <li>Positive NPV within the five-year planning horizon, subject to Finance validation of the benefits model.</li>
             </ul>
           </div>
         </div>
@@ -1918,7 +2350,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         </div>
         <div class="glass-card">
           <p><b>Formula:</b> NPV = &Sigma; [net cash flow<sub>t</sub> / (1 + 0.09)<sup>t</sup>] = +$9.10M.</p>
-          <p style="margin-bottom:0;"><b>Payback clarification:</b> the source describes an ROI horizon of 24 months after phased rollout begins, but does not define its anchor or cash-flow timing. The conservative illustrative model above reaches undiscounted cash payback at approximately Month 39 from approval. These are not presented as the same metric; Finance must define and approve one timing convention before the charter can be signed.</p>
+          <p style="margin-bottom:0;"><b>Payback clarification:</b> the source describes an ROI horizon of 24 months after phased rollout begins, but does not define its anchor or cash-flow timing. The conservative illustrative model above reaches undiscounted cash payback at approximately Month 39 from approval. These are not presented as the same metric; Finance must define and approve one timing convention before an execution funding authorization is signed.</p>
         </div>
       </section>
 
@@ -1956,7 +2388,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
       <section class="panel" id="b-recommendation">
         <div class="panel-head"><span class="pn">Section 7</span><h2>Recommendation &amp; Correct Sequence</h2></div>
         <div class="glass-card quote">
-          <p style="margin:0;"><b>Recommendation:</b> select Pair 5 as Pole Trust Bank's priority initiative and advance it to <b>charter approval</b>. Do not authorize implementation yet. Its 92/100 score, +$9.1M source NPV, diversified impact and enterprise scalability outweigh its higher cost and complexity, provided the validation conditions above are satisfied.</p>
+          <p style="margin:0;"><b>Decision outcome:</b> Pair 5 was selected as Pole Trust Bank's priority initiative and approved with its BC/FS and Project Charter by the Sponsor on <b>1 August 2026</b>. The approval authorizes progression into planning; execution still depends on the applicable data, finance, regulatory, authority and funding gates.</p>
         </div>
         <div class="table-wrap">
           <table>
@@ -1965,8 +2397,8 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
               <tr><td>1</td><td>Confirm assigned Pole Trust scenario and source dataset.</td><td><span class="badge go">COMPLETE</span></td></tr>
               <tr><td>2</td><td>Assess all five BC/FS options using weighted criteria.</td><td><span class="badge go">COMPLETE</span></td></tr>
               <tr><td>3</td><td>Validate data, regulatory assumptions and the finance model.</td><td><span class="badge amber">OPEN GATE</span></td></tr>
-              <tr><td>4</td><td>Assign the Project Manager, complete authority/approval fields and obtain signatures.</td><td><span class="badge amber">PENDING</span></td></tr>
-              <tr><td>5</td><td>Only after approval: develop stakeholder/risk registers, WBS, roadmap, backlog, governance plan and benefits baseline.</td><td><span class="badge conditional">NOT YET AUTHORIZED</span></td></tr>
+              <tr><td>4</td><td>Record Sponsor approval and Salman Zaman’s working PM role; complete DEC-02 funding and DEC-03 delegation decisions before execution commitments.</td><td><span class="badge amber">SPONSOR APPROVED / CONTROLS OPEN</span></td></tr>
+              <tr><td>5</td><td>Develop the stakeholder register and scope/WBS planning baselines.</td><td><span class="badge go">LOCALLY COMPLETE / SPONSOR REVIEW OPEN</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1980,19 +2412,19 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
 
     <div class="doc-page" id="page-charter">
       <div class="hero">
-        <div class="hero-eyebrow">Project Charter &middot; Version 1.0 Draft &middot; 31 July 2026</div>
+        <div class="hero-eyebrow">Project Charter &middot; Approved Baseline 1.0 &middot; Local Control Overlay 2 August 2026</div>
         <h1 class="hero-title">Integrated AI Banking<br>Implementation Ecosystem</h1>
-        <p class="hero-sub">A concise draft charter for Pole Trust Bank. It contains the six required charter elements but confers no mandate until the Project Manager is assigned and the designated authorities complete and sign it.</p>
+        <p class="hero-sub">The Sponsor-approved charter is treated as consolidated approval by all pertinent internal stakeholders for its submitted content. Salman Zaman’s formal delegation, mandatory delivery evidence and the specific initial funding release remain controlled prerequisites to execution.</p>
         <div class="stat-grid">
-          <div class="stat-card"><div class="sv gold">$11.5M</div><div class="sl">Proposed CAPEX</div></div>
-          <div class="stat-card"><div class="sv em">$27.5M</div><div class="sl">Proposed Five-Year TCO</div></div>
+          <div class="stat-card"><div class="sv gold">$11.5M</div><div class="sl">Approved Planning CAPEX</div></div>
+          <div class="stat-card"><div class="sv em">$27.5M</div><div class="sl">Approved Planning TCO</div></div>
           <div class="stat-card"><div class="sv">24 mo.</div><div class="sl">Delivery Roadmap</div></div>
-          <div class="stat-card"><div class="sv" id="charter-review-status">Pending</div><div class="sl">Approval Status</div></div>
+          <div class="stat-card"><div class="sv" id="charter-review-status">Baseline approved</div><div class="sl">Approval Status</div></div>
         </div>
       </div>
 
       <section class="panel" id="c-control">
-        <div class="panel-head"><span class="pn">Control</span><h2>Draft Status &amp; Required Completion</h2></div>
+        <div class="panel-head"><span class="pn">Control</span><h2>Sponsor Approval &amp; Remaining Execution Controls</h2></div>
         <div class="table-wrap">
           <table>
             <tbody>
@@ -2000,10 +2432,13 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
               <tr><td><b>Project</b></td><td>Integrated AI Banking Implementation Ecosystem (selected Pair 5)</td></tr>
               <tr><td><b>Organization</b></td><td>Pole Trust Bank, Toronto, Canada &mdash; synthetic classroom case</td></tr>
               <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
-              <tr><td><b>Project Manager</b></td><td>Project Manager &mdash; assignee pending</td></tr>
-              <tr><td><b>Version / Date</b></td><td>1.0 Draft / 31 July 2026</td></tr>
-              <tr><td><b>Status</b></td><td><span class="badge amber" id="charter-status-badge">DRAFT &mdash; PENDING APPROVAL</span></td></tr>
-              <tr><td><b>Authority</b></td><td>None. This document becomes a mandate only after all required fields, dates and signatures are completed.</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Version / Date</b></td><td>Approved baseline 1.0 submitted 31 July 2026 and approved 1 August 2026; local planning-control overlay dated 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge go" id="charter-status-badge">BASELINE APPROVED &mdash; CONTROL OVERLAY FOR REVIEW</span></td></tr>
+              <tr><td><b>Approval evidence</b></td><td>Sheikh Akhtar email, 1 August 2026: “Perfect, thanks Salman sb. Its approved, please proceed next.”</td></tr>
+              <tr><td><b>Consolidated approval rule</b></td><td>Sponsor approval constitutes approval by all pertinent internal stakeholders for the material actually submitted; functional evidence remains mandatory during delivery.</td></tr>
+              <tr><td><b>Configuration note</b></td><td>Sponsor approval applies to baseline 1.0. The PM designation and PTB-DEC-001 references are a subsequent local control overlay and do not become a Sponsor-approved amendment until formally accepted.</td></tr>
+              <tr><td><b>Authority boundary</b></td><td>Planning coordination may proceed. No funding, vendor, staffing or delivery commitment is implied until Sponsor-approved delegated limits, mandatory functional evidence and the initial funding release are completed.</td></tr>
             </tbody>
           </table>
         </div>
@@ -2049,7 +2484,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
               <li>Automatic account blocking or freezing.</li>
               <li>Core-banking replacement.</li>
               <li>Enterprise rollout beyond a use case that has not passed its evidence and compliance gate.</li>
-              <li>Detailed planning artifacts before charter approval.</li>
+              <li>Execution, procurement or production commitments before delegated authority and funding approval.</li>
             </ul>
           </div>
         </div>
@@ -2089,12 +2524,12 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Budget Component</th><th>Proposed Envelope</th><th>Authorization Treatment</th></tr></thead>
+            <thead><tr><th>Budget Component</th><th>Approved Planning Envelope</th><th>Authorization Treatment</th></tr></thead>
             <tbody>
-              <tr><td>Implementation CAPEX</td><td>USD 11.5M</td><td>Proposed lifecycle capital ceiling; not yet authorized.</td></tr>
-              <tr><td>Annual OPEX</td><td>USD 3.2M</td><td>Proposed recurring run cost, subject to annual budget approval.</td></tr>
-              <tr class="total-row"><td>Five-year TCO</td><td>USD 27.5M</td><td>Full proposed lifecycle envelope: $11.5M CAPEX + $16.0M five-year OPEX.</td></tr>
-              <tr><td>Initial release</td><td><b>To be determined</b></td><td>The Chief Financial Officer and Project Sponsor must define it after finance validation; this draft authorizes $0.</td></tr>
+              <tr><td>Implementation CAPEX</td><td>USD 11.5M</td><td>Approved planning ceiling; not a funding release.</td></tr>
+              <tr><td>Annual OPEX</td><td>USD 3.2M</td><td>Approved planning run rate, subject to staged and annual funding decisions.</td></tr>
+              <tr class="total-row"><td>Five-year TCO</td><td>USD 27.5M</td><td>Approved planning lifecycle envelope: $11.5M CAPEX + $16.0M five-year OPEX; not immediate spend.</td></tr>
+              <tr><td>Initial release</td><td><b>USD 0 currently authorized</b></td><td>DEC-02 requires the Sponsor to approve a phase-supported amount after CFO validation.</td></tr>
             </tbody>
           </table>
         </div>
@@ -2129,18 +2564,18 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
       <section class="panel" id="c-5">
         <div class="panel-head"><span class="pn">Element 5</span><h2>Authority &amp; Accountability</h2></div>
         <div class="glass-card quote">
-          <p style="margin:0;"><b>Authority is deliberately inactive.</b> The named project manager, spending thresholds, escalation rights and stage-gate decision rights must be completed and approved below. Until then, no person is empowered by this draft to commit funds, engage vendors, direct staff or start delivery.</p>
+          <p style="margin:0;"><b>Working ownership is active; delegated execution authority is controlled.</b> Salman Zaman may coordinate planning, baselines, evidence and escalation. Spending, staffing/procurement, material change, risk and stage-gate decisions route to the Sponsor under the consolidated-approval rule.</p>
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Authority Field</th><th>Required Entry Before Approval</th></tr></thead>
+            <thead><tr><th>Authority Field</th><th>Required Entry Before Execution Authority</th></tr></thead>
             <tbody>
               <tr><td>Project sponsor</td><td>Sheikh Moeen Akhtar owns sponsorship of the charter and approval outcome.</td></tr>
-              <tr><td>Project manager</td><td>Project Manager designation recorded; individual assignee remains pending before authorization.</td></tr>
-              <tr><td>Project-manager authority</td><td>Approved staffing, procurement and change-control limits.</td></tr>
-              <tr><td>Stage-gate authority</td><td>Named committee, quorum, decision rights and evidence thresholds.</td></tr>
-              <tr><td>Escalation</td><td>Approved route and response times for risk, compliance, budget and scope exceptions.</td></tr>
-              <tr><td>Financial authority</td><td>Initial release, lifecycle ceiling, reserve treatment and delegated transaction limits.</td></tr>
+              <tr><td>Project/Program Manager</td><td>Salman Zaman &mdash; working role and document custody accepted; interim authority boundary active under DEC-03.</td></tr>
+              <tr><td>Project-manager authority</td><td>DEC-03 interim boundary is active; additional staffing, procurement and change tolerances require Sponsor delegation.</td></tr>
+              <tr><td>Stage-gate authority</td><td>DEC-04 proposes committee, quorum, reserved decisions and evidence thresholds for Sponsor approval.</td></tr>
+              <tr><td>Escalation</td><td>Material risk, compliance, budget, scope, KPI, roadmap or release matters route to the Sponsor until DEC-03/DEC-04 approval.</td></tr>
+              <tr><td>Financial authority</td><td>USD 0 currently authorized; DEC-02 requires Sponsor release supported by CFO validation.</td></tr>
             </tbody>
           </table>
         </div>
@@ -2148,40 +2583,44 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
 
       <section class="panel" id="c-6">
         <div class="panel-head"><span class="pn">Element 6</span><h2>Approval &amp; Sign-Off</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Consolidated Sponsor approval recorded &middot; 1 August 2026</h3><p>Sheikh Akhtar approved the submitted BC/FS, Pair 5 selection and Project Charter and directed the project to proceed next. This is treated as approval by all pertinent internal stakeholders for that submitted material. Later funding, delegation and execution decisions remain controlled.</p></div>
+        </div>
         <div class="glass-card quote">
-          <em class="pull">Without an assigned Project Manager, completed authority fields, dates and signatures, this charter is a proposal, not a mandate.</em>
-          <p style="margin-top:16px;margin-bottom:0;">Signing confirms selection of Pair 5, acceptance of the high-level charter, approval of the stated authority limits and the specific initial funding release entered at signature. It does not automatically authorize the entire five-year TCO as an immediate spend.</p>
+          <em class="pull">Sponsor approval closes the selection and charter-review gate and constitutes pertinent internal stakeholder approval for the submitted baseline; it does not invent later execution authority.</em>
+          <p style="margin-top:16px;margin-bottom:0;">Completion of the remaining fields will formalize PM delegation, mandatory execution evidence, authority limits and the specific initial funding release. Separate internal concurrence does not reopen the approved baseline, and the email does not authorize the entire five-year TCO as an immediate spend.</p>
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Approval Capacity</th><th>Designation / Named Sponsor</th><th>Signature</th><th>Date</th><th>Decision</th></tr></thead>
+            <thead><tr><th>Capacity</th><th>Designation / Named Sponsor</th><th>Baseline record</th><th>Date</th><th>Current treatment</th></tr></thead>
             <tbody>
-              <tr><td>Project sponsorship</td><td>Sheikh Moeen Akhtar</td><td>________________</td><td>________</td><td>Approve / Reject</td></tr>
-              <tr><td>Funding authority</td><td>Chief Financial Officer</td><td>________________</td><td>________</td><td>Approve / Reject</td></tr>
-              <tr><td>Risk authority</td><td>Chief Risk Officer</td><td>________________</td><td>________</td><td>Approve / Reject</td></tr>
-              <tr><td>Architecture authority</td><td>Chief Information Officer</td><td>________________</td><td>________</td><td>Approve / Reject</td></tr>
-              <tr><td>Delivery acceptance</td><td>Project Manager &mdash; assignee pending</td><td>________________</td><td>________</td><td>Accept / Decline</td></tr>
+              <tr><td>Project sponsorship</td><td>Sheikh Moeen Akhtar</td><td>Email approval recorded</td><td>1 Aug 2026</td><td><span class="badge go">APPROVED / PROCEED NEXT</span></td></tr>
+              <tr><td>Finance evidence</td><td>Chief Financial Officer</td><td>Baseline concurrence deemed through Sponsor approval</td><td>1 Aug 2026</td><td>Specific release remains DEC-02</td></tr>
+              <tr><td>Risk evidence</td><td>Chief Risk Officer</td><td>Baseline concurrence deemed through Sponsor approval</td><td>1 Aug 2026</td><td>Future residual-risk decision remains DEC-11</td></tr>
+              <tr><td>Architecture evidence</td><td>Chief Information Officer</td><td>Baseline concurrence deemed through Sponsor approval</td><td>1 Aug 2026</td><td>Detailed readiness remains DEC-10</td></tr>
+              <tr><td>Delivery acceptance</td><td>Salman Zaman &mdash; Project/Program Manager</td><td>Working role accepted</td><td>2 Aug 2026</td><td>DEC-03 delegation instrument required</td></tr>
             </tbody>
           </table>
         </div>
         <div class="table-wrap">
           <table>
             <tbody>
-              <tr><td style="width:240px;"><b>Approved initial release</b></td><td>USD __________________</td></tr>
-              <tr><td><b>Approved CAPEX ceiling</b></td><td>USD __________________ (not to exceed proposed $11.5M without change approval)</td></tr>
-              <tr><td><b>Approved five-year TCO ceiling</b></td><td>USD __________________ (proposed $27.5M, including annual budget approvals)</td></tr>
-              <tr><td><b>Effective date</b></td><td>__________________</td></tr>
+              <tr><td style="width:240px;"><b>Initial funding release</b></td><td>USD 0 currently authorized; DEC-02 approval entry: USD __________________</td></tr>
+              <tr><td><b>Approved planning CAPEX ceiling</b></td><td>USD 11.5M &mdash; approved baseline envelope, not a funding release</td></tr>
+              <tr><td><b>Approved planning five-year TCO ceiling</b></td><td>USD 27.5M &mdash; lifecycle envelope subject to DEC-02 and annual budget decisions</td></tr>
+              <tr><td><b>Effective date</b></td><td>DEC-01 Sponsor authorization: __________________</td></tr>
             </tbody>
           </table>
         </div>
         <div class="review-console" id="review-console">
           <div class="review-head">
             <div>
-              <span class="viz-kicker">Reviewer Decision Console</span>
-              <h3>Record a governed review outcome</h3>
-              <p>These controls create a persistent, timestamped review record and synchronize the visible status of both artifacts. Approval records endorsement of the analysis only; formal signatures, an assigned Project Manager and completed authority and funding fields remain mandatory before execution.</p>
+              <span class="viz-kicker">Approval Evidence &amp; Subsequent Review Console</span>
+              <h3>Sponsor approval is the controlled baseline</h3>
+              <p>The baseline record reflects the Sponsor's 1 August 2026 consolidated approval. A later browser-local decision can document a subsequent review, but it does not erase that evidence or substitute for later delegation, mandatory execution evidence or funding controls.</p>
             </div>
-            <span class="live-status" id="live-review-status">Pending review</span>
+            <span class="live-status status-approved" id="live-review-status">Sponsor approved</span>
           </div>
           <div class="review-fields">
             <div class="review-field">
@@ -2201,22 +2640,375 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
             <button class="decision-btn approve" type="button" data-decision="approved">&#10003; Approve review</button>
             <button class="decision-btn revise" type="button" data-decision="revision">&#8634; Revert with comments</button>
             <button class="decision-btn reject" type="button" data-decision="rejected">&#10005; Reject</button>
-            <button class="decision-btn clear" type="button" id="clear-review">Clear saved decision</button>
+            <button class="decision-btn clear" type="button" id="clear-review">Reset to sponsor approval</button>
           </div>
           <div class="review-record" aria-live="polite">
-            <div><span>Decision</span><strong id="record-decision">Pending review</strong></div>
-            <div><span>Reviewer</span><strong id="record-reviewer">Not recorded</strong></div>
-            <div><span>Role</span><strong id="record-role">Not recorded</strong></div>
-            <div><span>Timestamp</span><strong id="record-time">Not recorded</strong></div>
-            <div class="comment-record"><span>Comments / Conditions</span><strong id="record-comments">No comments recorded.</strong></div>
+            <div><span>Decision</span><strong id="record-decision">Sponsor approved</strong></div>
+            <div><span>Reviewer</span><strong id="record-reviewer">Sheikh Akhtar</strong></div>
+            <div><span>Role</span><strong id="record-role">Project Sponsor / Course Trainer</strong></div>
+            <div><span>Timestamp</span><strong id="record-time">1 August 2026, 3:07 AM</strong></div>
+            <div class="comment-record"><span>Comments / Conditions</span><strong id="record-comments">Perfect, thanks Salman sb. Its approved, please proceed next.</strong></div>
           </div>
-          <p class="review-note">Governance safeguard: browser storage provides a functional review trail for this capstone artifact, but it is not a cryptographic digital signature or a substitute for the formal approval table above.</p>
+          <p class="review-note">Governance safeguard: the email is documented approval evidence. Browser storage supports later review records but is not a cryptographic signature or evidence of an unstated funding release or delegated authority.</p>
         </div>
         <div class="doc-footer">
-          <span>PTB-CHARTER-001 &middot; Version 1.0 Draft &middot; <a href="#revision-appendix" onclick="document.getElementById('revision-details').open=true">Revision traceability</a></span>
-          <span id="footer-status">Pole Trust Bank Integrated AI Ecosystem &mdash; Pending Approval</span>
+          <span>PTB-CHARTER-001 &middot; Approved baseline 1.0 / local control overlay 2 August 2026 &middot; <a href="#revision-appendix" onclick="document.getElementById('revision-details').open=true">Revision traceability</a></span>
+          <span id="footer-status">Pole Trust Bank Integrated AI Ecosystem &mdash; Baseline Approved / Control Overlay for Review</span>
           <span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span>
         </div>
+      </section>
+    </div>
+
+    <div class="doc-page" id="page-stakeholders">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 03 &middot; PTB-STK-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Stakeholder Register<br>&amp; Analysis</h1>
+        <p class="hero-sub">A living, evidence-aware register that identifies who can affect or is affected by Pair 5, maps power and interest, records stance without invention, and assigns one concrete engagement action to every key stakeholder.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">29</div><div class="sl">Relevant Stakeholder Groups</div></div>
+          <div class="stat-card"><div class="sv em">19</div><div class="sl">Manage Closely</div></div>
+          <div class="stat-card"><div class="sv">Monthly</div><div class="sl">Minimum Review Cycle</div></div>
+          <div class="stat-card"><div class="sv">1</div><div class="sl">Evidenced Champion</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="st-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Document Authority &amp; Status</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Authorized to plan; stakeholder assumptions remain visible</h3><p>The Sponsor approved the BC/FS, Pair 5 decision and Charter on 1 August 2026 and directed the project to proceed. This living register is issued for review; it does not appoint people or create delegated authority.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-STK-001</td></tr>
+              <tr><td><b>Project</b></td><td>Integrated AI Banking Implementation Ecosystem &mdash; approved Pair 5</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span> Living register</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager / custodian</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Approval basis</b></td><td>Sponsor email dated 1 August 2026: “Perfect, thanks Salman sb. Its approved, please proceed next.”</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for the material presented; roles remain responsible for evidence and implementation</td></tr>
+              <tr><td><b>Review cycle</b></td><td>Monthly, at every phase gate, and after a material stakeholder or project event</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 assigns appointments, delegation, Steering terms and specialist decisions an interim control and closure gate</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="st-method">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Analysis Method &amp; Integrity Rules</h2></div>
+        <p class="panel-lede">The register combines the approved Pair 5 stakeholder list with the instructional requirement to map power versus interest, record stance, define a specific action and revisit the analysis monthly.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Identification</h3><p>Include decision makers, control functions, delivery and operations roles, affected employees, representatives, customers, suppliers and external oversight obligations.</p></div>
+          <div class="glass-card"><h3>Assessment</h3><p>Rate role-based power and interest; record current stance only where evidence exists. “Not evidenced” creates an engagement action rather than a fictional attitude.</p></div>
+          <div class="glass-card"><h3>Action</h3><p>Give every key stakeholder a specific two-way action, cadence and provisional owner. Review movement, concerns and decision delays monthly.</p></div>
+        </div>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Power</b><span>Ability of the role to authorize, constrain, stop, fund, accept or materially influence project outcomes.</span></div>
+          <div class="definition-item"><b>Interest</b><span>Degree to which the role’s work, obligations, outcomes or experience are affected by the programme.</span></div>
+          <div class="definition-item"><b>Stance</b><span>Observed support or resistance. Only the Sponsor is confirmed as a champion by approval evidence.</span></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Identity and contact-data rule:</b> personal names and contact details may be added only from an authoritative appointment or directory. Operational contact details belong in a controlled private appendix, not the public HTML.</p></div>
+      </section>
+
+      <section class="panel" id="st-register">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Stakeholder Register</h2></div>
+        <p class="panel-lede">H = high and M = medium. Ratings apply to organizational roles, not personal worth. Each must be validated with the appointed role holder.</p>
+        <h3 class="section-title">Governance, technology and control stakeholders</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Stakeholder / designation</th><th>Primary stake or concern</th><th>Power / Interest</th><th>Current stance</th><th>Desired</th><th>Engagement action, cadence and provisional owner</th></tr></thead>
+            <tbody>
+              <tr><td>STK-01</td><td><b>Sheikh Moeen Akhtar</b><br>Project Sponsor / Course Trainer</td><td>Strategic value, scope, governance, funding gates and progression</td><td>H / H</td><td><span class="badge go">CHAMPION &mdash; EVIDENCED</span></td><td>Leading</td><td>Monthly executive checkpoint and every gate; PM issues the decision pack five working days before gate.</td></tr>
+              <tr><td>STK-02</td><td>Executive Steering Committee</td><td>Scope, risk, benefits, funding and gate decisions</td><td>H / H</td><td>PM-proposed terms in PTB-DEC-001; Sponsor approval required</td><td>Leading</td><td>Sponsor decides DEC-04 before the first gate; PM maintains the decision pack and log.</td></tr>
+              <tr><td>STK-03</td><td><b>Salman Zaman</b><br>Project/Program Manager</td><td>Baselines, delivery coordination, escalation and acceptance evidence</td><td>H / H</td><td><span class="badge amber">WORKING ROLE / INTERIM BOUNDARY ACTIVE</span></td><td>Leading</td><td>Maintain baselines and gate packs; Sponsor decides DEC-03 before any commitment or execution instruction.</td></tr>
+              <tr><td>STK-04</td><td>Central AI PMO / Programme Controls</td><td>Roadmap, RAID, benefits, records and cross-squad dependencies</td><td>H / H</td><td>Salman is interim controls coordinator; resourcing decision DEC-06</td><td>Leading</td><td>PM runs controls and weekly integration review; Sponsor/executives confirm resources before build.</td></tr>
+              <tr><td>STK-05</td><td>Chief Digital Officer</td><td>AI vision, product coherence and digital value</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Confirm outcomes and chair fortnightly value/design review. Owner: PM pending role-holder confirmation.</td></tr>
+              <tr><td>STK-06</td><td>Chief Operating Officer / Enterprise Operations</td><td>Operational value, capacity, continuity and copilot outcome</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Confirm operational ownership, Product Owner nominations and monthly readiness review. Owner: PM.</td></tr>
+              <tr><td>STK-07</td><td>CIO &amp; Enterprise Architecture</td><td>Architecture, integration sequencing, resilience and technical debt</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Run architecture workshop and weekly dependency review through the foundation gate.</td></tr>
+              <tr><td>STK-08</td><td>Information Security &amp; Privacy / Data Protection</td><td>Security, privacy, access, retention, incident and PIA evidence</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Define security/privacy gate checklist and review each affected pilot before release.</td></tr>
+              <tr><td>STK-09</td><td>Chief Risk Officer &amp; Operational Risk</td><td>Enterprise risk, human accountability and residual-risk acceptance</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Agree escalation/risk-acceptance route; review material exposure fortnightly and at gates.</td></tr>
+              <tr><td>STK-10</td><td>Model Risk / Responsible AI Oversight</td><td>Explainability, fairness, validation, drift and model lifecycle</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Define model evidence and approval criteria before model use.</td></tr>
+              <tr><td>STK-11</td><td>Compliance / Financial-Crime Compliance</td><td>OSFI/EDGE, FCAC and FINTRAC applicability, fair treatment and reporting</td><td>H / H</td><td>Baseline approval deemed through Sponsor; delivery evidence to validate</td><td>Leading</td><td>Maintain the regulatory-applicability and pilot-evidence checklist.</td></tr>
+              <tr><td>STK-12</td><td>Legal Counsel</td><td>Legal interpretation, contracts, disclosures, liability and records</td><td>H / H</td><td>Not evidenced &mdash; validate</td><td>Leading</td><td>Review material legal questions, customer terms and vendor provisions at the relevant gate.</td></tr>
+              <tr><td>STK-13</td><td>Internal Audit / Independent Assurance</td><td>Independent assurance over governance, controls and auditability</td><td>H / M</td><td>Appointment controlled by DEC-05</td><td>Satisfied</td><td>Confirm assurance touchpoints before the affected gate without assigning delivery ownership.</td></tr>
+              <tr><td>STK-14</td><td>CFO / Finance &amp; Benefits</td><td>Cash-flow validation, attribution, affordability, TCO and funding release</td><td>H / H</td><td>Finance validation open</td><td>Leading</td><td>Validate KPI baselines, NPV timing and benefit rules before funding; review cost/value monthly.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="section-title">Business, delivery, people and external stakeholders</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Stakeholder / designation</th><th>Primary stake or concern</th><th>Power / Interest</th><th>Current stance</th><th>Desired</th><th>Engagement action, cadence and provisional owner</th></tr></thead>
+            <tbody>
+              <tr><td>STK-15</td><td>Retail Banking / Customer Digital Product Owner</td><td>Customer proposition, journeys, service quality and product acceptance</td><td>H / H</td><td>Product Owner not nominated</td><td>Leading</td><td>CDO nominates the Product Owner; fortnightly journey/backlog review and pilot acceptance.</td></tr>
+              <tr><td>STK-16</td><td>Contact Centre Leadership &amp; Customer Experience</td><td>Inquiry demand, deflection, handoff, CSAT, complaints and continuity</td><td>H / H</td><td>Need evidenced; stance not evidenced</td><td>Supportive</td><td>Baseline service measures; weekly readiness and monthly outcome review.</td></tr>
+              <tr><td>STK-17</td><td>Branch Operations</td><td>Cross-channel handoff, customer support, training and operational impact</td><td>M / H</td><td>Not evidenced &mdash; validate</td><td>Supportive</td><td>Validate affected journeys and readiness before customer pilot.</td></tr>
+              <tr><td>STK-18</td><td>Contact-centre agents, supervisors &amp; union/employee representatives</td><td>Work redesign, workload, monitoring fairness, escalation and training</td><td>M / H</td><td>Not evidenced; resistance risk exists</td><td>Supportive</td><td>Listening/co-design sessions, published impact response and monthly pulse.</td></tr>
+              <tr><td>STK-19</td><td>SME Lending, Credit Operations &amp; relationship managers</td><td>Reduced rework, summaries, fair treatment and human credit authority</td><td>H / H</td><td>Need evidenced; stance not evidenced</td><td>Leading</td><td>Nominate Lending Product Owner; define cases, override rules and acceptance review.</td></tr>
+              <tr><td>STK-20</td><td>Fraud Operations, Financial Crime &amp; investigators</td><td>Alert priority, fewer false positives, traceability and investigator authority</td><td>H / H</td><td>Need evidenced; stance not evidenced</td><td>Leading</td><td>Nominate Fraud Product Owner; baseline alerts and calibrate weekly during pilot.</td></tr>
+              <tr><td>STK-21</td><td>HR, Learning &amp; Development, Change &amp; Communications</td><td>Role impact, skills, training, adoption and responsible use</td><td>M / H</td><td>Not evidenced &mdash; validate</td><td>Supportive</td><td>Complete impact/training analysis and monthly adoption/readiness council.</td></tr>
+              <tr><td>STK-22</td><td>Data Governance, Data Owners &amp; Analytics</td><td>Classification, quality, lineage, lawful use, retention and KPI baselines</td><td>H / H</td><td>Data readiness unvalidated</td><td>Leading</td><td>Approve inventory, ownership and quality thresholds before build; review weekly.</td></tr>
+              <tr><td>STK-23</td><td>AI Engineering, Data Science, MLOps &amp; Test Assurance</td><td>Build quality, reproducibility, testing, deployment and monitoring evidence</td><td>M / H</td><td>Resourcing decision controlled by DEC-05/DEC-06</td><td>Supportive</td><td>CIO confirms engineering/test ownership, environments and evidence standards before build.</td></tr>
+              <tr><td>STK-24</td><td>Core systems, application owners &amp; IT Service Management</td><td>APIs, availability, releases, support, incidents, continuity and transition</td><td>H / H</td><td>API/readiness assumptions open</td><td>Supportive</td><td>Confirm interfaces, NFRs, windows, support model and operations acceptance.</td></tr>
+              <tr><td>STK-25</td><td>Procurement, Vendor Management &amp; Third-Party Risk</td><td>Fair sourcing, due diligence, contract controls, exit rights and concentration</td><td>H / M</td><td>Vendor not selected</td><td>Satisfied</td><td>Approve sourcing/due-diligence plan before engagement and at contract gates.</td></tr>
+              <tr><td>STK-26</td><td>External AI vendor &mdash; not selected</td><td>Requirements, delivery obligations, assurance, support and knowledge transfer</td><td>M / H</td><td>Not appointed</td><td>Supportive</td><td>After selection, establish acceptance, security, reporting, support and exit obligations.</td></tr>
+              <tr><td>STK-27</td><td>Employees and target copilot users</td><td>Safe useful assistance, accountability, privacy, training and support</td><td>M / H</td><td>Potential supported; stance not evidenced</td><td>Supportive</td><td>Segment users, appoint champions, run role-based pilots and monthly pulse.</td></tr>
+              <tr><td>STK-28</td><td>Customers represented through CX research, complaints &amp; accessibility evidence</td><td>Accuracy, privacy, fair treatment, disclosure, accessibility and human escalation</td><td>M / H</td><td>Direct stance not researched</td><td>Consulted</td><td>Representative research; monitor CSAT, complaints and accessibility.</td></tr>
+              <tr><td>STK-29</td><td>Canadian supervisory and regulatory authorities / obligations</td><td>Governance, fair treatment, privacy, financial-crime controls and human oversight</td><td>H / M</td><td>Independent oversight; no stance assumed</td><td>Satisfied</td><td>Legal/Compliance confirms applicability and manages required engagement/evidence.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="st-matrix">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Power–Interest Strategy</h2></div>
+        <div class="pi-matrix" role="img" aria-label="Power–interest matrix placing nineteen stakeholder groups in manage closely, three in keep satisfied, seven in keep informed and none in monitor at the baseline.">
+          <div class="pi-cell manage"><h3>Manage closely <span>High power / High interest</span></h3><p>Involve in decisions, controls, requirements, evidence and formal gates. Do not surprise.</p><div class="stake-tags"><span>01 Sponsor</span><span>02 Steering</span><span>03 PM</span><span>04 AI PMO</span><span>05 CDO</span><span>06 COO</span><span>07 CIO/EA</span><span>08 Security/Privacy</span><span>09 CRO</span><span>10 Model Risk</span><span>11 Compliance</span><span>12 Legal</span><span>14 Finance</span><span>15 Retail/Product</span><span>16 Contact Centre/CX</span><span>19 Lending</span><span>20 Fraud</span><span>22 Data</span><span>24 Systems/ITSM</span></div></div>
+          <div class="pi-cell satisfy"><h3>Keep satisfied <span>High power / Medium interest</span></h3><p>Provide concise assurance and exception information; engage before assurance, sourcing or regulatory decisions.</p><div class="stake-tags"><span>13 Internal Audit</span><span>25 Procurement / Third-Party Risk</span><span>29 Regulatory oversight</span></div></div>
+          <div class="pi-cell inform"><h3>Keep informed <span>Medium power / High interest</span></h3><p>Use two-way communication and co-design; close the loop on concerns, impacts and feedback.</p><div class="stake-tags"><span>17 Branch Operations</span><span>18 Agents / representatives</span><span>21 HR / Change</span><span>23 AI Engineering / QA</span><span>26 AI vendor</span><span>27 Employees</span><span>28 Customers</span></div></div>
+          <div class="pi-cell monitor"><h3>Monitor <span>Lower power / Lower interest</span></h3><p>No group is placed here at baseline because Pair 5 is enterprise-wide. Reassess rather than assume continued relevance.</p><div class="stake-tags"><span>None at baseline</span></div></div>
+        </div>
+        <p class="fineprint">Power and interest are role-based planning assessments. Salman Zaman will validate them with each confirmed role holder and record movement monthly.</p>
+      </section>
+
+      <section class="panel" id="st-engagement">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Current-to-Desired Engagement Analysis</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Stakeholder cluster</th><th>Current level</th><th>Required level</th><th>Principal gap</th><th>Evidence that closes the gap</th></tr></thead>
+            <tbody>
+              <tr><td>Sponsor</td><td>Leading</td><td>Leading</td><td>Maintain timely, evidence-based decisions</td><td>Recorded monthly and gate decisions</td></tr>
+              <tr><td>Steering / PM / AI PMO</td><td>PM interim boundary active; Steering terms proposed; PMO resourcing controlled</td><td>Leading</td><td>Sponsor decisions DEC-03, DEC-04 and DEC-06</td><td>Delegation instrument, approved terms, assignment records and decision log</td></tr>
+              <tr><td>Technology, data, risk and control functions</td><td>Not evidenced</td><td>Leading</td><td>Readiness and acceptance unvalidated</td><td>Named leads and approved architecture/data/control evidence</td></tr>
+              <tr><td>Business Product Owners</td><td>Role designations defined; individual appointments not evidenced</td><td>Leading</td><td>DEC-05 requires appointments before affected requirements acceptance</td><td>Appointment records, accepted backlogs, baselines and acceptance records</td></tr>
+              <tr><td>Employees, agents and representatives</td><td>Not evidenced</td><td>Supportive</td><td>Work impact, concerns and training needs unknown</td><td>Listening record, impact response, readiness and pulse trend</td></tr>
+              <tr><td>Customers</td><td>Not evidenced</td><td>Consulted</td><td>Synthetic case data is not live research</td><td>Approved research method and representative pilot feedback</td></tr>
+              <tr><td>Vendor ecosystem</td><td>Not selected</td><td>Supportive</td><td>No supplier or obligations exist</td><td>Due diligence, contract, delivery and knowledge-transfer plan</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="st-raci">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Provisional Responsibility Interface</h2></div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Governance boundary:</b> this RACI assigns work accountability, not duplicate approval gates. The Steering Committee advises unless expressly delegated; Sponsor approval constitutes pertinent internal stakeholder approval.</p></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Major deliverable / decision</th><th>Sponsor</th><th>PM / AI PMO</th><th>Accountable business/control owner</th><th>Technology / Data</th><th>Risk / Compliance / Legal</th><th>Finance</th><th>Change / Training</th></tr></thead>
+            <tbody>
+              <tr><td>Planning baselines and integrated roadmap</td><td>A</td><td>R</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+              <tr><td>Governance and architecture foundation</td><td>C</td><td>R</td><td>A &mdash; CIO / Enterprise Architecture</td><td>R</td><td>C</td><td>C</td><td>C</td></tr>
+              <tr><td>Internal copilot MVP</td><td>I</td><td>R</td><td>A &mdash; Copilot Product Owner / COO</td><td>R</td><td>C</td><td>C</td><td>R</td></tr>
+              <tr><td>Customer digital assistant MVP</td><td>I</td><td>R</td><td>A &mdash; Digital Product Owner</td><td>R</td><td>C</td><td>C</td><td>R</td></tr>
+              <tr><td>Lending decision-support MVP</td><td>I</td><td>R</td><td>A &mdash; Lending Product Owner</td><td>R</td><td>C</td><td>C</td><td>R</td></tr>
+              <tr><td>Fraud investigator-assist MVP</td><td>I</td><td>R</td><td>A &mdash; Fraud Product Owner</td><td>R</td><td>R</td><td>C</td><td>C</td></tr>
+              <tr><td>Benefits baseline and funding-gate evidence</td><td>C</td><td>R</td><td>C</td><td>C</td><td>C</td><td>A &mdash; CFO</td><td>C</td></tr>
+              <tr><td>Scope or KPI baseline change</td><td>A</td><td>R</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+              <tr><td>Pilot acceptance and permission to scale</td><td>A</td><td>R</td><td>R</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fineprint"><b>RACI:</b> A = Accountable, R = Responsible, C = Consulted, I = Informed. Work accountability remains distinct from the Sponsor’s consolidated approval authority.</p>
+      </section>
+
+      <section class="panel" id="st-review">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Monthly Review, Escalation &amp; Acceptance</h2></div>
+        <div class="process-flow" aria-label="Stakeholder register review sequence">
+          <div class="process-step"><strong>01</strong><span>Confirm appointments, additions and role changes</span></div>
+          <div class="process-step"><strong>02</strong><span>Validate power, interest and stance</span></div>
+          <div class="process-step"><strong>03</strong><span>Review actions, evidence and concerns</span></div>
+          <div class="process-step"><strong>04</strong><span>Test decision delay, fatigue and resistance</span></div>
+          <div class="process-step"><strong>05</strong><span>Update owners, cadence and desired state</span></div>
+          <div class="process-step"><strong>06</strong><span>Escalate high-power resistance or missed decisions</span></div>
+          <div class="process-step"><strong>07</strong><span>Version the register and communicate changes</span></div>
+        </div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Event-driven review triggers</h3><ul><li>Material scope or regulatory change</li><li>Pilot incident or material complaint trend</li><li>Vendor appointment or executive change</li><li>Funding decision or movement between phases</li></ul></div>
+          <div class="glass-card"><h3>Baseline acceptance</h3><ul><li>Sponsor confirms categories and governance route</li><li>High-power roles have an appointee or appointment action</li><li>Every key stakeholder has an action, cadence and owner</li><li>Stances are evidenced or transparently marked for validation</li><li>Salman Zaman’s delegation and AI PMO maintenance route are recorded</li></ul></div>
+        </div>
+        <div class="doc-footer"><span>PTB-STK-001 &middot; Version 1.0 &middot; Living planning register</span><span>Sponsor-approved project baseline &middot; 1 August 2026</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
+    <div class="doc-page" id="page-scope">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 04 &middot; PTB-SCOPE-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Scope Management Plan<br>&amp; Detailed Scope Statement</h1>
+        <p class="hero-sub">The controlled boundary for the complete Pair 5 ecosystem: seven deliverables, an eight-branch / 48-component WBS, measurable acceptance evidence and a disciplined route for validating scope and authorizing change.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">7</div><div class="sl">Controlled Deliverables</div></div>
+          <div class="stat-card"><div class="sv em">8 / 48</div><div class="sl">Level-1 / Level-2 WBS</div></div>
+          <div class="stat-card"><div class="sv">7</div><div class="sl">Approved Success Criteria</div></div>
+          <div class="stat-card"><div class="sv">24 mo.</div><div class="sl">Roadmap Boundary</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="s-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Scope Baseline Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Enterprise scope preserved</h3><p>The instructional slide’s customer-assistant wording is used as a structural example, not as permission to narrow Pair 5. This baseline covers governance, platform controls and all four approved MVPs.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-SCOPE-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baseline</b></td><td>PTB-CHARTER-001 &mdash; Sponsor approved 1 August 2026</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for presented material; functional roles validate evidence and the Sponsor approves later gates</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Change authority</b></td><td>Project Sponsor; an expressly delegated Steering decision remains a Sponsor decision under DEC-04</td></tr>
+              <tr><td><b>Financial boundary</b></td><td>Approved planning envelope: USD 11.5M CAPEX, USD 3.2M annual OPEX and USD 27.5M five-year TCO; DEC-02 keeps current commitment authority at USD 0 until Sponsor release supported by Finance evidence</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 gives each unresolved decision an interim control, accountable role, required evidence and closure gate</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="s-approach">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Scope Management Approach</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Product scope</h3><p>A governed enterprise AI ecosystem comprising an approved platform/control foundation plus four human-accountable MVPs: internal productivity, customer assistance, lending support and fraud investigator assistance.</p></div>
+          <div class="glass-card"><h3>Project scope</h3><p>Planning, architecture, readiness, MVP delivery, controlled pilots, training, adoption, benefits measurement, evidence-based scale, transition and closure across the approved 24-month roadmap.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Waterfall–Agile boundary:</b> Waterfall governance controls the scope baseline, phase funding, risk acceptance and exit gates. Within an authorized phase, Agile squads may refine stories and solution detail without changing objectives, deliverable boundaries, exclusions, KPIs, budget envelope or roadmap. The backlog is not authority to expand scope.</p></div>
+      </section>
+
+      <section class="panel" id="s-boundaries">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Scope Statement: Drawing the Line</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>In Scope</h3><ol><li>Enterprise AI governance, acceptable-use controls, model oversight and gate evidence.</li><li>Approved platform architecture and API integration layer.</li><li>Data classification, masking, access, retention, lineage and quality controls.</li><li>Internal copilot with approved knowledge, templates and human verification.</li><li>Customer assistant for approved inquiries, intelligent intake and designed human handoff.</li><li>Lending completeness/risk summaries for human decisions.</li><li>Fraud alert prioritization and investigator assistance.</li><li>Logging, audit, monitoring, fallback, incident and support arrangements.</li><li>Training, communications, champions and adoption measurement.</li><li>Benefits baselines, controlled scale, operations transition and closure.</li></ol></div>
+          <div class="glass-card"><h3>Out of Scope</h3><ol><li>Autonomous loan, credit or pricing decisions.</li><li>Unsupervised financial advice or unapproved regulated communications.</li><li>Automatic account blocking, freezing or adverse customer action.</li><li>Core-banking, CRM, loan or fraud-system replacement.</li><li>Ungated production scale.</li><li>Unapproved personal-data reuse, opaque operation or removal of human accountability.</li><li>New use cases, regions or business units without change approval.</li><li>Immediate commitment of the full five-year TCO.</li><li>Vendor/product selection before sourcing, assurance evidence and Sponsor approval.</li></ol></div>
+        </div>
+      </section>
+
+      <section class="panel" id="s-deliverables">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Controlled Deliverables &amp; Milestone Alignment</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Controlled deliverable</th><th>Window</th><th>Minimum completion evidence</th><th>Functional evidence / consolidated approval</th></tr></thead>
+            <tbody>
+              <tr><td>D1</td><td>Initiation and planning baselines</td><td>M01–02</td><td>Approved decision/charter; governance actions; stakeholder, scope, schedule, risk and benefit baselines</td><td>PM assembles evidence; Sponsor approves</td></tr>
+              <tr><td>D2</td><td>Enterprise AI governance and architecture foundation</td><td>M03–04</td><td>Governance model, target architecture, data/control design, roadmap and gate checklist</td><td>CIO/control functions validate evidence; Sponsor approves</td></tr>
+              <tr><td>D3</td><td>Internal productivity copilot MVP</td><td>M05–07</td><td>Controlled pilot, approved knowledge/prompt library, access, human-verification, training and measures</td><td>Copilot Product Owner and Risk/Security validate evidence; Sponsor approves</td></tr>
+              <tr><td>D4</td><td>Customer digital assistant MVP</td><td>M08–11</td><td>Approved knowledge/journeys, handoff, privacy/security, audit trail, pilot and measures</td><td>Retail/Contact Centre Product Owner and controls validate evidence; Sponsor approves</td></tr>
+              <tr><td>D5</td><td>Lending decision-support MVP</td><td>M12–15</td><td>Completeness/risk summaries only, explainability, override/audit and human decision authority</td><td>Lending Product Owner and Credit Risk/Compliance validate evidence; Sponsor approves</td></tr>
+              <tr><td>D6</td><td>Fraud investigator-assist MVP</td><td>M16–18</td><td>Alert prioritization, calibrated thresholds, investigator review, audit and no automatic action</td><td>Fraud Product Owner and Financial Crime/Risk validate evidence; Sponsor approves</td></tr>
+              <tr><td>D7</td><td>Scale, operational transition and closure</td><td>M19–24</td><td>Gate-approved scale, support, knowledge transfer, benefit review, lessons and closure report</td><td>Operations owners validate transition evidence; Sponsor approves</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="s-wbs">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Work Breakdown Structure</h2></div>
+        <p class="panel-lede">The deliverable-oriented Level 1–2 WBS decomposes the complete approved scope into eight branches and 48 non-duplicative Level-2 components. These are scope components—not schedule activities; the approved milestone windows and detailed schedule control execution sequence. Work packages and Agile stories may be added below Level 2 only after ownership, estimates and acceptance methods are confirmed.</p>
+        <div class="wbs-grid">
+          <div class="wbs-branch"><span class="wbs-code">1.0</span><h3>Programme Management &amp; Governance</h3><ul><li>1.1 Authorization and delegation baseline</li><li>1.2 Integrated management baselines</li><li>1.3 Governance and decision-control framework</li><li>1.4 Hybrid delivery and release-control model</li><li>1.5 Assurance, reporting and records framework</li><li>1.6 Funding, procurement and benefits-control framework</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">2.0</span><h3>Enterprise AI Foundation</h3><ul><li>2.1 Responsible-AI governance framework</li><li>2.2 Target solution and integration architecture</li><li>2.3 Vendor, platform and contractual readiness package</li><li>2.4 Governed data foundation</li><li>2.5 Security, privacy, compliance and resilience controls</li><li>2.6 Model operations, monitoring, incident and audit capability</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">3.0</span><h3>Internal Copilot MVP</h3><ul><li>3.1 Approved use-case and requirements baseline</li><li>3.2 Governed knowledge corpus and content stewardship</li><li>3.3 Prompt, template and response-control library</li><li>3.4 Identity, access, logging and human-verification controls</li><li>3.5 Configured copilot MVP and assurance evidence</li><li>3.6 Pilot adoption, productivity and acceptance package</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">4.0</span><h3>Customer Digital Assistant MVP</h3><ul><li>4.1 Approved service-intent and journey baseline</li><li>4.2 Governed customer knowledge and disclosure corpus</li><li>4.3 Identity, authentication, consent and privacy boundary</li><li>4.4 Intelligent intake, orchestration and human-handoff capability</li><li>4.5 Configured customer-assistant MVP and assurance evidence</li><li>4.6 Controlled pilot, service performance and acceptance package</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">5.0</span><h3>Lending Support MVP</h3><ul><li>5.1 Approved lending use-case and requirements baseline</li><li>5.2 Controlled document-intake and completeness capability</li><li>5.3 Traceable risk-summary and evidence-presentation capability</li><li>5.4 Explainability, fairness, override and human-decision controls</li><li>5.5 Configured lending-support MVP and assurance evidence</li><li>5.6 Human-authorized pilot, rework performance and acceptance package</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">6.0</span><h3>Fraud Investigator-Assist MVP</h3><ul><li>6.1 Approved fraud use-case and signal baseline</li><li>6.2 Governed fraud data and case-integration capability</li><li>6.3 Alert-prioritization and investigator-triage capability</li><li>6.4 Threshold, explanation, override and no-automatic-action controls</li><li>6.5 Configured investigator-assist MVP and assurance evidence</li><li>6.6 Investigator pilot, false-positive performance and acceptance package</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">7.0</span><h3>Change, Adoption &amp; Benefits</h3><ul><li>7.1 Stakeholder-impact and readiness baseline</li><li>7.2 Communications and engagement package</li><li>7.3 Role-based learning and performance-support package</li><li>7.4 Champion, service-desk and adoption-support network</li><li>7.5 KPI, baseline and benefits-measurement framework</li><li>7.6 Adoption, outcome and benefits-realization evidence</li></ul></div>
+          <div class="wbs-branch"><span class="wbs-code">8.0</span><h3>Scale, Transition &amp; Closure</h3><ul><li>8.1 Consolidated pilot evidence and scale recommendation</li><li>8.2 Sponsor-approved scale and release package</li><li>8.3 Production deployment and stabilization package</li><li>8.4 Operating model, support and service-transition package</li><li>8.5 Knowledge-transfer, residual-risk and benefits-handover package</li><li>8.6 Lessons, archive, closure and post-implementation-review package</li></ul></div>
+        </div>
+        <h3 class="section-title">Provisional WBS accountability</h3>
+        <p class="panel-lede">One accountable role is identified at each major control point. Role-holder names, delegated limits and acceptance thresholds remain subject to confirmation where stated.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>WBS control point</th><th>Accountable role</th><th>Responsible coordination</th><th>Confirmation status</th></tr></thead>
+            <tbody>
+              <tr><td>1.0 Programme management and governance</td><td>Project Sponsor; Steering advises unless expressly delegated</td><td>Salman Zaman &mdash; Project/Program Manager</td><td>Interim boundary active; delegation closes through DEC-03</td></tr>
+              <tr><td>2.0 Enterprise AI foundation</td><td>CIO / Enterprise Architecture</td><td>Technical, Data, Security and control leads</td><td>Appointments and functional evidence close through DEC-05/DEC-10 before foundation acceptance</td></tr>
+              <tr><td>3.0 Internal copilot MVP</td><td>COO / Copilot Product Owner</td><td>Copilot squad and Change Lead</td><td>Product Owner appointment closes through DEC-05 before requirements acceptance</td></tr>
+              <tr><td>4.0 Customer digital assistant MVP</td><td>Retail Banking / Digital Product Owner</td><td>Digital-assistant squad and Contact Centre</td><td>Product Owner appointment closes through DEC-05 before requirements acceptance</td></tr>
+              <tr><td>5.0 Lending support MVP</td><td>Lending Product Owner</td><td>Lending squad, Credit Operations and Credit Risk</td><td>Product Owner appointment closes through DEC-05 before requirements acceptance</td></tr>
+              <tr><td>6.0 Fraud investigator-assist MVP</td><td>Fraud Product Owner</td><td>Fraud squad, investigators and Financial Crime</td><td>Product Owner appointment closes through DEC-05 before requirements acceptance</td></tr>
+              <tr><td>7.1 Change and training</td><td>COO / designated Change authority</td><td>Change, HR and Learning &amp; Development</td><td>Change authority closes through DEC-05 before the first readiness baseline</td></tr>
+              <tr><td>7.2 Benefits and performance</td><td>CFO</td><td>Finance, Product Owners and PM</td><td>Measurement/benefit rules close through DEC-08 before pilot baselines freeze</td></tr>
+              <tr><td>8.0 Scale, transition and closure</td><td>Project Sponsor</td><td>PM plus business and IT operations owners</td><td>Advisory/delegated terms and risk evidence close through DEC-04/DEC-11 before pilot or scale</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="s-acceptance">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Acceptance Criteria &amp; Objective Traceability</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Approved objective</th><th>Deliverable / milestone</th><th>Acceptance evidence</th><th>Functional evidence owner</th></tr></thead>
+            <tbody>
+              <tr><td><b>35%</b> reduction in repetitive customer inquiries</td><td>D4 / M08–11</td><td>Approved baseline/window; target demonstrated or governed gate decision; knowledge, handoff and audit evidence complete</td><td>Head of Contact Centre / Digital Product Owner</td></tr>
+              <tr><td><b>30%</b> reduction in internal report-preparation time</td><td>D3 / M05–07</td><td>Comparable time study; approved use cases, knowledge, access and human-verification guidance</td><td>COO / Copilot Product Owner</td></tr>
+              <tr><td><b>35%</b> reduction in lending-documentation rework</td><td>D5 / M12–15</td><td>Defined baseline/result; traceable summaries; human credit authority and override record</td><td>Head of Lending Operations / Credit Risk</td></tr>
+              <tr><td><b>25%</b> reduction in fraud false positives in pilot scope</td><td>D6 / M16–18</td><td>Agreed labelled sample; parallel monitoring and investigator review; no automatic account action</td><td>Head of Fraud Operations / Financial Crime Risk</td></tr>
+              <tr><td><b>&gt;60%</b> adoption in target user groups</td><td>D3–D7</td><td>Defined eligible population and active-use rule; dashboard; training and support readiness</td><td>Change Lead / Product Owner</td></tr>
+              <tr><td><b>Zero</b> critical compliance breaches during pilots</td><td>D2–D7</td><td>Approved severity definition; complete control checklist; incident/audit records</td><td>CRO / Compliance / Privacy / Security</td></tr>
+              <tr><td>Positive NPV within five-year planning horizon</td><td>D1 / D7</td><td>Finance-approved timing, baselines and attribution supporting the investment case</td><td>CFO</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="section-title">Operational measures required by the scope instruction</h3>
+        <p class="panel-lede">PTB-DEC-001 defines each formula and closure authority. Source-approved targets remain binding; proposed guardrails are explicitly labelled and route to the Sponsor under DEC-08 after functional evidence review.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Measure</th><th>Baseline / threshold status</th><th>Functional evidence input</th><th>Evidence method</th></tr></thead>
+            <tbody>
+              <tr><td>Inquiry deflection</td><td>Diagnostic formula defined; no separate source-approved target</td><td>Contact Centre Product Owner + Finance</td><td>Eligible assisted sessions resolved without human contact divided by all eligible assisted sessions</td></tr>
+              <tr><td>Human-handoff accuracy</td><td><span class="badge amber">PROPOSED &ge;95% &middot; DEC-08 CONFIRMATION</span></td><td>Contact Centre Operations + Risk + CX</td><td>Labelled sample of destination, context-transfer and recovery correctness</td></tr>
+              <tr><td>CSAT movement</td><td><span class="badge amber">PROPOSED: NO DETERIORATION FROM APPROVED BASELINE</span></td><td>Customer Experience + Product Owner</td><td>Like-for-like CSAT with response volume, segment mix, complaints and accessibility review</td></tr>
+              <tr><td>Audit-trail completeness</td><td>Proposed 100% mandatory fields; any missing critical field fails the gate</td><td>Security + Privacy + Model Risk + assurance role</td><td>Trace source/input, model/version, output, identity, human action/override, escalation and retention</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Gate rule:</b> no use case scales merely because a sprint is complete. The Product Owner and applicable control functions validate the evidence; the Sponsor makes the consolidated progression decision.</p></div>
+      </section>
+
+      <section class="panel" id="s-controls">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Assumptions, Constraints, Validation &amp; Change Control</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Assumptions to validate</h3><ul><li>Sponsorship and phased funding remain available</li><li>Systems expose usable APIs</li><li>Compliance supports human-supervised pilots</li><li>Owners provide capacity, data, content and baselines</li><li>Finance validates source estimates and cash-flow phasing</li></ul></div>
+          <div class="glass-card"><h3>Constraints</h3><ul><li>Approved 24-month roadmap</li><li>Approved planning $11.5M CAPEX / $27.5M TCO; DEC-02 keeps commitment authority at $0 until Sponsor release</li><li>Canadian regulatory applicability closes through DEC-09</li><li>PM delegation and Steering advisory/delegated terms close through DEC-03/DEC-04</li><li>Human accountability and gates are non-negotiable</li></ul></div>
+          <div class="glass-card"><h3>Dependencies</h3><ul><li>Detailed governance and architecture evidence</li><li>Vendor selection and due diligence</li><li>Data, privacy, security and model-risk review</li><li>System integration readiness</li><li>Business, training, Finance and operations capacity</li></ul></div>
+        </div>
+        <h3 class="section-title">Controlled change workflow</h3>
+        <div class="process-flow" aria-label="Seven-step scope change-control workflow">
+          <div class="process-step"><strong>01 &middot; LOG</strong><span>Record request, rationale, requestor and affected baseline</span></div>
+          <div class="process-step"><strong>02 &middot; TRIAGE</strong><span>Check completeness and urgency; backlog item is not authority</span></div>
+          <div class="process-step"><strong>03 &middot; ASSESS</strong><span>Test scope, value, schedule, cost, risk, controls and people impact</span></div>
+          <div class="process-step"><strong>04 &middot; REVIEW</strong><span>Obtain specialist evidence for affected control boundaries</span></div>
+          <div class="process-step"><strong>05 &middot; DECIDE</strong><span>Sponsor approves, rejects or defers with conditions</span></div>
+          <div class="process-step"><strong>06 &middot; REBASELINE</strong><span>Update WBS, schedule, cost, registers, backlog and acceptance</span></div>
+          <div class="process-step"><strong>07 &middot; VERIFY</strong><span>Confirm implementation, evidence and closure</span></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Interim authority rule:</b> until PM delegation and thresholds are approved, every baseline change routes to the Sponsor. Autonomous decisions/advice/account action, a new use case, a material KPI change, roadmap extension or TCO change requires formal Sponsor approval and, where material, an amended Business Case and Charter.</p></div>
+        <h3 class="section-title">Project/Program Manager working-role boundary</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Permitted working responsibility</th><th>Reserved until formal Sponsor delegation or evidence-backed Sponsor decision</th></tr></thead>
+            <tbody>
+              <tr><td>Maintain draft planning baselines, traceability and registers</td><td>Commit or release funds</td></tr>
+              <tr><td>Convene workshops and coordinate designated functions</td><td>Engage or contract a vendor</td></tr>
+              <tr><td>Prepare impact assessments, recommendations and gate packs</td><td>Direct bank staff outside approved assignments</td></tr>
+              <tr><td>Record decisions, evidence, issues and escalations</td><td>Approve material scope, KPI, roadmap or TCO changes</td></tr>
+              <tr><td>Coordinate acceptance evidence and report status</td><td>Accept regulatory, privacy, security, model or residual risk</td></tr>
+              <tr><td>Recommend stop, remediate, continue, scale or close</td><td>Authorize a pilot, production release or scale decision unless expressly delegated</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="section-title">Definition of a valid scope baseline</h3>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Complete</b><span>Every charter scope item appears once in the statement and WBS; exclusions do not appear as planned work.</span></div>
+          <div class="definition-item"><b>Traceable</b><span>Every deliverable maps to a milestone, functional evidence owner, Sponsor decision route and approved outcome.</span></div>
+          <div class="definition-item"><b>Controlled</b><span>Open decisions have an interim control, accountable role, required evidence and closure gate in PTB-DEC-001.</span></div>
+        </div>
+        <div class="doc-footer"><span>PTB-SCOPE-001 &middot; Version 1.0 &middot; Planning baseline</span><span>Aligned to PTB-STK-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
       </section>
     </div>
 
@@ -2226,9 +3018,9 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         <div class="revision-body">
           <div class="revision-meta">
             <div><span>Review trigger</span><strong>Assignment connection and missing content</strong></div>
-            <div><span>Revision</span><strong>Source-Locked / Charter 1.0 Draft</strong></div>
+            <div><span>Revision</span><strong>Planning Pack 2.0 / 2 August 2026</strong></div>
             <div><span>Project Sponsor</span><strong>Sheikh Moeen Akhtar</strong></div>
-            <div><span>Authorization</span><strong>Draft &middot; external approvals pending</strong></div>
+            <div><span>Authorization</span><strong>Sponsor approved &middot; planning authorized &middot; execution controls open</strong></div>
           </div>
           <p>The submission was reconciled to the supplied Pole Trust Bank BC/FS package and Project Charter reference. The principal corrections are summarized below; the linked sponsor-review register contains the complete non-UI evidence trail.</p>
           <div class="table-wrap">
@@ -2243,11 +3035,13 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
                 <tr><td>Financial reconciliation</td><td>Reconciled all five source rows and separated CAPEX, OPEX, TCO, NPV, ROI and illustrative payback.</td><td><span class="badge go">RESOLVED</span></td></tr>
                 <tr><td>Charter structure and length</td><td>Mapped all six elements and produced an exact four-page A4 charter.</td><td><span class="badge go">RESOLVED</span></td></tr>
                 <tr><td>Objectives and roles</td><td>Restored exact source KPIs; named Sheikh Moeen Akhtar as Sponsor and used designations for others.</td><td><span class="badge go">RESOLVED</span></td></tr>
-                <tr><td>Authority and approval</td><td>Separated review endorsement from PM assignment, authority limits, funding release and signatures.</td><td><span class="badge amber">PENDING EXTERNAL ACTION</span></td></tr>
+                <tr><td>Authority and approval</td><td>Applied consolidated Sponsor approval to the submitted baseline while separating it from later PM delegation, execution evidence and funding release.</td><td><span class="badge amber">PENDING SPONSOR DECISIONS</span></td></tr>
+                <tr><td>Sponsor decision evidence</td><td>Recorded Sheikh Akhtar's 1 August 2026 email approval and authorization to proceed next without implying an unstated funding release.</td><td><span class="badge go">RESOLVED</span></td></tr>
+                <tr><td>Document 3 &mdash; Stakeholders</td><td>Added 29 non-duplicative stakeholder role groups, power–interest analysis, evidence-aware stances, engagement actions, provisional RACI and monthly/event-driven review.</td><td><span class="badge go">COMPLETE FOR REVIEW</span></td></tr>
+                <tr><td>Document 4 &mdash; Scope</td><td>Added Pair 5 boundaries, seven deliverables, Level 1–2 WBS, acceptance traceability, decision-controlled operational measures and change workflow.</td><td><span class="badge go">COMPLETE FOR REVIEW</span></td></tr>
               </tbody>
             </table>
           </div>
-          <a class="revision-link" href="03%20-%20Sponsor%20Feedback%20Response%20and%20Requirements%20Traceability.pdf">Open complete sponsor-review register &rarr;</a>
         </div>
       </details>
     </section>
@@ -2261,15 +3055,15 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         <div class="pc-logo"><img src="NED Logo.jfif" alt="NED University official logo"></div>
         <div class="pc-brand-label">Assigned by<strong>NED University of Engineering &amp; Technology</strong>Karachi, Pakistan</div>
       </div>
-      <div class="pc-doc-meta"><strong>Project Charter</strong>PTB-CHARTER-001 &middot; Version 1.0 Draft<br>Page 1 of 4 &middot; 31 July 2026</div>
+      <div class="pc-doc-meta"><strong>Project Charter</strong>PTB-CHARTER-001 &middot; Approved baseline 1.0<br>Page 1 of 4 &middot; Local control overlay 2 August 2026</div>
     </header>
 
-    <div class="pc-kicker">Draft &middot; Decision and authorization document</div>
+    <div class="pc-kicker">Baseline Sponsor approved &middot; Local control overlay for review</div>
     <h1 class="pc-title">Integrated AI Banking<br>Implementation Ecosystem</h1>
     <p class="pc-subtitle">A gated, human-accountable programme for customer service, employee productivity, lending support and fraud-investigation assistance at Pole Trust Bank, the synthetic Canadian classroom case supplied in the capstone package.</p>
 
     <div class="pc-status-strip">
-      <div class="pc-stat"><span>Charter status</span><strong id="print-charter-status">Draft &mdash; Pending Approval</strong></div>
+      <div class="pc-stat"><span>Charter status</span><strong id="print-charter-status">Baseline Approved &mdash; Overlay for Review</strong></div>
       <div class="pc-stat"><span>CAPEX ceiling</span><strong>USD 11.5M</strong></div>
       <div class="pc-stat"><span>Five-year TCO</span><strong>USD 27.5M</strong></div>
       <div class="pc-stat"><span>Roadmap</span><strong>24 months</strong></div>
@@ -2281,8 +3075,8 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         <tbody>
           <tr><td><strong>Organization / case</strong></td><td>Pole Trust Bank &middot; Synthetic Canadian instructional dataset</td></tr>
           <tr><td><strong>Project sponsor</strong></td><td>Sheikh Moeen Akhtar</td></tr>
-          <tr><td><strong>Project manager</strong></td><td>Project Manager &middot; assignee pending before authorization</td></tr>
-          <tr><td><strong>Approval state</strong></td><td>Proposal only; no delivery or spending authority until Section 6 is completed</td></tr>
+          <tr><td><strong>Project/Program Manager</strong></td><td>Salman Zaman &middot; working role accepted; interim boundary active under DEC-03</td></tr>
+          <tr><td><strong>Approval state</strong></td><td>Consolidated Sponsor approval for the submitted baseline; delivery and spending remain controlled by DEC-02, DEC-03 and evidence-backed Sponsor gates</td></tr>
         </tbody>
       </table>
     </section>
@@ -2312,7 +3106,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         <div class="pc-logo"><img src="NED Logo.jfif" alt="NED University official logo"></div>
         <div class="pc-brand-label">Pole Trust Bank<strong>Integrated AI Ecosystem</strong>Concise authorization charter</div>
       </div>
-      <div class="pc-doc-meta"><strong>Scope and schedule</strong>PTB-CHARTER-001 &middot; Version 1.0 Draft<br>Page 2 of 4</div>
+      <div class="pc-doc-meta"><strong>Scope and schedule</strong>PTB-CHARTER-001 &middot; Baseline 1.0 / overlay 2 Aug<br>Page 2 of 4</div>
     </header>
 
     <section class="pc-section">
@@ -2337,7 +3131,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
             <li>Automatic account blocking without authorized human review.</li>
             <li>Wholesale core-banking replacement.</li>
             <li>Enterprise scale-up before security, risk, value and adoption gates pass.</li>
-            <li>Detailed WBS, backlog or procurement commitments before charter approval.</li>
+            <li>Execution or procurement commitments before delegated authority and funding approval.</li>
           </ul>
         </div>
       </div>
@@ -2370,19 +3164,19 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         <div class="pc-logo"><img src="NED Logo.jfif" alt="NED University official logo"></div>
         <div class="pc-brand-label">Pole Trust Bank<strong>Integrated AI Ecosystem</strong>Concise authorization charter</div>
       </div>
-      <div class="pc-doc-meta"><strong>Budget, risk and assumptions</strong>PTB-CHARTER-001 &middot; Version 1.0 Draft<br>Page 3 of 4</div>
+      <div class="pc-doc-meta"><strong>Budget, risk and assumptions</strong>PTB-CHARTER-001 &middot; Baseline 1.0 / overlay 2 Aug<br>Page 3 of 4</div>
     </header>
 
     <section class="pc-section">
       <div class="pc-section-head"><span>Element 3B</span>Budget envelope and release control</div>
       <table class="pc-table">
-        <thead><tr><th>Financial boundary</th><th>Draft planning value</th><th>Authorization meaning</th></tr></thead>
+        <thead><tr><th>Financial boundary</th><th>Planning value</th><th>Authorization meaning</th></tr></thead>
         <tbody>
           <tr><td><strong>CAPEX ceiling</strong></td><td>USD 11.5M</td><td>Programme build envelope; subject to stage-gated release</td></tr>
           <tr><td><strong>Annual run-rate OPEX</strong></td><td>USD 3.2M</td><td>Planning estimate after implementation</td></tr>
           <tr><td><strong>Five-year OPEX</strong></td><td>USD 16.0M</td><td>Five annual periods used in the business-case model</td></tr>
           <tr class="pc-total"><td><strong>Five-year TCO ceiling</strong></td><td>USD 27.5M</td><td>CAPEX plus five-year OPEX; not an immediate spending release</td></tr>
-          <tr><td><strong>Initial funding release</strong></td><td>Not yet authorized</td><td>Amount must be entered and signed in Section 6</td></tr>
+          <tr><td><strong>Initial funding release</strong></td><td>USD 0 currently authorized</td><td>DEC-02 requires Sponsor approval after CFO validation</td></tr>
         </tbody>
       </table>
     </section>
@@ -2402,7 +3196,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
     </section>
 
     <section class="pc-section">
-      <div class="pc-section-head"><span>Assumptions</span>Conditions to validate before approval</div>
+      <div class="pc-section-head"><span>Assumptions</span>Conditions to validate before execution</div>
       <div class="pc-box">
         <ul>
           <li>Project sponsorship by Sheikh Moeen Akhtar, accountable delivery leadership and gated funding will remain available.</li>
@@ -2414,7 +3208,7 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
       </div>
     </section>
 
-    <footer class="pc-footer"><span>Values are draft planning assumptions pending accountable-owner validation</span><span>PTB-CHARTER-001 &middot; Page 3 of 4</span></footer>
+    <footer class="pc-footer"><span>Source planning values retained; Finance validation and stage-gated release remain required</span><span>PTB-CHARTER-001 &middot; Page 3 of 4</span></footer>
   </article>
 
   <article class="pc-page pc-approval-page">
@@ -2423,43 +3217,43 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
         <div class="pc-logo"><img src="NED Logo.jfif" alt="NED University official logo"></div>
         <div class="pc-brand-label">Pole Trust Bank<strong>Integrated AI Ecosystem</strong>Concise authorization charter</div>
       </div>
-      <div class="pc-doc-meta"><strong>Authority and approval</strong>PTB-CHARTER-001 &middot; Version 1.0 Draft<br>Page 4 of 4</div>
+      <div class="pc-doc-meta"><strong>Authority and approval</strong>PTB-CHARTER-001 &middot; Baseline 1.0 / overlay 2 Aug<br>Page 4 of 4</div>
     </header>
 
     <section class="pc-section">
       <div class="pc-section-head"><span>Element 5</span>Project manager authority and accountability</div>
-      <div class="pc-callout"><strong>Authority is inactive.</strong> The sponsor must name the project manager and complete the boundaries below. Until then, this charter remains a recommendation and confers no authority to spend, procure, staff or direct operational change.</div>
+      <div class="pc-callout"><strong>Working ownership is active; delegated execution authority is controlled.</strong> Salman Zaman may coordinate planning, baselines, evidence and escalation. PTB-DEC-001 keeps spending and procurement authority at zero and routes staffing, risk, release and material-change decisions to the Sponsor with relevant functional evidence.</div>
       <table class="pc-table">
-        <thead><tr><th>Authority field</th><th>Required approval entry</th></tr></thead>
+        <thead><tr><th>Authority field</th><th>Active control / Sponsor decision</th></tr></thead>
         <tbody>
           <tr><td><strong>Project sponsor</strong></td><td>Sheikh Moeen Akhtar</td></tr>
-          <tr><td><strong>Project manager</strong></td><td>Project Manager &middot; individual assignee: __________________________________</td></tr>
-          <tr><td><strong>PM decision rights</strong></td><td>Staffing, procurement, budget-variance and change-control limits: ________________________________</td></tr>
-          <tr><td><strong>Stage-gate authority</strong></td><td>Committee, quorum and approve / pause / terminate rights: _______________________________________</td></tr>
-          <tr><td><strong>Escalation threshold</strong></td><td>Cost, schedule, risk and scope thresholds requiring sponsor action: ______________________________</td></tr>
-          <tr><td><strong>Financial authority</strong></td><td>Initial release and delegated approval limit: ___________________________________________________</td></tr>
+          <tr><td><strong>Project manager</strong></td><td>Salman Zaman &middot; working role and planning-baseline custody accepted</td></tr>
+          <tr><td><strong>PM decision rights</strong></td><td>DEC-03 interim boundary active; any additional staffing, procurement, budget or change tolerance requires Sponsor delegation</td></tr>
+          <tr><td><strong>Stage-gate authority</strong></td><td>DEC-04 proposes committee, quorum and reserved decisions for Sponsor approval</td></tr>
+          <tr><td><strong>Escalation threshold</strong></td><td>Zero tolerance for material scope, KPI, roadmap, TCO, specialist-risk or release decisions until DEC-03/DEC-04 approval</td></tr>
+          <tr><td><strong>Financial authority</strong></td><td>USD 0 currently authorized; DEC-02 requires Sponsor release supported by CFO validation</td></tr>
         </tbody>
       </table>
     </section>
 
     <section class="pc-section">
       <div class="pc-section-head"><span>Element 6</span>Approval and sign-off</div>
-      <p class="pc-lede">Approval confirms strategic alignment, accountable designations, stated boundaries and the authorized release below. Without an assigned Project Manager, completed authority fields, dates and signatures, this document is not a mandate to execute.</p>
+      <p class="pc-lede">The Sponsor’s consolidated approval confirms the submitted baseline on behalf of pertinent internal stakeholders. PM delegation, mandatory execution evidence, the specific funding release and effective date remain controlled prerequisites to execution.</p>
       <div class="pc-approval-fields">
-        <div class="pc-approval-field"><strong>Authorized initial release</strong>USD __________________</div>
-        <div class="pc-approval-field"><strong>Approved CAPEX ceiling</strong>USD __________________ (proposed 11.5M)</div>
-        <div class="pc-approval-field"><strong>Approved five-year TCO ceiling</strong>USD __________________ (proposed 27.5M)</div>
-        <div class="pc-approval-field"><strong>Effective date</strong>__________________</div>
+        <div class="pc-approval-field"><strong>Authorized initial release</strong>USD 0 currently; DEC-02 approval entry: USD __________________</div>
+        <div class="pc-approval-field"><strong>Approved planning CAPEX ceiling</strong>USD 11.5M &middot; not a funding release</div>
+        <div class="pc-approval-field"><strong>Approved planning five-year TCO ceiling</strong>USD 27.5M &middot; staged/annual decisions apply</div>
+        <div class="pc-approval-field"><strong>Effective date</strong>DEC-01 Sponsor authorization: __________________</div>
       </div>
     </section>
 
     <div class="pc-signatures">
-      <div class="pc-signature"><strong>Project Sponsor &mdash; Sheikh Moeen Akhtar</strong><span>Signature &middot; Date</span></div>
-      <div class="pc-signature"><strong>Chief Financial Officer</strong><span>Name &middot; Signature &middot; Date</span></div>
-      <div class="pc-signature"><strong>Chief Risk Officer</strong><span>Name &middot; Signature &middot; Date</span></div>
-      <div class="pc-signature"><strong>Chief Information Officer</strong><span>Name &middot; Signature &middot; Date</span></div>
-      <div class="pc-signature"><strong>Project Manager &mdash; acceptance</strong><span>Name &middot; Signature &middot; Date</span></div>
-      <div class="pc-signature"><strong>Additional required approver</strong><span>Name &middot; Role &middot; Signature &middot; Date</span></div>
+      <div class="pc-signature"><strong>Project Sponsor &mdash; Sheikh Moeen Akhtar</strong><span>Email approval recorded &middot; 1 August 2026</span></div>
+      <div class="pc-signature"><strong>Finance baseline concurrence</strong><span>Deemed through Sponsor approval &middot; DEC-02 release open</span></div>
+      <div class="pc-signature"><strong>Risk baseline concurrence</strong><span>Deemed through Sponsor approval &middot; DEC-11 future gate</span></div>
+      <div class="pc-signature"><strong>Architecture baseline concurrence</strong><span>Deemed through Sponsor approval &middot; DEC-10 readiness gate</span></div>
+      <div class="pc-signature"><strong>Project/Program Manager &mdash; Salman Zaman</strong><span>Working role accepted &middot; formal delegation via DEC-03</span></div>
+      <div class="pc-signature"><strong>Other pertinent internal stakeholders</strong><span>Baseline approval deemed through the Project Sponsor</span></div>
     </div>
 
     <div class="pc-callout" style="margin-top:4mm;margin-bottom:0;"><strong>Record integrity:</strong> the interactive reviewer console records a useful browser-based review trail, but it is not a cryptographic signature and does not replace this formal authorization.</div>
@@ -2474,7 +3268,50 @@ html[data-theme="dark"] .sidebar-heading{border-color:rgba(255,255,255,.08);}
 var searchHits=[];
 var currentSearchHit=-1;
 var searchTimer;
-var REVIEW_KEY='ptb-capstone-review-v1';
+var REVIEW_KEY='ptb-capstone-review-v2';
+var SPONSOR_APPROVAL={
+  decision:'approved',
+  reviewer:'Sheikh Akhtar',
+  role:'Project Sponsor / Course Trainer',
+  comments:'Perfect, thanks Salman sb. Its approved, please proceed next.',
+  timestamp:'2026-08-01T03:07:00+05:00'
+};
+
+function setNavigation(open,restoreFocus){
+  var sidebar=document.getElementById('document-navigation');
+  var toggle=document.getElementById('app-nav-toggle');
+  if(!sidebar||!toggle){return;}
+  sidebar.classList.toggle('open',open);
+  sidebar.setAttribute('aria-hidden',String(!open));
+  sidebar.inert=!open;
+  toggle.setAttribute('aria-expanded',String(open));
+  toggle.setAttribute('aria-label',(open?'Close':'Open')+' document navigation');
+  var label=toggle.querySelector('.nav-toggle-label');
+  if(label){label.textContent=open?'Close':'Navigation';}
+  document.body.classList.toggle('nav-open',open);
+  if(open){
+    var closeButton=sidebar.querySelector('.sidebar-close');
+    if(closeButton){closeButton.focus({preventScroll:true});}
+  }else if(restoreFocus){
+    toggle.focus({preventScroll:true});
+  }
+}
+
+function toggleNavigation(){
+  var sidebar=document.getElementById('document-navigation');
+  setNavigation(!(sidebar&&sidebar.classList.contains('open')),false);
+}
+
+function prepareResponsiveTables(){
+  document.querySelectorAll('.table-wrap table').forEach(function(table){
+    var headers=Array.from(table.querySelectorAll('thead th')).map(function(header){return header.textContent.trim();});
+    table.querySelectorAll('tbody tr').forEach(function(row){
+      Array.from(row.children).filter(function(cell){return cell.tagName==='TD';}).forEach(function(cell,index){
+        cell.setAttribute('data-label',headers[index]||'Detail');
+      });
+    });
+  });
+}
 
 function switchDoc(doc,shouldScroll){
   document.querySelectorAll('.doc-page').forEach(function(page){page.classList.remove('active');});
@@ -2485,10 +3322,27 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  document.getElementById('toc-charter').style.display=doc==='charter'?'flex':'none';
-  document.getElementById('toc-business').style.display=doc==='business'?'flex':'none';
-  document.querySelector('.sidebar').classList.remove('open');
+  ['business','charter','stakeholders','scope'].forEach(function(name){
+    var toc=document.getElementById('toc-'+name);
+    if(toc){toc.style.display=doc===name?'flex':'none';}
+  });
+  setNavigation(false,false);
   if(shouldScroll!==false){window.scrollTo({top:0,behavior:'smooth'});}
+}
+
+function activateLocationDocument(){
+  var requested='';
+  var target=null;
+  try{requested=new URLSearchParams(window.location.search).get('doc')||'';}catch(e){}
+  if(window.location.hash){
+    target=document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    var containingPage=target&&target.closest('.doc-page');
+    if(containingPage){requested=containingPage.id.replace('page-','');}
+  }
+  if(['business','charter','stakeholders','scope'].indexOf(requested)>=0){
+    switchDoc(requested,false);
+    if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
+  }
 }
 
 function setTheme(theme,persist){
@@ -2570,7 +3424,7 @@ function goToSearchHit(index){
   if(disclosure){disclosure.open=true;}
   var page=hit.closest('.doc-page');
   if(page&&!page.classList.contains('active')){
-    switchDoc(page.id==='page-charter'?'charter':'business',false);
+    switchDoc(page.id.replace('page-',''),false);
   }
   updateSearchMeta();
   requestAnimationFrame(function(){hit.scrollIntoView({behavior:'smooth',block:'center'});});
@@ -2586,7 +3440,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
@@ -2611,9 +3465,9 @@ function reviewConfiguration(decision){
       charterBadge:'DRAFT — PENDING APPROVAL',footer:'Pole Trust Bank Integrated AI Ecosystem — Pending Approval',tone:'revision'
     },
     approved:{
-      business:'Endorsed',charter:'Review approved',live:'Review approved',
-      selection:'SELECTION ENDORSED',selectionCopy:'Pair 5 selection is endorsed for completion of the formal charter and validation gates.',
-      charterBadge:'REVIEW APPROVED — SIGNATURES PENDING',footer:'Pole Trust Bank Integrated AI Ecosystem — Review Approved / Signatures Pending',tone:'approved'
+      business:'Approved',charter:'Baseline approved',live:'Sponsor approved',
+      selection:'PAIR 5 APPROVED',selectionCopy:'The Sponsor approved the selection, BC/FS and Project Charter on 1 August 2026 and directed progression into planning.',
+      charterBadge:'BASELINE APPROVED — CONTROL OVERLAY FOR REVIEW',footer:'Pole Trust Bank Integrated AI Ecosystem — Baseline Approved / Control Overlay for Review',tone:'approved'
     },
     revision:{
       business:'Revision',charter:'Returned',live:'Returned for revision',
@@ -2709,21 +3563,26 @@ document.querySelectorAll('.decision-btn[data-decision]').forEach(function(butto
   button.addEventListener('click',function(){saveReviewDecision(button.dataset.decision);});
 });
 document.getElementById('clear-review').addEventListener('click',function(){
-  if(!window.confirm('Clear the locally saved review decision and return both artifacts to pending review?')){return;}
+  if(!window.confirm('Clear any later browser-local review and restore the documented Sponsor approval baseline?')){return;}
   try{localStorage.removeItem(REVIEW_KEY);}catch(e){}
-  document.getElementById('reviewer-name').value='';
-  document.getElementById('reviewer-role').value='';
-  document.getElementById('review-comments').value='';
-  applyReviewState(null);
-  showToast('Saved review decision cleared; artifacts returned to pending review.');
+  document.getElementById('reviewer-name').value=SPONSOR_APPROVAL.reviewer;
+  document.getElementById('reviewer-role').value=SPONSOR_APPROVAL.role;
+  document.getElementById('review-comments').value=SPONSOR_APPROVAL.comments;
+  applyReviewState(SPONSOR_APPROVAL);
+  showToast('Sponsor approval baseline restored.');
 });
 
 document.querySelectorAll('.toc a').forEach(function(link){
-  link.addEventListener('click',function(){document.querySelector('.sidebar').classList.remove('open');});
+  link.addEventListener('click',function(){setNavigation(false,false);});
 });
 
 document.addEventListener('keydown',function(event){
   var tag=document.activeElement&&document.activeElement.tagName;
+  if(event.key==='Escape'&&document.getElementById('document-navigation').classList.contains('open')){
+    event.preventDefault();
+    setNavigation(false,true);
+    return;
+  }
   if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&tag!=='INPUT'&&tag!=='TEXTAREA'){
     event.preventDefault();
     document.getElementById('global-search').focus();
@@ -2734,9 +3593,12 @@ window.addEventListener('scroll',function(){
   var height=document.documentElement.scrollHeight-window.innerHeight;
   document.getElementById('progress').style.width=(height>0?(window.scrollY/height)*100:0)+'%';
 });
+window.addEventListener('hashchange',activateLocationDocument);
 
 (function initialize(){
   setTheme(document.documentElement.dataset.theme||'light',false);
+  prepareResponsiveTables();
+  setNavigation(false,false);
   var appHeader=document.querySelector('.app-header');
   var syncHeaderHeight=function(){
     document.documentElement.style.setProperty('--app-header-height',(appHeader?appHeader.offsetHeight:0)+'px');
@@ -2746,7 +3608,8 @@ window.addEventListener('scroll',function(){
   window.addEventListener('resize',syncHeaderHeight);
   var record=null;
   try{record=JSON.parse(localStorage.getItem(REVIEW_KEY)||'null');}catch(e){}
-  applyReviewState(record);
+  applyReviewState(record||SPONSOR_APPROVAL);
+  activateLocationDocument();
 })();
 </script>
 </body>

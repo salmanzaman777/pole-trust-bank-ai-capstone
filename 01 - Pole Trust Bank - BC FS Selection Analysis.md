@@ -1,4 +1,4 @@
-# Pole Trust Bank — AI Project Selection, Business Case/Feasibility Study, and Draft Project Charter
+# Pole Trust Bank — Approved AI Project Selection, Business Case/Feasibility Study, Project Charter and Planning Baselines
 
 **Presentation-source edition:** Complete substantive Markdown conversion of “01 - Pole Trust Bank - BC FS Selection Analysis.html”. Interactive navigation, theme/search controls, decorative chart geometry, and the duplicate print-only charter layout are omitted; all decision evidence, figures, assumptions, risks, controls, requirements, and approval fields are retained below.
 
@@ -11,20 +11,20 @@
 | Prepared by                      | [Salman Zaman](https://www.linkedin.com/in/samzam)                                                                          |
 | Project Sponsor / Course Trainer | Sheikh Moeen Akhtar                                                                                                         |
 | Source edition date              | 31 July 2026                                                                                                                |
-| Included documents               | PTB-BCFS-001 selection analysis and BC/FS; PTB-CHARTER-001 draft charter; Appendix A revision and requirements traceability |
+| Included documents               | PTB-BCFS-001 selection analysis and BC/FS; PTB-CHARTER-001 sponsor-approved charter; PTB-STK-001 stakeholder register; PTB-SCOPE-001 scope plan; Appendix A traceability |
 
 Project Selection Analysis · Source-Locked Edition · 31 July 2026
 
 ## Pole Trust Bank AI Project Selection
 
-A traceable comparison of all five Business Case/Feasibility Study pairs, followed by a conditional recommendation to advance Pair 5 into charter approval.
+A traceable comparison of all five Business Case/Feasibility Study pairs. Pair 5 and the Project Charter were approved by the Sponsor on 1 August 2026 for progression into planning.
 
 | Metric                | Value     |
 |-----------------------|-----------|
 | Options Assessed      | 5 / 5     |
 | Pair 5 Weighted Score | 92 / 100  |
 | Pair 5 Five-Year TCO  | USD 27.5M |
-| Review Status         | Draft     |
+| Review Status         | Approved  |
 
 ### Control — Source, Scenario & Decision Status
 
@@ -34,8 +34,9 @@ A traceable comparison of all five Business Case/Feasibility Study pairs, follow
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | Organization and dataset | Pole Trust Bank; 2.1M customers, 4,800 employees, 160 branches and five regional markets, all synthetic.                                      |
 | Decision required        | Select one priority initiative from the five supplied BC/FS pairs.                                                                            |
-| Recommendation status    | CONDITIONAL RECOMMENDATION Pair 5 may proceed to charter approval, subject to validation gates.                                               |
-| Authorization status     | NO EXECUTION AUTHORITY No funding or delivery authority exists until the draft charter is completed and signed.                               |
+| Decision status          | PAIR 5 APPROVED The Sponsor approved the selection, BC/FS and Charter on 1 August 2026 and directed progression into planning.                |
+| Approval interpretation  | Sponsor approval is treated as consolidated approval by all pertinent internal stakeholders for the submitted BC/FS, selection decision and Charter. |
+| Authorization status     | PLANNING AUTHORIZED; Salman Zaman has accepted the working Project/Program Manager role. Formal delegated authority, funding release and execution commitments remain controlled open actions. |
 | Charter design reference | Project Charter — Key Elements.jpeg : purpose/objectives, high-level scope, milestones/budget, top risks/assumptions, authority and approval. |
 
 ### Section 1 — Selection Method & Weighted Criteria
@@ -128,6 +129,7 @@ Pole Trust has fragmented AI experiments without unified governance or benefits 
 -   35% reduction in lending documentation rework.
 -   25% reduction in fraud false positives in pilot scope.
 -   Above 60% adoption in target groups and zero critical compliance breaches during pilots.
+-   Positive NPV within the five-year planning horizon, subject to Finance validation of the benefits model.
 
 #### Market & Operating Context
 
@@ -191,7 +193,7 @@ Green pillars show the explicit student-analysis benefit ramp used to reproduce 
 
 **Formula:** NPV = Σ \[net cash flow<sub>t</sub> / (1 + 0.09)<sup>t</sup>\] = +$9.10M.
 
-**Payback clarification:** the source describes an ROI horizon of 24 months after phased rollout begins, but does not define its anchor or cash-flow timing. The conservative illustrative model above reaches undiscounted cash payback at approximately Month 39 from approval. These are not presented as the same metric; Finance must define and approve one timing convention before the charter can be signed.
+**Payback clarification:** the source describes an ROI horizon of 24 months after phased rollout begins, but does not define its anchor or cash-flow timing. The conservative illustrative model above reaches undiscounted cash payback at approximately Month 39 from approval. These are not presented as the same metric; Finance must define and approve one timing convention before an execution funding authorization is signed.
 
 ### Section 6 — Feasibility Findings & Validation Gates
 
@@ -216,15 +218,15 @@ These references come from the package glossary and feasibility notes. They iden
 
 ### Section 7 — Recommendation & Correct Sequence
 
-**Recommendation:** select Pair 5 as Pole Trust Bank's priority initiative and advance it to **charter approval**. Do not authorize implementation yet. Its 92/100 score, +$9.1M source NPV, diversified impact and enterprise scalability outweigh its higher cost and complexity, provided the validation conditions above are satisfied.
+**Decision outcome:** Pair 5 was selected and approved with its BC/FS and Project Charter by the Sponsor on **1 August 2026**. The approval authorizes progression into planning; execution remains subject to data, finance, regulatory, authority and funding gates.
 
 | Sequence | Decision / Deliverable                                                                                                 | Status                 |
 |----------|------------------------------------------------------------------------------------------------------------------------|------------------------|
 | 1        | Confirm assigned Pole Trust scenario and source dataset.                                                               | **COMPLETE**           |
 | 2        | Assess all five BC/FS options using weighted criteria.                                                                 | **COMPLETE**           |
 | 3        | Validate data, regulatory assumptions and the finance model.                                                           | **OPEN GATE**          |
-| 4        | Assign the Project Manager, complete authority/approval fields and obtain signatures.                                  | **PENDING**            |
-| 5        | Only after approval: develop stakeholder/risk registers, WBS, roadmap, backlog, governance plan and benefits baseline. | **NOT YET AUTHORIZED** |
+| 4        | Record Sponsor approval and Salman Zaman’s working PM role; complete DEC-02 funding and DEC-03 delegation decisions before execution. | **SPONSOR APPROVED / CONTROLS OPEN** |
+| 5        | Develop the stakeholder register and scope/WBS planning baselines.                                                     | **LOCALLY COMPLETE / SPONSOR REVIEW OPEN** |
 
 PTB-BCFS-001 · Source-Locked · 31 July 2026 · [Revision traceability](#revision-appendix)
 
@@ -232,20 +234,20 @@ Pole Trust Bank — Five-Option Selection Analysis
 
 Prepared by: [Salman Zaman](https://www.linkedin.com/in/samzam)
 
-Project Charter · Version 1.0 Draft · 31 July 2026
+Project Charter · Version 1.0 · Sponsor approved 1 August 2026
 
 ## Integrated AI Banking Implementation Ecosystem
 
-A concise draft charter for Pole Trust Bank. It contains the six required charter elements but confers no mandate until the Project Manager is assigned and the designated authorities complete and sign it.
+The Sponsor-approved charter is treated as consolidated approval by all pertinent internal stakeholders for its submitted content. Salman Zaman’s formal delegation, mandatory delivery evidence and the specific initial funding release remain controlled prerequisites to execution.
 
 | Metric                 | Value   |
 |------------------------|---------|
-| Proposed CAPEX         | $11.5M  |
-| Proposed Five-Year TCO | $27.5M  |
+| Approved Planning CAPEX | $11.5M |
+| Approved Planning Five-Year TCO | $27.5M |
 | Delivery Roadmap       | 24 mo.  |
-| Approval Status        | Pending |
+| Approval Status        | Sponsor approved |
 
-### Control — Draft Status & Required Completion
+### Control — Sponsor Approval & Remaining Execution Controls
 
 |                     |                                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------|
@@ -253,10 +255,13 @@ A concise draft charter for Pole Trust Bank. It contains the six required charte
 | **Project**         | Integrated AI Banking Implementation Ecosystem (selected Pair 5)                                          |
 | **Organization**    | Pole Trust Bank, Toronto, Canada — synthetic classroom case                                               |
 | **Project Sponsor** | Sheikh Moeen Akhtar                                                                                       |
-| **Project Manager** | Project Manager — assignee pending                                                                        |
-| **Version / Date**  | 1.0 Draft / 31 July 2026                                                                                  |
-| **Status**          | **DRAFT — PENDING APPROVAL**                                                                              |
-| **Authority**       | None. This document becomes a mandate only after all required fields, dates and signatures are completed. |
+| **Project/Program Manager** | Salman Zaman — working role accepted; formal delegated authority subject to Sponsor approval |
+| **Version / Date**  | Approved baseline 1.0 submitted 31 July 2026 and approved 1 August 2026; local planning-control overlay dated 2 August 2026 |
+| **Status**          | **BASELINE APPROVED — CONTROL OVERLAY FOR REVIEW**                                                       |
+| **Approval evidence** | Sheikh Akhtar email, 1 August 2026: “Perfect, thanks Salman sb. Its approved, please proceed next.”      |
+| **Consolidated approval rule** | Sponsor approval constitutes approval by all pertinent internal stakeholders for the material actually submitted; functional evidence remains mandatory during delivery. |
+| **Configuration note** | Sponsor approval applies to baseline 1.0. The PM designation and PTB-DEC-001 references are a subsequent local control overlay pending formal acceptance. |
+| **Authority boundary** | Planning may proceed; execution commitments await Sponsor-approved PM delegation, mandatory functional evidence and the specific funding release. |
 
 ### Element 1 — Purpose & Measurable Objectives
 
@@ -289,7 +294,7 @@ A concise draft charter for Pole Trust Bank. It contains the six required charte
 -   Automatic account blocking or freezing.
 -   Core-banking replacement.
 -   Enterprise rollout beyond a use case that has not passed its evidence and compliance gate.
--   Detailed planning artifacts before charter approval.
+-   Execution, procurement or production commitments before delegated authority and funding approval.
 
 ### Element 3 — Major Milestones & Budget Envelope
 
@@ -309,12 +314,12 @@ Execution Logic · 24-Month Flightpath
 
 The visual flightpath converts the schedule into seven executive decision moments. Each node represents a controlled evidence gate—not an automatic commitment to the next phase.
 
-| Budget Component     | Proposed Envelope    | Authorization Treatment                                                                                            |
+| Budget Component     | Approved Planning Envelope | Authorization Treatment                                                                                       |
 |----------------------|----------------------|--------------------------------------------------------------------------------------------------------------------|
-| Implementation CAPEX | USD 11.5M            | Proposed lifecycle capital ceiling; not yet authorized.                                                            |
-| Annual OPEX          | USD 3.2M             | Proposed recurring run cost, subject to annual budget approval.                                                    |
-| Five-year TCO        | USD 27.5M            | Full proposed lifecycle envelope: $11.5M CAPEX + $16.0M five-year OPEX.                                            |
-| Initial release      | **To be determined** | The Chief Financial Officer and Project Sponsor must define it after finance validation; this draft authorizes $0. |
+| Implementation CAPEX | USD 11.5M            | Approved planning ceiling; not a funding release.                                                                  |
+| Annual OPEX          | USD 3.2M             | Approved planning run rate, subject to staged and annual funding decisions.                                        |
+| Five-year TCO        | USD 27.5M            | Approved planning lifecycle envelope: $11.5M CAPEX + $16.0M five-year OPEX; not immediate spend.                  |
+| Initial release      | **USD 0 currently authorized** | DEC-02 requires the Project Sponsor to approve a phase-supported amount after Chief Financial Officer validation. |
 
 ### Element 4 — Top Risks & Foundational Assumptions
 
@@ -336,63 +341,63 @@ The visual flightpath converts the schedule into seven executive decision moment
 
 ### Element 5 — Authority & Accountability
 
-**Authority is deliberately inactive.** The named project manager, spending thresholds, escalation rights and stage-gate decision rights must be completed and approved below. Until then, no person is empowered by this draft to commit funds, engage vendors, direct staff or start delivery.
+**Working ownership is active; delegated execution authority is controlled.** Salman Zaman may coordinate planning, baselines, evidence and escalation. Spending, staffing/procurement, material change, risk and stage-gate decisions route to the Sponsor under the consolidated-approval rule.
 
-| Authority Field           | Required Entry Before Approval                                                                  |
+| Authority Field           | Required Entry Before Execution Authority                                                        |
 |---------------------------|-------------------------------------------------------------------------------------------------|
 | Project sponsor           | Sheikh Moeen Akhtar owns sponsorship of the charter and approval outcome.                       |
-| Project manager           | Project Manager designation recorded; individual assignee remains pending before authorization. |
-| Project-manager authority | Approved staffing, procurement and change-control limits.                                       |
-| Stage-gate authority      | Named committee, quorum, decision rights and evidence thresholds.                               |
-| Escalation                | Approved route and response times for risk, compliance, budget and scope exceptions.            |
-| Financial authority       | Initial release, lifecycle ceiling, reserve treatment and delegated transaction limits.         |
+| Project/Program Manager   | Salman Zaman — working role and document custody accepted; interim authority boundary active under DEC-03. |
+| Project-manager authority | DEC-03 interim boundary is active; additional staffing, procurement and change tolerances require Sponsor delegation. |
+| Stage-gate authority      | DEC-04 proposes committee, quorum, reserved decisions and evidence thresholds for Sponsor approval. |
+| Escalation                | Material risk, compliance, budget, scope, KPI, roadmap or release matters route to the Sponsor until DEC-03/DEC-04 approval. |
+| Financial authority       | USD 0 currently authorized; DEC-02 requires Sponsor release supported by CFO validation.        |
 
 ### Element 6 — Approval & Sign-Off
 
-*Without an assigned Project Manager, completed authority fields, dates and signatures, this charter is a proposal, not a mandate.*
+*Sponsor approval closes the selection and charter-review gate and constitutes pertinent internal stakeholder approval for the submitted baseline; it does not invent later execution authority.*
 
-Signing confirms selection of Pair 5, acceptance of the high-level charter, approval of the stated authority limits and the specific initial funding release entered at signature. It does not automatically authorize the entire five-year TCO as an immediate spend.
+The future execution-authorization record will state PM delegation and the specific initial funding release. It does not reopen the approved baseline or automatically authorize the entire five-year TCO as an immediate spend.
 
-| Approval Capacity      | Designation / Named Sponsor        | Signature                        | Date             | Decision         |
-|------------------------|------------------------------------|----------------------------------|------------------|------------------|
-| Project sponsorship    | Sheikh Moeen Akhtar                | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_ | Approve / Reject |
-| Funding authority      | Chief Financial Officer            | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_ | Approve / Reject |
-| Risk authority         | Chief Risk Officer                 | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_ | Approve / Reject |
-| Architecture authority | Chief Information Officer          | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_ | Approve / Reject |
-| Delivery acceptance    | Project Manager — assignee pending | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_ | Accept / Decline |
+| Capacity             | Designation / Named Sponsor            | Baseline record                                      | Date       | Current treatment |
+|----------------------|----------------------------------------|------------------------------------------------------|------------|-------------------|
+| Project sponsorship  | Sheikh Moeen Akhtar                    | Email approval recorded                              | 1 Aug 2026 | Approved / proceed next |
+| Finance evidence     | Chief Financial Officer                | Baseline concurrence deemed through Sponsor approval | 1 Aug 2026 | Specific release remains DEC-02 |
+| Risk evidence        | Chief Risk Officer                     | Baseline concurrence deemed through Sponsor approval | 1 Aug 2026 | Future residual-risk decision remains DEC-11 |
+| Architecture evidence| Chief Information Officer              | Baseline concurrence deemed through Sponsor approval | 1 Aug 2026 | Detailed readiness remains DEC-10 |
+| Delivery acceptance  | Salman Zaman — Project/Program Manager | Working role accepted                                | 2 Aug 2026 | DEC-03 delegation instrument required |
 
 |                                    |                                                                                                  |
 |------------------------------------|--------------------------------------------------------------------------------------------------|
-| **Approved initial release**       | USD \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                                                         |
-| **Approved CAPEX ceiling**         | USD \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ (not to exceed proposed $11.5M without change approval) |
-| **Approved five-year TCO ceiling** | USD \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ (proposed $27.5M, including annual budget approvals)    |
-| **Effective date**                 | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                                                             |
+| **Initial funding release**        | USD 0 currently authorized; DEC-02 approval entry: USD \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_       |
+| **Approved planning CAPEX ceiling** | USD 11.5M — approved baseline envelope, not a funding release                                      |
+| **Approved planning five-year TCO ceiling** | USD 27.5M — lifecycle envelope subject to DEC-02 and annual budget decisions                |
+| **Effective date**                 | DEC-01 Sponsor authorization: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                               |
 
-Reviewer Decision Console
+Approval Evidence and Subsequent Review Console
 
-#### Record a governed review outcome
+#### Sponsor approval is the controlled baseline
 
-These controls create a persistent, timestamped review record and synchronize the visible status of both artifacts. Approval records endorsement of the analysis only; formal signatures, an assigned Project Manager and completed authority and funding fields remain mandatory before execution.
+The baseline record reflects the Sponsor's 1 August 2026 consolidated approval. A later browser-local decision can document a subsequent review, but it does not erase that evidence or substitute for later PM delegation, mandatory execution evidence or funding controls.
 
-Pending review
+Sponsor approved
 
 **Reviewer inputs:** Reviewer name \*; Reviewer role \*; Decision comments (required for revision or rejection).
 
-**Available review actions:** ✓ Approve review; ↺ Revert with comments; ✕ Reject; Clear saved decision.
+**Available review actions:** ✓ Approve review; ↺ Revert with comments; ✕ Reject; Reset to sponsor approval.
 
 |                       |                       |
 |-----------------------|-----------------------|
-| Decision              | Pending review        |
-| Reviewer              | Not recorded          |
-| Role                  | Not recorded          |
-| Timestamp             | Not recorded          |
-| Comments / Conditions | No comments recorded. |
+| Decision              | Sponsor approved      |
+| Reviewer              | Sheikh Akhtar         |
+| Role                  | Project Sponsor / Course Trainer |
+| Timestamp             | 1 August 2026, 3:07 AM |
+| Comments / Conditions | Perfect, thanks Salman sb. Its approved, please proceed next. |
 
-Governance safeguard: browser storage provides a functional review trail for this capstone artifact, but it is not a cryptographic digital signature or a substitute for the formal approval table above.
+Governance safeguard: the email is documented approval evidence. Browser storage supports later review records but is not a cryptographic signature or evidence of an unstated funding release or delegated authority.
 
-PTB-CHARTER-001 · Version 1.0 Draft · [Revision traceability](#revision-appendix)
+PTB-CHARTER-001 · Approved baseline 1.0 / local control overlay 2 August 2026 · [Revision traceability](#revision-appendix)
 
-Pole Trust Bank Integrated AI Ecosystem — Pending Approval
+Pole Trust Bank Integrated AI Ecosystem — Baseline Approved / Control Overlay for Review
 
 Prepared by: [Salman Zaman](https://www.linkedin.com/in/samzam)
 
@@ -401,9 +406,9 @@ Prepared by: [Salman Zaman](https://www.linkedin.com/in/samzam)
 |                 |                                           |
 |-----------------|-------------------------------------------|
 | Review trigger  | Assignment connection and missing content |
-| Revision        | Source-Locked / Charter 1.0 Draft         |
+| Revision        | Planning Pack 2.0 / 2 August 2026         |
 | Project Sponsor | Sheikh Moeen Akhtar                       |
-| Authorization   | Draft · external approvals pending        |
+| Authorization   | Sponsor approved · planning authorized · execution controls open |
 
 The submission was reconciled to the supplied Pole Trust Bank BC/FS package and Project Charter reference. The principal corrections are summarized below; the linked sponsor-review register contains the complete non-UI evidence trail.
 
@@ -417,6 +422,16 @@ The submission was reconciled to the supplied Pole Trust Bank BC/FS package and 
 | Financial reconciliation          | Reconciled all five source rows and separated CAPEX, OPEX, TCO, NPV, ROI and illustrative payback.     | **RESOLVED**                |
 | Charter structure and length      | Mapped all six elements and produced an exact four-page A4 charter.                                    | **RESOLVED**                |
 | Objectives and roles              | Restored exact source KPIs; named Sheikh Moeen Akhtar as Sponsor and used designations for others.     | **RESOLVED**                |
-| Authority and approval            | Separated review endorsement from PM assignment, authority limits, funding release and signatures.     | **PENDING EXTERNAL ACTION** |
+| Authority and approval            | Applied consolidated Sponsor approval to the submitted baseline while separating it from later PM delegation, execution evidence and funding release. | **PENDING SPONSOR DECISIONS** |
+| Sponsor decision evidence         | Recorded the 1 August 2026 approval without implying an unstated funding release.                       | **RESOLVED**                |
+| Document 3 — Stakeholders         | Added 29 non-duplicative role groups, power–interest analysis, actions, RACI and review cycle.          | **COMPLETE FOR REVIEW**     |
+| Document 4 — Scope                | Added boundaries, deliverables, WBS, acceptance traceability and change control.                        | **COMPLETE FOR REVIEW**     |
 
 [Open complete sponsor-review register →](03%20-%20Sponsor%20Feedback%20Response%20and%20Requirements%20Traceability.pdf)
+
+## Planning Documents
+
+- [Document 3 — Stakeholder Register and Analysis](03%20-%20Pole%20Trust%20Bank%20-%20Stakeholder%20Register%20and%20Analysis.md)
+- [Document 4 — Scope Management Plan and Detailed Scope Statement](04%20-%20Pole%20Trust%20Bank%20-%20Scope%20Management%20Plan%20and%20Scope%20Statement.md)
+- [Stakeholder Gaps Review and Resolution Proposal](06%20-%20Pole%20Trust%20Bank%20-%20Stakeholder%20Gaps%20Review%20and%20Resolution%20Proposal.md)
+- [Open Decisions and TBD Closure Register](07%20-%20Pole%20Trust%20Bank%20-%20Open%20Decisions%20and%20TBD%20Closure%20Register.md)
