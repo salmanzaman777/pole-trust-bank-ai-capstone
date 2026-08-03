@@ -73,9 +73,9 @@ The programme includes initiation and planning baselines, governance and archite
 | D6 | Fraud investigator-assist MVP | Months 16–18 | Alert-prioritization pilot, calibrated thresholds, investigator review, audit records and no automatic account action | Fraud Product Owner and Financial Crime/Risk validate evidence; Sponsor approves |
 | D7 | Scale, operational transition and closure | Months 19–24 | Gate-approved scale decisions, support model, knowledge transfer, benefit review, lessons learned and closure report | Operations owners validate transition evidence; Sponsor approves |
 
-## 5. Work Breakdown Structure — Level 1 and Level 2
+## 5. Scope dictionary and Work Breakdown Structure
 
-The deliverable-oriented WBS decomposes the total approved project scope into eight Level-1 branches and 48 non-duplicative Level-2 components. These are scope components, not schedule activities; the approved milestone windows and detailed schedule control execution sequence. Detailed work packages and Agile stories may be added beneath Level 2 after owners, estimates and acceptance methods are confirmed.
+The detailed scope dictionary below retains 48 non-duplicative components for traceability. The executable WBS hierarchy groups the approved scope into eight Level-1 branches, 16 Level-2 major deliverables and 48 Level-3 work packages. The work packages are the lowest planning level shown in this baseline; responsibility assignment, estimating, scheduling and monitoring remain subsequent planning activities.
 
 | WBS | WBS component | Scope content |
 |---|---|---|
@@ -135,6 +135,21 @@ The deliverable-oriented WBS decomposes the total approved project scope into ei
 | 8.4 | Operating model, support and service-transition package | Service ownership, SLAs, support, maintenance, access, model operations and acceptance |
 | 8.5 | Knowledge-transfer, residual-risk and benefits-handover package | Operational knowledge, accepted risks, control ownership and benefits-accountability transfer |
 | 8.6 | Lessons, archive, closure and post-implementation-review package | Lessons, records archive, closure report, contract closure and scheduled post-implementation review |
+
+### 5.1 Level-3 work-package register
+
+Each Level-2 component is decomposed into two initial work packages. These are task-level planning units, not resource, duration or accountability commitments; those attributes will be developed in the next planning activities.
+
+| Level 1 | Level-3 work packages (two per Level-2 component) |
+|---|---|
+| 1.0 Governance | 1.1.1 Confirm Sponsor authorization; 1.1.2 Record delegation limits; 1.2.1 Establish scope baseline; 1.2.2 Establish milestone and cost baseline; 1.3.1 Define decision log; 1.3.2 Configure change and escalation gates; 1.4.1 Define waterfall stage gates; 1.4.2 Define Agile release cadence; 1.5.1 Set reporting cadence; 1.5.2 Establish controlled evidence repository; 1.6.1 Confirm funding controls; 1.6.2 Define procurement and benefit tracking |
+| 2.0 AI foundation | 2.1.1 Approve responsible-AI principles; 2.1.2 Establish model-risk review; 2.2.1 Baseline target architecture; 2.2.2 Define integration interfaces; 2.3.1 Evaluate platform fit; 2.3.2 Complete contract-readiness evidence; 2.4.1 Inventory and assess data quality; 2.4.2 Curate governed data products; 2.5.1 Assess required control set; 2.5.2 Execute control and resilience tests; 2.6.1 Design monitoring measures; 2.6.2 Configure incident and audit workflows |
+| 3.0 Internal Copilot | 3.1.1 Validate internal use cases; 3.1.2 Approve functional requirements; 3.2.1 Source and classify content; 3.2.2 Curate and version knowledge; 3.3.1 Design prompt and template set; 3.3.2 Test response guardrails; 3.4.1 Configure identity and access; 3.4.2 Test logging and human verification; 3.5.1 Build and integrate MVP; 3.5.2 Execute assurance tests; 3.6.1 Run controlled pilot; 3.6.2 Collect productivity and acceptance evidence |
+| 4.0 Customer Assistant | 4.1.1 Validate service intents; 4.1.2 Approve customer journeys; 4.2.1 Source and classify customer content; 4.2.2 Approve disclosures and versioning; 4.3.1 Define authentication flow; 4.3.2 Test consent and privacy controls; 4.4.1 Configure intake and routing; 4.4.2 Test handoff accuracy; 4.5.1 Build and integrate assistant; 4.5.2 Execute service and safety tests; 4.6.1 Run controlled customer pilot; 4.6.2 Collect service and acceptance evidence |
+| 5.0 Lending Support | 5.1.1 Validate lending use cases; 5.1.2 Approve lending requirements; 5.2.1 Configure document intake; 5.2.2 Test completeness checks; 5.3.1 Define risk-summary template; 5.3.2 Test evidence traceability; 5.4.1 Configure explanation and fairness tests; 5.4.2 Test override and human decision path; 5.5.1 Build and integrate MVP; 5.5.2 Execute lending assurance tests; 5.6.1 Run human-authorized pilot; 5.6.2 Collect rework and acceptance evidence |
+| 6.0 Fraud Assist | 6.1.1 Validate fraud use cases; 6.1.2 Baseline permitted signals; 6.2.1 Assess fraud data sources; 6.2.2 Configure case-system integration; 6.3.1 Define prioritization rules; 6.3.2 Test investigator triage; 6.4.1 Configure threshold and explanation controls; 6.4.2 Test override and human action boundary; 6.5.1 Build and integrate MVP; 6.5.2 Execute fraud assurance tests; 6.6.1 Run investigator pilot; 6.6.2 Collect false-positive and acceptance evidence |
+| 7.0 Change and Benefits | 7.1.1 Assess stakeholder impacts; 7.1.2 Record readiness baseline; 7.2.1 Approve communications plan; 7.2.2 Deliver engagement activities; 7.3.1 Define role-based learning; 7.3.2 Produce performance support; 7.4.1 Establish champion network; 7.4.2 Configure service-desk support; 7.5.1 Confirm KPI definitions; 7.5.2 Establish benefits baseline; 7.6.1 Measure adoption outcomes; 7.6.2 Record benefits-realization evidence |
+| 8.0 Scale and Closure | 8.1.1 Consolidate pilot evidence; 8.1.2 Prepare scale recommendation; 8.2.1 Prepare Sponsor scale decision; 8.2.2 Baseline approved release scope; 8.3.1 Execute controlled production deployment; 8.3.2 Complete stabilization checks; 8.4.1 Define operating procedures; 8.4.2 Complete service-transition readiness; 8.5.1 Transfer operational knowledge; 8.5.2 Handover residual risks and benefits; 8.6.1 Conduct lessons and archive records; 8.6.2 Complete closure and post-implementation review |
 
 ### Provisional WBS accountability
 
