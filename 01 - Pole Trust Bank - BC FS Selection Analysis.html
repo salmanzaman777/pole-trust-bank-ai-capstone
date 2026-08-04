@@ -1109,6 +1109,30 @@ html[data-theme="dark"] .doc-switch button.active .dt{color:#9eafe2;}
 html[data-theme="dark"] .doc-switch button.active .dn{color:#eef3ff;}
 html[data-theme="dark"] .search-shell{box-shadow:0 7px 24px rgba(29,77,143,.15),inset 0 1px rgba(255,255,255,.04);}
 
+/* ---------- Executive presentation access ---------- */
+.presentation-access{margin:0 0 24px;padding:14px;border:1px solid rgba(66,133,244,.16);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.68),rgba(231,241,255,.42));box-shadow:0 12px 28px rgba(58,85,142,.09),inset 0 1px rgba(255,255,255,.9);}
+.presentation-access-kicker{display:block;margin:0 0 4px;font:700 8px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#61709a;}
+.presentation-access-title{display:block;margin:0 0 11px;font:600 14px var(--serif);color:#1b2947;}
+.presentation-access-links{display:grid;gap:8px;}
+.presentation-access-link{position:relative;display:flex;align-items:center;gap:10px;overflow:hidden;isolation:isolate;padding:10px 11px;border:1px solid rgba(66,133,244,.18);border-radius:11px;color:#253b78;text-decoration:none;background:rgba(255,255,255,.62);box-shadow:0 6px 15px rgba(59,91,165,.08);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
+.presentation-access-link::before{content:'';position:absolute;z-index:-1;inset:-1px;background:linear-gradient(105deg,transparent 4%,#4285f4 17%,#8b75ed 31%,#ea4335 45%,#fbbc05 59%,#34a853 73%,#4285f4 87%,transparent 96%);background-size:320% 100%;opacity:.25;filter:saturate(.9) blur(.1px);animation:spectrum-shimmer 5.8s linear infinite;}
+.presentation-access-link::after{content:'';position:absolute;z-index:-1;inset:1px;border-radius:10px;background:rgba(255,255,255,.86);}
+.presentation-access-link:hover,.presentation-access-link:focus-visible{transform:translateY(-2px);border-color:rgba(66,133,244,.42);box-shadow:0 12px 24px rgba(59,91,165,.16);outline:none;}
+.presentation-access-link:hover::before,.presentation-access-link:focus-visible::before{opacity:.8;animation-duration:2.1s;}
+.presentation-access-icon{display:grid;place-items:center;flex:none;width:27px;height:27px;border-radius:8px;color:white;background:linear-gradient(135deg,#4285f4,#625cf6);box-shadow:0 5px 11px rgba(66,133,244,.24);}
+.presentation-access-link:last-child .presentation-access-icon{background:linear-gradient(135deg,#0f9d8a,#168bca);}
+.presentation-access-icon svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;}
+.presentation-access-copy{min-width:0;display:flex;flex-direction:column;gap:2px;}
+.presentation-access-copy strong{font:700 10px var(--mono);letter-spacing:.035em;text-transform:uppercase;color:#26396e;}
+.presentation-access-copy span{font-size:10px;color:#71809b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+html[data-theme="dark"] .presentation-access{background:linear-gradient(145deg,rgba(34,52,89,.58),rgba(17,30,55,.72));border-color:rgba(118,151,255,.25);box-shadow:0 13px 30px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.08);}
+html[data-theme="dark"] .presentation-access-title{color:#eef3ff;}
+html[data-theme="dark"] .presentation-access-kicker{color:#a6b7e7;}
+html[data-theme="dark"] .presentation-access-link{background:rgba(19,31,56,.7);border-color:rgba(118,151,255,.28);}
+html[data-theme="dark"] .presentation-access-link::after{background:rgba(17,29,53,.82);}
+html[data-theme="dark"] .presentation-access-copy strong{color:#e8efff;}
+html[data-theme="dark"] .presentation-access-copy span{color:#aab7d1;}
+
 @media (prefers-reduced-motion:reduce){
   .doc-switch button.active,.doc-switch button:hover::before,.doc-switch button:focus-visible::before,.search-shell::before{animation:none;}
   .doc-switch button{transition:none;}
@@ -2059,7 +2083,7 @@ html[data-theme="dark"] .nav-scrim{background:linear-gradient(90deg,rgba(0,4,12,
       <button class="sidebar-close" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation">&times;</button>
     </div>
 
-    <div class="doc-switch">
+<div class="doc-switch">
       <button class="active" data-doc="business" onclick="switchDoc('business')" aria-current="page">
         <span class="dt">Document 01 &middot; PTB-BCFS-001</span>
         <span class="dn">Selection Analysis &amp; BC/FS</span>
@@ -2077,6 +2101,21 @@ html[data-theme="dark"] .nav-scrim{background:linear-gradient(90deg,rgba(0,4,12,
         <span class="dn">Scope Management Plan</span>
       </button>
     </div>
+
+    <section class="presentation-access" aria-label="Executive presentation outputs">
+      <span class="presentation-access-kicker">Executive outputs</span>
+      <strong class="presentation-access-title">Presentations &amp; briefing packs</strong>
+      <div class="presentation-access-links">
+        <a class="presentation-access-link" href="Project%20Documentation%20Pack%20-%20Gamma%20Presentation.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Gamma presentation PDF">
+          <span class="presentation-access-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.5h7l3 3V20.5H7z"></path><path d="M14 3.5v4h4M9.5 12h5M9.5 15h5"></path></svg></span>
+          <span class="presentation-access-copy"><strong>Gamma presentation</strong><span>Corporate PDF briefing pack</span></span>
+        </a>
+        <a class="presentation-access-link" href="Pole_Trust_AI_Banking_Mandate%20-%20NotebookLM.pptx" target="_blank" rel="noopener noreferrer" aria-label="Open NotebookLM PowerPoint presentation">
+          <span class="presentation-access-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h14v15H5z"></path><path d="M8.5 8h7M8.5 12h7M8.5 16h4"></path></svg></span>
+          <span class="presentation-access-copy"><strong>NotebookLM deck</strong><span>PowerPoint stakeholder presentation</span></span>
+        </a>
+      </div>
+    </section>
 
     <nav class="toc" id="toc-business">
       <div class="toc-group">Decision Evidence</div>
