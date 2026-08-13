@@ -2108,6 +2108,10 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dt">Document 04 &middot; PTB-SCOPE-001</span>
         <span class="dn">Scope Management Plan</span>
       </button>
+      <button data-doc="schedule" onclick="switchDoc('schedule')">
+        <span class="dt">Document 05 &middot; PTB-SCHED-001</span>
+        <span class="dn">Schedule Management Plan</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs">
@@ -2169,6 +2173,17 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#s-wbs"><span class="num">04</span>WBS</a>
       <a href="#s-acceptance"><span class="num">05</span>Acceptance &amp; Traceability</a>
       <a href="#s-controls"><span class="num">06</span>Controls &amp; Validation</a>
+    </nav>
+
+    <nav class="toc" id="toc-schedule" style="display:none;">
+      <div class="toc-group">Planning &middot; Time and Dependencies</div>
+      <a href="#sc-control"><span class="num">00</span>Document Control</a>
+      <a href="#sc-method"><span class="num">01</span>Schedule Approach</a>
+      <a href="#sc-dependencies"><span class="num">02</span>Dependencies &amp; Critical Path</a>
+      <a href="#sc-milestones"><span class="num">03</span>Milestones</a>
+      <a href="#sc-workpackages"><span class="num">04</span>Work-Package Sequencing</a>
+      <a href="#sc-risks"><span class="num">05</span>Schedule Risks &amp; Controls</a>
+      <a href="#sc-acceptance"><span class="num">06</span>Schedule Validation &amp; Baseline</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -3132,6 +3147,149 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-schedule">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 05 &middot; PTB-SCHED-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Schedule Management Plan<br>&amp; Work-Package Sequencing</h1>
+        <p class="hero-sub">Converts the 48-work-package WBS and the sponsor-approved 24-month roadmap into a dependency-sequenced schedule: the zero-slack critical path, board-visible milestones, the two riskiest dependencies and the schedule baseline against which progress is measured.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">24 mo.</div><div class="sl">Approved Roadmap</div></div>
+          <div class="stat-card"><div class="sv em">1</div><div class="sl">Critical Path</div></div>
+          <div class="stat-card"><div class="sv">7</div><div class="sl">Board Milestones</div></div>
+          <div class="stat-card"><div class="sv">2</div><div class="sl">Riskiest Dependencies</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="sc-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Schedule Baseline Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Scheduling, not budgeting</h3><p>This plan covers time, sequencing, dependencies, milestones and schedule control only. Cost estimation and budgeting remain a separate planning artifact and are intentionally out of scope here.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-SCHED-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-CHARTER-001 (24-month roadmap) and PTB-SCOPE-001 (seven deliverables and 48-work-package WBS); included in the Sponsor-approved four-document pack with the WBS correction incorporated 3 August 2026</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for presented material; functional roles validate duration and dependency evidence and the Sponsor approves later gates</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Schedule change authority</b></td><td>Project Sponsor; any roadmap extension or milestone slip outside tolerance routes to the Sponsor until DEC-03/DEC-04 approval</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 assigns the effective start date (DEC-01), owner appointments (DEC-05) and data/integration readiness (DEC-10) to interim controls with accountable roles, evidence and closure gates</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="sc-method">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Schedule Approach, Purpose &amp; Methodology</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Purpose</h3><p>Sequence the approved work packages into a realistic, controllable 24-month schedule; expose the chain with zero slack so management attention is spent where delay directly extends delivery; and establish a fixed baseline for measuring progress, variance and corrective action.</p></div>
+          <div class="glass-card"><h3>Methodology</h3><p>Precedence Diagramming Method (PDM) on the 48 work packages, rolled up to the seven controlled deliverables. Finish-to-start dominates; start-to-start and finish-to-finish are used only where parallelism is evidenced. Waterfall stage gates control phase exit; Agile sprints refine detail inside an authorized phase without changing the baseline.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Operating rule:</b> a completed sprint never authorizes the next phase. The schedule advances a milestone only when the applicable Product Owner and control functions validate the evidence and the Sponsor records the consolidated progression decision.</p></div>
+      </section>
+
+      <section class="panel" id="sc-dependencies">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Dependencies &amp; Critical Path</h2></div>
+        <p class="panel-lede">The critical path is the longest chain of dependent deliverables with zero total slack. In this programme it is the full phase sequence D1&rarr;D2&rarr;D3&rarr;D4&rarr;D5&rarr;D6&rarr;D7, totalling the approved 24 months. Any slip on this chain extends the programme one-for-one.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Deliverable</th><th>Window</th><th>Depends on</th><th>Dependency type</th><th>Zero-slack reason</th></tr></thead>
+            <tbody>
+              <tr><td><b>D1</b> Initiation &amp; baselines</td><td>M01&ndash;02</td><td>Sponsor authorization (DEC-01)</td><td>Finish-to-Start</td><td>Anchor start; the effective date is not yet approved</td></tr>
+              <tr><td><b>D2</b> Governance &amp; architecture foundation</td><td>M03&ndash;04</td><td>D1 complete; DEC-10 readiness evidence</td><td>Finish-to-Start</td><td>Every MVP requires the shared platform and controls</td></tr>
+              <tr><td><b>D3</b> Internal copilot MVP</td><td>M05&ndash;07</td><td>D2 complete</td><td>Finish-to-Start</td><td>First release cannot begin before the foundation gate</td></tr>
+              <tr><td><b>D4</b> Customer digital assistant MVP</td><td>M08&ndash;11</td><td>D3 pilot evidence</td><td>Finish-to-Start</td><td>Sequenced to reuse foundation and copilot controls</td></tr>
+              <tr><td><b>D5</b> Lending support MVP</td><td>M12&ndash;15</td><td>D4 complete</td><td>Finish-to-Start</td><td>Lending evidence cannot start before service integration</td></tr>
+              <tr><td><b>D6</b> Fraud investigator-assist MVP</td><td>M16&ndash;18</td><td>D5 complete</td><td>Finish-to-Start</td><td>Fraud signals and triage depend on prior integration</td></tr>
+              <tr><td><b>D7</b> Scale, transition &amp; closure</td><td>M19&ndash;24</td><td>D6 pilot evidence</td><td>Finish-to-Start</td><td>Scale requires consolidated cross-pilot evidence</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Critical-path summary:</b> the chain D1&rarr;D2&rarr;D3&rarr;D4&rarr;D5&rarr;D6&rarr;D7 has zero float. Parallel work (change/adoption, benefits measurement, model operations) has float and is not on the critical path, but it must still complete before its own gate.</p></div>
+      </section>
+
+      <section class="panel" id="sc-milestones">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Board-Visible Milestones</h2></div>
+        <p class="panel-lede">Milestones are the executive decision moments the board and Sponsor use to see whether the programme is on time. Each is tied to an evidence gate, not to a calendar date invented here.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Milestone</th><th>Timing</th><th>What the board sees</th><th>Gate evidence</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td><b>M0</b> Schedule baseline approved</td><td>Month 1 start</td><td>Effective date locked; roadmap begins</td><td>Signed/recorded authorization (DEC-01)</td><td>Project Sponsor</td></tr>
+              <tr><td><b>M1</b> Charter &amp; funding gate</td><td>End M02</td><td>Initiation approved</td><td>Approved decision/charter and funding gate</td><td>Project Sponsor</td></tr>
+              <tr><td><b>M2</b> Foundation accepted</td><td>End M04</td><td>Shared platform ready</td><td>Governance, architecture, data/control evidence (DEC-10)</td><td>CIO / Enterprise Architecture</td></tr>
+              <tr><td><b>M3</b> Copilot pilot live</td><td>End M07</td><td>First MVP pilot live</td><td>Pilot and prompt library accepted</td><td>Copilot Product Owner</td></tr>
+              <tr><td><b>M4</b> Customer assistant pilot live</td><td>End M11</td><td>Customer-facing pilot live</td><td>Controlled customer-assistant pilot accepted</td><td>Digital Product Owner</td></tr>
+              <tr><td><b>M5</b> Lending pilot live</td><td>End M15</td><td>Human-authorized lending pilot live</td><td>Lending support pilot accepted</td><td>Lending Product Owner</td></tr>
+              <tr><td><b>M6</b> Fraud pilot live</td><td>End M18</td><td>Investigator-assist pilot live</td><td>Fraud investigator-assist pilot accepted</td><td>Fraud Product Owner</td></tr>
+              <tr><td><b>M7</b> Rollout done</td><td>End M24</td><td>Scaled, transitioned, closed</td><td>Benefits review, operations transition and closure report</td><td>Project Sponsor</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="sc-workpackages">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Work-Package Sequencing (WBS to Schedule)</h2></div>
+        <p class="panel-lede">Each of the eight WBS branches maps to a schedule window and a predecessor. Work packages are the lowest planning level shown; individual duration estimates and resource loading remain subsequent planning activities subject to DEC-05 owner confirmation.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>WBS</th><th>Branch</th><th>Schedule window</th><th>Predecessor</th><th>Accountable role</th></tr></thead>
+            <tbody>
+              <tr><td>1.0</td><td>Programme Management &amp; Governance</td><td>M01&ndash;24</td><td>Sponsor authorization</td><td>Project Sponsor / PM</td></tr>
+              <tr><td>2.0</td><td>Enterprise AI Foundation</td><td>M03&ndash;04</td><td>1.0 authorization baseline</td><td>CIO / Enterprise Architecture</td></tr>
+              <tr><td>3.0</td><td>Internal Copilot MVP</td><td>M05&ndash;07</td><td>2.0 foundation gate</td><td>COO / Copilot Product Owner</td></tr>
+              <tr><td>4.0</td><td>Customer Digital Assistant MVP</td><td>M08&ndash;11</td><td>3.0 pilot evidence</td><td>Digital Product Owner</td></tr>
+              <tr><td>5.0</td><td>Lending Support MVP</td><td>M12&ndash;15</td><td>4.0 complete</td><td>Lending Product Owner</td></tr>
+              <tr><td>6.0</td><td>Fraud Investigator-Assist MVP</td><td>M16&ndash;18</td><td>5.0 complete</td><td>Fraud Product Owner</td></tr>
+              <tr><td>7.0</td><td>Change, Adoption &amp; Benefits</td><td>M01&ndash;24 (parallel)</td><td>1.0 (parallel with 2&ndash;6)</td><td>Change Lead / CFO</td></tr>
+              <tr><td>8.0</td><td>Scale, Transition &amp; Closure</td><td>M19&ndash;24</td><td>6.0 pilot evidence</td><td>Project Sponsor / PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="sc-risks">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Schedule Risks &amp; the Two Riskiest Dependencies</h2></div>
+        <p class="panel-lede">The schedule is most exposed where a single dependency can delay the whole critical path. The two riskiest dependencies, identified from the approved scope and decision register, are called out below and matched to owners and responses.</p>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Riskiest dependency 1 &mdash; Enterprise-foundation acceptance</h3><p>D2 (governance, architecture, data, security and integration readiness) gates every MVP. It is the single bottleneck with zero slack; any slip here extends D3&ndash;D7 one-for-one.</p><p><b>Response:</b> CIO/Enterprise Architecture validate readiness before build (DEC-10); fallback is a reduced pilot boundary, not a silent schedule slip.</p></div>
+          <div class="glass-card"><h3>Riskiest dependency 2 &mdash; Vendor &amp; platform selection</h3><p>No vendor is selected. Sourcing and due-diligence lead time is external and cannot be compressed, and it gates foundation configuration and MVP build.</p><p><b>Response:</b> run approved sourcing and due diligence early (DEC-07); do not name a vendor before the procurement, security, privacy, legal and third-party-risk evidence is assembled.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Schedule risk</th><th>Required response</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td>Foundation slip delays all MVPs</td><td>Front-load architecture/data/control evidence; hold the foundation gate</td><td>CIO / Enterprise Architecture</td></tr>
+              <tr><td>Vendor lead time exceeds window</td><td>Early sourcing, parallel due diligence, explicit go/no-go</td><td>Procurement Lead / PM</td></tr>
+              <tr><td>Owner capacity not confirmed</td><td>Nominate Product Owners before requirements acceptance (DEC-05)</td><td>Project Sponsor / PM</td></tr>
+              <tr><td>Unrealistic sprint optimism</td><td>Agile output cannot advance a gate without control evidence</td><td>Project Sponsor / PM</td></tr>
+              <tr><td>Milestone slippage hidden</td><td>Weekly variance reporting against the baseline; escalate &gt; tolerance</td><td>PM / AI PMO</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="sc-acceptance">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Schedule Validation, Control &amp; Baseline</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Every work package has one owner and one predecessor</li><li>The critical path resolves to the approved 24-month roadmap</li><li>Milestones map to charter gates and deliverables</li><li>No milestone is a date without an evidence owner</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Weekly variance against baseline; escalate outside tolerance</li><li>Roadmap or milestone change routes to the Sponsor</li><li>Agile backlog changes cannot alter the baseline</li><li>DEC-01/DEC-03/DEC-04/DEC-10 close open schedule authority</li></ul></div>
+          <div class="glass-card"><h3>Baseline definition</h3><ul><li>Effective start date recorded (DEC-01)</li><li>Seven board milestones locked</li><li>Critical path D1&rarr;D7 frozen</li><li>Schedule integrated with WBS, RACI and decision register</li></ul></div>
+        </div>
+        <h3 class="section-title">Definition of a valid schedule baseline</h3>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Sequenced</b><span>Every work package has a defined predecessor and dependency type.</span></div>
+          <div class="definition-item"><b>Critical-path aware</b><span>The zero-slack chain is explicitly identified and monitored.</span></div>
+          <div class="definition-item"><b>Controlled</b><span>Milestones map to Sponsor gates; open authority closes through PTB-DEC-001.</span></div>
+        </div>
+        <div class="doc-footer"><span>PTB-SCHED-001 &middot; Version 1.0 &middot; Planning baseline</span><span>Aligned to PTB-SCOPE-001, PTB-STK-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -3444,7 +3602,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -3460,7 +3618,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -3561,7 +3719,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
