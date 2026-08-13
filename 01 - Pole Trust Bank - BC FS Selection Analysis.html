@@ -2112,6 +2112,10 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dt">Document 05 &middot; PTB-SCHED-001</span>
         <span class="dn">Schedule Management Plan</span>
       </button>
+      <button data-doc="cost" onclick="switchDoc('cost')">
+        <span class="dt">Document 06 &middot; PTB-COST-001</span>
+        <span class="dn">Cost Estimate &amp; Budget</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs">
@@ -2184,6 +2188,17 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#sc-workpackages"><span class="num">04</span>Work-Package Sequencing</a>
       <a href="#sc-risks"><span class="num">05</span>Schedule Risks &amp; Controls</a>
       <a href="#sc-acceptance"><span class="num">06</span>Schedule Validation &amp; Baseline</a>
+    </nav>
+
+    <nav class="toc" id="toc-cost" style="display:none;">
+      <div class="toc-group">Planning &middot; Money and Value</div>
+      <a href="#cc-control"><span class="num">00</span>Document Control</a>
+      <a href="#cc-method"><span class="num">01</span>Cost Approach</a>
+      <a href="#cc-estimate"><span class="num">02</span>Cost Estimates</a>
+      <a href="#cc-budget"><span class="num">03</span>Budget &amp; Contingency</a>
+      <a href="#cc-baseline"><span class="num">04</span>Cost Baseline &amp; Reconcile</a>
+      <a href="#cc-evm"><span class="num">05</span>Cost Control &amp; EVM</a>
+      <a href="#cc-acceptance"><span class="num">06</span>Cost Validation &amp; Baseline</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -3290,6 +3305,148 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-cost">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 06 &middot; PTB-COST-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Cost Estimate &amp; Budget<br>Planning</h1>
+        <p class="hero-sub">Converts the 48-work-package WBS and the Sponsor-approved financial envelope into a controlled cost baseline: per-work-package estimates rolled up, explicit contingency, a reconciliated budget and Earned Value control against which progress is measured.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">USD 11.5M</div><div class="sl">CAPEX Ceiling</div></div>
+          <div class="stat-card"><div class="sv em">USD 27.5M</div><div class="sl">Five-Year TCO</div></div>
+          <div class="stat-card"><div class="sv">+25% / &minus;10%</div><div class="sl">Estimate Accuracy Range</div></div>
+          <div class="stat-card"><div class="sv">EVM</div><div class="sl">Control Method</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="cc-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Cost Baseline Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Budgeting, not schedule</h3><p>This plan covers cost estimation, budgeting, contingency, baseline reconciliation and cost control only. Schedule and time management are addressed in PTB-SCHED-001.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-COST-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-CHARTER-001 (USD 11.5M CAPEX / USD 27.5M five-year TCO envelope) and PTB-SCOPE-001 (48-work-package WBS); Sponsor-approved four-document pack with the WBS correction incorporated 3 August 2026</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for presented material; Finance validates estimates and attribution, and the Sponsor approves the cost baseline and funding releases</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Cost change authority</b></td><td>Project Sponsor; any movement outside the approved planning envelope or change to the cost baseline routes to the Sponsor until DEC-02/DEC-03 approval</td></tr>
+              <tr><td><b>Funding authority</b></td><td>USD 0 currently authorized; DEC-02 requires Sponsor release supported by Chief Financial Officer validation</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 assigns the initial funding release (DEC-02), cost-baseline owner appointments (DEC-05) and KPI/benefit measurement rules (DEC-08) to interim controls with accountable roles and evidence</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="cc-method">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Cost Management Approach &amp; Methodology</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Plan Cost Management</h3><p>Estimate at the work-package level, then roll up to the seven controlled deliverables and the eight WBS branches. Use bottom-up estimation as the primary method, cross-checked with top-down analogous estimates from the approved source package.</p></div>
+          <div class="glass-card"><h3>Determine Budget</h3><p>Aggregate work-package estimates, add contingency explicitly and state what it covers, then establish the cost baseline — the fixed number against which progress is measured. Management reserve stays outside the baseline and requires Sponsor release.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Grounding rule:</b> the instructional slide's "CAD 1.9M envelope" is a generic template placeholder. This plan reconciles to Pole Trust's approved envelope of USD 11.5M CAPEX and USD 27.5M five-year TCO; the placeholder is not imported as a project fact.</p></div>
+      </section>
+
+      <section class="panel" id="cc-estimate">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Cost Estimates (Per Work Package, Rolled Up)</h2></div>
+        <p class="panel-lede">Estimates are produced bottom-up at the Level-2 deliverable level (the lowest level with defined scope in this baseline), then rolled up to the eight WBS branches. Accuracy is a budget estimate of +25% / &minus;10% per PMBoK guidance, to be narrowed as detailed design and sourcing evidence matures.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>WBS</th><th>Branch</th><th>Bottom-up estimate (USD)</th><th>Top-down cross-check</th><th>Method</th><th>Accuracy</th></tr></thead>
+            <tbody>
+              <tr><td>1.0</td><td>Programme Management &amp; Governance</td><td>$1.15M</td><td>~10% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>2.0</td><td>Enterprise AI Foundation</td><td>$3.45M</td><td>~30% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>3.0</td><td>Internal Copilot MVP</td><td>$1.44M</td><td>~12.5% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>4.0</td><td>Customer Digital Assistant MVP</td><td>$1.73M</td><td>~15% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>5.0</td><td>Lending Support MVP</td><td>$1.44M</td><td>~12.5% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>6.0</td><td>Fraud Investigator-Assist MVP</td><td>$1.44M</td><td>~12.5% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>7.0</td><td>Change, Adoption &amp; Benefits</td><td>$0.86M</td><td>~7.5% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+              <tr><td>8.0</td><td>Scale, Transition &amp; Closure</td><td>$0.86M</td><td>~7.5% of CAPEX</td><td>Bottom-up</td><td>+25% / &minus;10%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Roll-up result:</b> the eight branches total <b>USD 12.37M</b> before contingency. The source-approved planning CAPEX is <b>USD 11.5M</b>; the difference is resolved explicitly in the budget section as a managed estimate versus the approved ceiling, not silently absorbed.</p></div>
+      </section>
+
+      <section class="panel" id="cc-budget">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Budget, Contingency &amp; Baseline</h2></div>
+        <p class="panel-lede">Contingency is added explicitly and stated to cover known-unknown estimate risk within the approved scope; management reserve is held by the Sponsor outside the baseline for unknown-unknowns and changes.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Budget component</th><th>Amount (USD)</th><th>Basis / what it covers</th></tr></thead>
+            <tbody>
+              <tr><td>Work-package cost roll-up</td><td>$12.37M</td><td>Bottom-up sum of the eight WBS branches</td></tr>
+              <tr><td>Approved planning CAPEX ceiling</td><td>$11.5M</td><td>Source-approved envelope; binding ceiling, not an estimate</td></tr>
+              <tr><td>Contingency reserve (explicit)</td><td>To be sized by Finance</td><td>Known-unknown estimate risk; quantified via risk-adjusted estimate before baseline approval (DEC-02)</td></tr>
+              <tr><td>Management reserve</td><td>Held by Sponsor</td><td>Unknown-unknowns and approved scope/KPI changes; outside the cost baseline</td></tr>
+              <tr><td>Annual OPEX run-rate</td><td>$3.2M</td><td>Recurring operating cost after implementation</td></tr>
+              <tr><td>Five-year OPEX</td><td>$16.0M</td><td>$3.2M &times; 5 years</td></tr>
+              <tr><td><b>Five-year TCO envelope</b></td><td><b>$27.5M</b></td><td>$11.5M CAPEX + $16.0M OPEX; lifecycle ceiling, not immediate spend</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Reconciliation rule:</b> the budget must reconcile to the approved envelope. Because the bottom-up roll-up ($12.37M) exceeds the $11.5M ceiling by $0.87M (7.6%), the estimate is capped at the ceiling and the delta is logged as an open Finance item under DEC-02 &mdash; not presented as an approved increase. The full five-year TCO ($27.5M) is the lifecycle number, not an immediate spend.</p></div>
+      </section>
+
+      <section class="panel" id="cc-baseline">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Cost Baseline &amp; Reconciliation Math</h2></div>
+        <p class="panel-lede">The cost baseline is the time-phased, approved budget against which performance is measured. It is built from the approved CAPEX ceiling, not the un-capped estimate, until Finance reconciles the delta.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Line</th><th>Amount (USD)</th><th>Derivation</th></tr></thead>
+            <tbody>
+              <tr><td>Approved planning CAPEX</td><td>$11.5M</td><td>Source-approved charter envelope</td></tr>
+              <tr><td>Annual OPEX</td><td>$3.2M</td><td>Source-approved run-rate</td></tr>
+              <tr><td>Five-year OPEX</td><td>$16.0M</td><td>$3.2M &times; 5</td></tr>
+              <tr><td><b>Five-year TCO</b></td><td><b>$27.5M</b></td><td>$11.5M + $16.0M</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>The math, shown:</b> $11.5M (CAPEX) + $3.2M &times; 5 (OPEX) = $11.5M + $16.0M = <b>$27.5M five-year TCO</b>. This is the number the budget must reconcile to; it does not authorize immediate spend, which remains USD 0 until DEC-02.</p></div>
+      </section>
+
+      <section class="panel" id="cc-evm">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Cost Control, Earned Value &amp; Variance Thresholds</h2></div>
+        <p class="panel-lede">Cost is controlled through Earned Value Management (EVM), monthly reporting and variance thresholds. Each measure is defined against the approved baseline so progress, cost and schedule are never reported as a single undifferentiated number.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>EVM measure</th><th>Definition</th><th>Use / threshold</th></tr></thead>
+            <tbody>
+              <tr><td>PV (Planned Value)</td><td>Authorized budget for planned work</td><td>Monthly baseline curve</td></tr>
+              <tr><td>EV (Earned Value)</td><td>Budgeted value of work actually completed</td><td>Progress against scope and schedule</td></tr>
+              <tr><td>AC (Actual Cost)</td><td>Cost incurred for work performed</td><td>Actuals from Finance</td></tr>
+              <tr><td>CV (Cost Variance)</td><td>EV &minus; AC</td><td>Threshold: escalate if &lt; &minus;10% of EV at a gate</td></tr>
+              <tr><td>SV (Schedule Variance)</td><td>EV &minus; PV</td><td>Threshold: escalate if &lt; &minus;10% of PV at a gate</td></tr>
+              <tr><td>CPI (Cost Performance Index)</td><td>EV &divide; AC</td><td>Flag &lt; 0.95 for corrective action</td></tr>
+              <tr><td>SPI (Schedule Performance Index)</td><td>EV &divide; PV</td><td>Flag &lt; 0.95 for corrective action</td></tr>
+              <tr><td>Variance threshold</td><td>Defined tolerance outside baseline</td><td>Sponsor escalation beyond &plusmn;10%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Control rule:</b> monthly reporting reconciles EV, PV and AC against the approved baseline. A variance beyond threshold triggers a corrective action and Sponsor escalation; no sprint output or cost overrun is silently absorbed into the baseline.</p></div>
+      </section>
+
+      <section class="panel" id="cc-acceptance">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Cost Validation, Control &amp; Baseline Acceptance</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Every work package has a bottom-up estimate and owner</li><li>Roll-up reconciles to the approved CAPEX ceiling</li><li>Contingency is explicit and risk-based</li><li>EVM measures are defined against the baseline</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Monthly reporting and variance thresholds</li><li>Funding release stays at USD 0 until DEC-02</li><li>Baseline change routes to the Sponsor</li><li>Contingency use is logged, not hidden</li></ul></div>
+          <div class="glass-card"><h3>Baseline definition</h3><ul><li>Approved CAPEX ceiling $11.5M frozen</li><li>Five-year TCO $27.5M locked</li><li>Contingency and reserve separated</li><li>EVM baseline integrated with WBS and schedule</li></ul></div>
+        </div>
+        <h3 class="section-title">Definition of a valid cost baseline</h3>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Reconciled</b><span>All components roll up to the approved $27.5M TCO; no hidden spend.</span></div>
+          <div class="definition-item"><b>Contingent</b><span>Contingency is explicit; management reserve is held outside the baseline.</span></div>
+          <div class="definition-item"><b>Controlled</b><span>EVM, variance thresholds and Sponsor funding gates close open cost authority.</span></div>
+        </div>
+        <div class="doc-footer"><span>PTB-COST-001 &middot; Version 1.0 &middot; Planning baseline</span><span>Aligned to PTB-SCOPE-001, PTB-SCHED-001, PTB-STK-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -3602,7 +3759,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope','schedule'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule','cost'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -3618,7 +3775,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope','schedule'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule','cost'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -3719,7 +3876,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
