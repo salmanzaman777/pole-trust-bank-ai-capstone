@@ -2120,6 +2120,10 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dt">Document 07 &middot; PTB-COMM-001</span>
         <span class="dn">Communications Management Plan</span>
       </button>
+      <button data-doc="resources" onclick="switchDoc('resources')">
+        <span class="dt">Document 08 &middot; PTB-RES-001</span>
+        <span class="dn">Resource Management Plan</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs">
@@ -2214,6 +2218,17 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#cm-message"><span class="num">04</span>Key Messages &amp; Announcements</a>
       <a href="#cm-escalation"><span class="num">05</span>Escalation &amp; Incident Comms</a>
       <a href="#cm-acceptance"><span class="num">06</span>Validation &amp; Baseline</a>
+    </nav>
+
+    <nav class="toc" id="toc-resources" style="display:none;">
+      <div class="toc-group">Planning &middot; People and Capability</div>
+      <a href="#rs-control"><span class="num">00</span>Document Control</a>
+      <a href="#rs-method"><span class="num">01</span>Resource Approach</a>
+      <a href="#rs-types"><span class="num">02</span>Resource Types &amp; Loading</a>
+      <a href="#rs-raci"><span class="num">03</span>Deliverable RACI</a>
+      <a href="#rs-gaps"><span class="num">04</span>Capacity Gaps &amp; Responses</a>
+      <a href="#rs-controls"><span class="num">05</span>Resource Control &amp; Baseline</a>
+      <a href="#rs-acceptance"><span class="num">06</span>Validation &amp; Baseline</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -3599,6 +3614,134 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-resources">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 08 &middot; PTB-RES-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Resource Management Plan<br>&amp; Deliverable RACI</h1>
+        <p class="hero-sub">A controlled resource plan for the approved Pair 5 programme: the people, roles, skills and capacity every major deliverable needs — with a deliverable-level RACI that names real roles, enforces exactly one accountable per row, and says clearly where the bank has not yet freed the people the plan requires.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">7</div><div class="sl">Controlled Deliverables</div></div>
+          <div class="stat-card"><div class="sv em">1 A</div><div class="sl">Per RACI Row</div></div>
+          <div class="stat-card"><div class="sv">48</div><div class="sl">Work Packages Resourced</div></div>
+          <div class="stat-card"><div class="sv">RACI</div><div class="sl">Control Method</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="rs-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Resource Baseline Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>People, not budgets</h3><p>This plan covers resource identification, roles, skills, capacity, loading, RACI accountability and resource-risk responses only. Cost and budget remain a separate planning artifact (PTB-COST-001).</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-RES-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-CHARTER-001 (approved Pair 5), PTB-SCOPE-001 (seven deliverables and 48-work-package WBS) and PTB-SCHED-001 (24-month critical path); included in the Sponsor-approved four-document pack with the WBS correction incorporated 3 August 2026</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for presented material; functional leads confirm role holders and capacity, and the Sponsor approves any staffing or resourcing decision that changes the baseline</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Resource change authority</b></td><td>Project Sponsor; any staffing, procurement or resourcing commitment routes to the Sponsor until DEC-03/DEC-06 approval</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 assigns owner appointments (DEC-05), AI PMO and delivery-team constitution (DEC-06) and vendor/platform resources (DEC-07) to interim controls with accountable roles, evidence and closure gates</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="rs-method">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Resource Approach, Purpose &amp; Methodology</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Purpose</h3><p>Ensure every major deliverable has the people, roles, skills and capacity it needs, when it needs them, without over-committing the bank's staff. The plan follows the PMBoK Plan Resource Management process and is explicitly tied to scope, schedule, cost, risk and the WBS.</p></div>
+          <div class="glass-card"><h3>Methodology</h3><p>Resource needs are derived from the approved WBS (48 work packages, eight branches) and the D1&ndash;D7 deliverable windows. Roles are named where the bank has confirmed them; where people are not yet freed, the gap is stated explicitly rather than assumed away.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Operating rule:</b> exactly one accountable role per deliverable row. Two accountables means none. R = Responsible (does the work), A = Accountable (owns the outcome), C = Consulted (provides input), I = Informed (is kept aware).</p></div>
+      </section>
+
+      <section class="panel" id="rs-types">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Resource Types &amp; Loading</h2></div>
+        <p class="panel-lede">Resources are identified by type, matched to the WBS branch and schedule window, and loaded against the approved roadmap. Capacity that the bank has not yet freed is flagged as a gap, not silently absorbed.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Resource type</th><th>Examples</th><th>WBS branch</th><th>Schedule window</th><th>Capacity status</th></tr></thead>
+            <tbody>
+              <tr><td><b>Human</b></td><td>PM, product owners, squads, control leads, trainers</td><td>1.0&ndash;8.0</td><td>M01&ndash;M24</td><td>Partial &mdash; gaps flagged in Section 4</td></tr>
+              <tr><td><b>Material / tooling</b></td><td>AI platform, data tools, test environments</td><td>2.0</td><td>M03&ndash;M04</td><td>Not procured &mdash; DEC-07</td></tr>
+              <tr><td><b>Financial</b></td><td>Approved CAPEX envelope, staged funding</td><td>1.0&ndash;8.0</td><td>M01&ndash;M24</td><td>USD 0 released until DEC-02</td></tr>
+              <tr><td><b>Information</b></td><td>Approved knowledge, data, controls and evidence</td><td>2.0&ndash;7.0</td><td>M03&ndash;M24</td><td>Data readiness open &mdash; DEC-10</td></tr>
+              <tr><td><b>Physical</b></td><td>Workspaces, infrastructure, network capacity</td><td>2.0&ndash;8.0</td><td>M03&ndash;M24</td><td>Confirmed as required by architecture</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Loading rule:</b> resource loading is levelled against the approved critical path; no resource is double-booked across two critical deliverables without a Sponsor-approved exception and a named owner.</p></div>
+      </section>
+
+      <section class="panel" id="rs-raci">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Deliverable RACI</h2></div>
+        <p class="panel-lede">Every major deliverable (D1&ndash;D7) is assigned an R, A, C and I. Exactly one A per row. Real roles are named where confirmed; otherwise the role designation is stated and the appointment is routed through DEC-05.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Deliverable</th><th>R (does)</th><th>A (owns)</th><th>C (consults)</th><th>I (informed)</th></tr></thead>
+            <tbody>
+              <tr><td><b>D1</b> Initiation &amp; baselines</td><td>Salman Zaman (PM working role)</td><td>Project Sponsor</td><td>Steering, Finance, Control leads</td><td>All stakeholders</td></tr>
+              <tr><td><b>D2</b> Governance &amp; architecture</td><td>Architecture / Data leads</td><td>CIO &amp; Enterprise Architecture</td><td>Security, Privacy, Risk, Model Risk</td><td>Steering, Sponsor</td></tr>
+              <tr><td><b>D3</b> Internal copilot MVP</td><td>Copilot squad</td><td>COO / Copilot Product Owner</td><td>Risk, Security, Change, HR</td><td>Steering, Sponsor</td></tr>
+              <tr><td><b>D4</b> Customer assistant MVP</td><td>Digital-assistant squad</td><td>Retail / Digital Product Owner</td><td>Contact Centre, CX, Privacy, Legal</td><td>Steering, Sponsor</td></tr>
+              <tr><td><b>D5</b> Lending support MVP</td><td>Lending squad</td><td>Lending Product Owner</td><td>Credit Risk, Compliance, Lending Ops</td><td>Steering, Sponsor</td></tr>
+              <tr><td><b>D6</b> Fraud investigator-assist MVP</td><td>Fraud squad</td><td>Fraud Product Owner</td><td>Financial Crime, Risk, Model Risk</td><td>Steering, Sponsor</td></tr>
+              <tr><td><b>D7</b> Scale, transition &amp; closure</td><td>Operations / IT service leads</td><td>Project Sponsor</td><td>Finance, HR, Change, ITSM</td><td>All stakeholders</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>RACI rule:</b> the same role may be R on one row and A on another, but no row has two As. Vendor lead, compliance officer and human-resources roles are named as real roles where the bank has confirmed them; unconfirmed appointments stay as designations routed through DEC-05.</p></div>
+      </section>
+
+      <section class="panel" id="rs-gaps">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Capacity Gaps &amp; Responses</h2></div>
+        <p class="panel-lede">Where the plan needs people the bank has not yet freed, the gap is stated explicitly with a named response and owner. No gap is silently absorbed into an assumption.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Resource gap</th><th>Impact</th><th>Response</th><th>Owner</th><th>Closure</th></tr></thead>
+            <tbody>
+              <tr><td>Product Owners not yet nominated</td><td>Requirements acceptance cannot start</td><td>Nominate through DEC-05 before affected gate</td><td>Project Sponsor / CDO</td><td>DEC-05</td></tr>
+              <tr><td>AI PMO / squad capacity not confirmed</td><td>Delivery coordination and build capacity</td><td>Confirm resources via functional assignment records</td><td>Salman Zaman / functional leads</td><td>DEC-06</td></tr>
+              <tr><td>Vendor / platform team not selected</td><td>Foundation configuration and MVP build</td><td>Run approved sourcing and due diligence early</td><td>Procurement Lead</td><td>DEC-07</td></tr>
+              <tr><td>Data / MLOps capacity not confirmed</td><td>Data foundation and model operations</td><td>Confirm Data Science / MLOps owners before build</td><td>CIO / Data Owner</td><td>DEC-10</td></tr>
+              <tr><td>Change / training resources not confirmed</td><td>Adoption and readiness</td><td>Assign Change Lead and trainers before first readiness baseline</td><td>COO / Change Lead</td><td>DEC-05</td></tr>
+              <tr><td>Compliance / control review capacity</td><td>Gate evidence and approval</td><td>Reserve control-review capacity per gate; escalate contention</td><td>Compliance Lead / PM</td><td>DEC-03/DEC-04</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Response rule:</b> responses use avoidance, mitigation or protection consistently with the risk register. A gap is closed only when the accountable role confirms capacity and the Sponsor records the decision with evidence.</p></div>
+      </section>
+
+      <section class="panel" id="rs-controls">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Resource Control &amp; Baseline</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Every deliverable has an R, A, C and I</li><li>Exactly one accountable per row</li><li>Real roles named where confirmed</li><li>Gaps stated, not assumed away</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Resource loading levelled against the critical path</li><li>Staffing/procurement commitments route to Sponsor</li><li>Gap closures logged with evidence</li><li>DEC-03/DEC-05/DEC-06/DEC-07 close open authority</li></ul></div>
+          <div class="glass-card"><h3>Baseline definition</h3><ul><li>Deliverable RACI is the controlled baseline</li><li>Role holders confirmed through DEC-05</li><li>Loading integrated with WBS, schedule and cost</li><li>Plan integrates with risk register and decision log</li></ul></div>
+        </div>
+        <h3 class="section-title">Definition of a valid resource baseline</h3>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Deliverable-mapped</b><span>Every deliverable has a full R, A, C and I with one accountable.</span></div>
+          <div class="definition-item"><b>Honest about gaps</b><span>People the bank has not freed are flagged with a response, not assumed.</span></div>
+          <div class="definition-item"><b>Controlled</b><span>Staffing/procurement routes to the Sponsor; open authority closes through PTB-DEC-001.</span></div>
+        </div>
+      </section>
+
+      <section class="panel" id="rs-acceptance">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Resource Validation, Control &amp; Baseline Acceptance</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Resource needs trace to WBS, schedule and scope</li><li>Every row has exactly one accountable</li><li>Named roles are real and capacity-confirmed</li><li>Gaps are explicit with owners and closure gates</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Monthly resource review vs loading baseline</li><li>No double-booking on the critical path</li><li>Escalation outside delegated tolerance to Sponsor</li><li>DEC-05/DEC-06/DEC-07 govern appointments</li></ul></div>
+          <div class="glass-card"><h3>Baseline definition</h3><ul><li>Deliverable RACI frozen as controlled baseline</li><li>Resource gaps logged with response and owner</li><li>Loading integrated with schedule and cost</li><li>Plan integrates with risk register and decision log</li></ul></div>
+        </div>
+        <div class="doc-footer"><span>PTB-RES-001 &middot; Version 1.0 &middot; Planning baseline</span><span>Aligned to PTB-SCOPE-001, PTB-SCHED-001, PTB-COST-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -3911,7 +4054,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope','schedule','cost','communications'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule','cost','communications','resources'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -3927,7 +4070,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope','schedule','cost','communications'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -4028,7 +4171,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
