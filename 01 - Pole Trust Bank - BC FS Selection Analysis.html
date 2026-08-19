@@ -105,6 +105,28 @@ a{color:inherit;text-decoration:none;}
 .doc-switch button.active{border-color:var(--border-hi);background:linear-gradient(135deg,rgba(217,180,106,0.14),rgba(47,163,131,0.08));}
 .doc-switch .dt{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--text-mute);text-transform:uppercase;}
 .doc-switch .dn{font-family:var(--serif);font-size:13.5px;font-weight:600;color:var(--text);}
+.doc-switch .doc-review-badge{
+  position:absolute;top:7px;right:8px;z-index:4;
+  display:inline-flex;align-items:center;gap:4px;
+  padding:2.5px 7px;border-radius:999px;
+  font-family:var(--mono);font-size:7.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;line-height:1.2;white-space:nowrap;
+  color:#fff;background:linear-gradient(135deg,#e07a1f,#c4451f);
+  border:1px solid rgba(255,210,130,.55);
+  box-shadow:0 2px 8px rgba(196,69,31,.38),inset 0 1px 0 rgba(255,255,255,.35);
+  pointer-events:none;user-select:none;
+  animation:review-badge-pulse 2.6s ease-in-out infinite;
+}
+.doc-switch .doc-review-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:#ffe1a8;box-shadow:0 0 6px 1px rgba(255,225,168,.9);animation:review-badge-dot 2.6s ease-in-out infinite;}
+html[data-theme="dark"] .doc-switch .doc-review-badge{background:linear-gradient(135deg,#f59a3e,#d9534f);border-color:rgba(255,196,120,.6);box-shadow:0 2px 10px rgba(217,83,79,.45),inset 0 1px 0 rgba(255,255,255,.28);}
+@keyframes review-badge-pulse{
+  0%,100%{transform:scale(1);box-shadow:0 2px 8px rgba(196,69,31,.38),inset 0 1px 0 rgba(255,255,255,.35);}
+  50%{transform:scale(1.06);box-shadow:0 3px 14px rgba(224,122,31,.62),inset 0 1px 0 rgba(255,255,255,.42);}
+}
+@keyframes review-badge-dot{
+  0%,100%{opacity:.75;transform:scale(.9);}
+  50%{opacity:1;transform:scale(1.15);}
+}
 
 nav.toc{display:flex;flex-direction:column;gap:1px;}
 nav.toc .toc-group{margin-top:16px;margin-bottom:2px;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mute);padding:0 12px;}
@@ -1136,6 +1158,7 @@ html[data-theme="dark"] .presentation-access-copy span{color:#aab7d1;}
 @media (prefers-reduced-motion:reduce){
   .doc-switch button.active,.doc-switch button:hover::before,.doc-switch button:focus-visible::before,.search-shell::before{animation:none;}
   .doc-switch button{transition:none;}
+  .doc-switch .doc-review-badge,.doc-switch .doc-review-badge::before{animation:none;}
 }
 
 @media (max-width:1200px){
@@ -2115,18 +2138,22 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <button data-doc="cost" onclick="switchDoc('cost')">
         <span class="dt">Document 06 &middot; PTB-COST-001</span>
         <span class="dn">Cost Estimate &amp; Budget</span>
+        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="communications" onclick="switchDoc('communications')">
         <span class="dt">Document 07 &middot; PTB-COMM-001</span>
         <span class="dn">Communications Management Plan</span>
+        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="resources" onclick="switchDoc('resources')">
         <span class="dt">Document 08 &middot; PTB-RES-001</span>
         <span class="dn">Resource Management Plan</span>
+        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="risk" onclick="switchDoc('risk')">
         <span class="dt">Document 09 &middot; PTB-RISK-001</span>
         <span class="dn">Risk Management Plan</span>
+        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
     </div>
 
