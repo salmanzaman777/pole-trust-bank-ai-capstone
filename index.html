@@ -2116,6 +2116,10 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dt">Document 06 &middot; PTB-COST-001</span>
         <span class="dn">Cost Estimate &amp; Budget</span>
       </button>
+      <button data-doc="communications" onclick="switchDoc('communications')">
+        <span class="dt">Document 07 &middot; PTB-COMM-001</span>
+        <span class="dn">Communications Management Plan</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs">
@@ -2199,6 +2203,17 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#cc-baseline"><span class="num">04</span>Cost Baseline &amp; Reconcile</a>
       <a href="#cc-evm"><span class="num">05</span>Cost Control &amp; EVM</a>
       <a href="#cc-acceptance"><span class="num">06</span>Cost Validation &amp; Baseline</a>
+    </nav>
+
+    <nav class="toc" id="toc-communications" style="display:none;">
+      <div class="toc-group">Planning &middot; People and Communication</div>
+      <a href="#cm-control"><span class="num">00</span>Document Control</a>
+      <a href="#cm-method"><span class="num">01</span>Communications Approach</a>
+      <a href="#cm-audiences"><span class="num">02</span>Audiences &amp; Channels</a>
+      <a href="#cm-matrix"><span class="num">03</span>Stakeholder Matrix</a>
+      <a href="#cm-message"><span class="num">04</span>Key Messages &amp; Announcements</a>
+      <a href="#cm-escalation"><span class="num">05</span>Escalation &amp; Incident Comms</a>
+      <a href="#cm-acceptance"><span class="num">06</span>Validation &amp; Baseline</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -3447,6 +3462,143 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-communications">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 07 &middot; PTB-COMM-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Communications Management Plan</h1>
+        <p class="hero-sub">A governed, audience-by-audience communications plan for the approved Pair 5 programme: what each stakeholder needs to know, how often, through which channel, and who is accountable — including the early, carefully drafted announcement for contact-centre agents whose Tier-1 work the assistant absorbs.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">5</div><div class="sl">Core Audiences</div></div>
+          <div class="stat-card"><div class="sv em">3</div><div class="sl">Comms Objectives</div></div>
+          <div class="stat-card"><div class="sv">2 wks</div><div class="sl">Minimum Review Cycle</div></div>
+          <div class="stat-card"><div class="sv">1</div><div class="sl">Drafted-First Announcement</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="cm-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Communications Baseline Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Communication, not resource planning</h3><p>This plan covers communications planning, audiences, channels, key messages, escalation and incident communications only. The resource plan with RACI is a separate planning artifact and is intentionally out of scope here.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-COMM-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-CHARTER-001 (approved Pair 5), PTB-STK-001 (29 stakeholder role groups) and PTB-SCOPE-001 (seven deliverables and 48-work-package WBS); included in the Sponsor-approved four-document pack with the WBS correction incorporated 3 August 2026</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for presented material; functional roles validate message accuracy and the Sponsor approves material external or regulatory communications</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Communications change authority</b></td><td>Project Sponsor; any external or regulatory message, or a message that changes an approved programme fact, routes to the Sponsor until DEC-03/DEC-04 approval</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 assigns owner appointments (DEC-05), Steering terms (DEC-04) and incident/escalation thresholds (DEC-11) to interim controls with accountable roles, evidence and closure gates</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="cm-method">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Communications Approach, Purpose &amp; Methodology</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Purpose</h3><p>Build a shared, accurate and timely picture of the programme for every stakeholder group; reduce uncertainty, resistance and rumour; and give people the information they need to decide, act and support delivery. The plan follows the PMBoK Plan Communications Management process.</p></div>
+          <div class="glass-card"><h3>Methodology</h3><p>Audience-by-audience analysis from the approved Stakeholder Register: identify what each audience needs, how often and through which channel; then assign a single accountable sender. Channels are matched to sensitivity and evidence; no material claim is made without an approved source.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Operating rule:</b> no communication changes an approved programme fact. Message accuracy is validated by the accountable functional owner; material external, regulatory or Sponsor-facing messages route to the Sponsor for consolidated approval before release.</p></div>
+      </section>
+
+      <section class="panel" id="cm-audiences">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Audiences, Needs &amp; Channels</h2></div>
+        <p class="panel-lede">Each audience is defined by what it needs to know, how often, through which channel, and the accountable sender. The contact-centre message is treated as the hardest and is drafted early (Section 4).</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Audience</th><th>What they need</th><th>Frequency</th><th>Channel</th><th>Accountable sender</th></tr></thead>
+            <tbody>
+              <tr><td><b>Board &amp; Executive Steering</b></td><td>Strategic progress, risks, decisions, funding and gate outcomes</td><td>Monthly + every gate</td><td>Decision pack, dashboard, meeting</td><td>Project Sponsor / PM</td></tr>
+              <tr><td><b>Staff &amp; target users</b></td><td>What the programme means for their work, timeline, training and support</td><td>Monthly + at each pilot</td><td>Intranet, town hall, team briefing</td><td>PM / Change Lead</td></tr>
+              <tr><td><b>Union &amp; employee representatives</b></td><td>Impact on roles, workload, monitoring fairness and how concerns are heard</td><td>Monthly + on impact events</td><td>Representative forum, written brief</td><td>PM / HR / Change Lead</td></tr>
+              <tr><td><b>Contact-centre agents</b></td><td>How the assistant changes Tier-1 work, what stays human, training and support</td><td>Before pilot + at go-live</td><td>Manager cascade, team huddle, FAQ</td><td>Contact Centre Lead / PM</td></tr>
+              <tr><td><b>Regulator &amp; compliance</b></td><td>Applicable obligations, evidence, incidents and assurance status</td><td>Per applicable obligation</td><td>Regulatory liaison, evidence pack</td><td>Legal / Compliance</td></tr>
+              <tr><td><b>Customers</b></td><td>Service changes, privacy, accessibility and human escalation</td><td>At customer-facing pilot</td><td>Statement, in-app notice, CX review</td><td>Digital Product Owner / CX</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Channel rule:</b> confidential or decision-sensitive material uses controlled channels with a named sender and record; broad announcements use open channels only after Sponsor approval of the message.</p></div>
+      </section>
+
+      <section class="panel" id="cm-matrix">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Stakeholder Communications Matrix</h2></div>
+        <p class="panel-lede">The matrix maps the approved stakeholder universe (PTB-STK-001) to a concrete communications action, cadence, channel and accountable sender. Exactly one accountable sender is named per row — two accountables means none.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Stakeholder / group</th><th>Key message</th><th>Cadence</th><th>Channel</th><th>Accountable sender</th></tr></thead>
+            <tbody>
+              <tr><td>Sponsor &amp; Steering Committee</td><td>Gate decisions, risks, funding and consolidated approval</td><td>Monthly + every gate</td><td>Decision pack, meeting</td><td>Project/Program Manager</td></tr>
+              <tr><td>Chief Digital Officer</td><td>Digital value, product coherence and pilot readiness</td><td>Fortnightly</td><td>Value/design review</td><td>Digital Product Owner</td></tr>
+              <tr><td>CIO &amp; Enterprise Architecture</td><td>Architecture, integration and readiness evidence</td><td>Weekly through foundation</td><td>Architecture workshop</td><td>Architecture Lead</td></tr>
+              <tr><td>Risk, Compliance, Legal, Privacy</td><td>Control evidence, obligations and assurance status</td><td>Weekly + per gate</td><td>Control checklist, escalation</td><td>Risk / Compliance Lead</td></tr>
+              <tr><td>CFO / Finance</td><td>Cost, benefits, funding and attribution evidence</td><td>Monthly</td><td>Cost &amp; benefit review</td><td>Finance Lead</td></tr>
+              <tr><td>Contact Centre leadership &amp; agents</td><td>Assistant scope, human handoff, training, support</td><td>Before pilot + go-live</td><td>Manager cascade, huddle, FAQ</td><td>Contact Centre Lead</td></tr>
+              <tr><td>Branch Operations</td><td>Cross-channel impact and readiness</td><td>Monthly</td><td>Ops readiness review</td><td>Operations Lead</td></tr>
+              <tr><td>HR, Learning &amp; Change</td><td>Role impact, training and adoption support</td><td>Monthly</td><td>Change council</td><td>Change Lead</td></tr>
+              <tr><td>Vendor / procurement (future)</td><td>Sourcing, due diligence and contract obligations</td><td>Per sourcing stage</td><td>Procurement record</td><td>Procurement Lead</td></tr>
+              <tr><td>Customers &amp; CX</td><td>Service change, privacy, accessibility, escalation</td><td>At customer pilot</td><td>Statement, in-app notice</td><td>Digital Product Owner</td></tr>
+              <tr><td>Regulators / obligations</td><td>Applicable obligations and evidence</td><td>Per obligation</td><td>Regulatory liaison</td><td>Legal / Compliance</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="cm-message">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Key Messages &amp; Announcements</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Programme announcement</h3><p>Pole Trust Bank is building a governed, human-accountable AI capability to improve customer service, employee productivity, lending support and fraud investigation. It will be phased, evidence-gated and never act autonomously on money or accounts.</p></div>
+          <div class="glass-card"><h3>Contact-centre announcement (drafted first)</h3><p>Your Tier-1 work is not being automated away. The assistant will absorb repetitive, low-complexity inquiries; you remain the accountable human for judgement, empathy and escalation. We will train you, measure the change transparently and keep your handoff authority intact.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Why the contact-centre message is drafted first:</b> this is the group whose day-to-day work is most visibly changed, so the message must be accurate, early, consistent and human. It is drafted in this plan, validated by Contact Centre leadership and HR, and released only with Sponsor-approved wording.</p></div>
+        <h3 class="section-title">Announcement release controls</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Announcement</th><th>Audience</th><th>Draft owner</th><th>Approval</th><th>Channel / timing</th></tr></thead>
+            <tbody>
+              <tr><td>Programme kick-off</td><td>All staff</td><td>PM</td><td>Sponsor</td><td>Intranet + town hall / M01</td></tr>
+              <tr><td>Copilot pilot</td><td>Target users</td><td>Copilot Product Owner</td><td>PM</td><td>Team briefing / M05</td></tr>
+              <tr><td>Contact-centre assistant</td><td>Agents + union reps</td><td>Contact Centre Lead</td><td>Sponsor</td><td>Cascade + forum / before M08</td></tr>
+              <tr><td>Customer-facing notice</td><td>Customers</td><td>Digital Product Owner</td><td>Sponsor + CX</td><td>In-app + statement / at pilot</td></tr>
+              <tr><td>Regulatory notification</td><td>Regulator</td><td>Legal / Compliance</td><td>Sponsor</td><td>Regulatory liaison / per obligation</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="cm-escalation">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Escalation &amp; Incident Communications</h2></div>
+        <p class="panel-lede">Escalation and incident communications follow the programme's evidence and control route. Material risk, compliance, budget, scope, KPI, roadmap or release matters route to the Sponsor; external and regulatory incident communications require Sponsor approval.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Escalation route</h3><ul><li>Weekly variance vs baseline; escalate outside tolerance</li><li>Material risk or compliance event &rarr; Sponsor within 24h</li><li>No unilateral external statement</li><li>DEC-03/DEC-04 close delegated escalation thresholds</li></ul></div>
+          <div class="glass-card"><h3>Incident communications</h3><ul><li>Internal: affected teams briefed first</li><li>External/regulatory: Legal/Compliance drafts, Sponsor approves</li><li>Record every incident communication</li><li>DEC-11 governs residual-risk acceptance</li></ul></div>
+          <div class="glass-card"><h3>Rumour / misinformation</h3><ul><li>Single source of truth: this plan and the decision register</li><li>Correct inaccuracies promptly via the same channel</li><li>Escalate persistent misinformation to Sponsor</li><li>Keep staff/union messages consistent</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Control rule:</b> an incident is communicated only with the accountable functional owner's validation and the Sponsor's consolidated approval where external or regulatory. No communication implies an approved fact that does not exist.</p></div>
+      </section>
+
+      <section class="panel" id="cm-acceptance">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Communications Validation, Control &amp; Baseline</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Every audience has a need, cadence, channel and sender</li><li>Exactly one accountable sender per message</li><li>Contact-centre announcement drafted and reviewed first</li><li>No message changes an approved programme fact</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Message accuracy validated by functional owner</li><li>External/regulatory messages route to Sponsor</li><li>Incident communications recorded and approved</li><li>DEC-03/DEC-04/DEC-05/DEC-11 close open authority</li></ul></div>
+          <div class="glass-card"><h3>Baseline definition</h3><ul><li>Approved programme facts are the source of truth</li><li>Audience matrix is the controlled baseline</li><li>Cadence and channels are monitored and versioned</li><li>Plan integrates with STK register and decision log</li></ul></div>
+        </div>
+        <h3 class="section-title">Definition of a valid communications baseline</h3>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Audience-led</b><span>Every group is served by a need, cadence, channel and accountable sender.</span></div>
+          <div class="definition-item"><b>Single-accountable</b><span>Exactly one accountable sender per message; two accountables means none.</span></div>
+          <div class="definition-item"><b>Controlled</b><span>External/regulatory messages route to the Sponsor; open authority closes through PTB-DEC-001.</span></div>
+        </div>
+        <div class="doc-footer"><span>PTB-COMM-001 &middot; Version 1.0 &middot; Planning baseline</span><span>Aligned to PTB-STK-001, PTB-SCOPE-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -3759,7 +3911,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope','schedule','cost'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule','cost','communications'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -3775,7 +3927,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope','schedule','cost'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule','cost','communications'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -3876,7 +4028,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
