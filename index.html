@@ -2124,6 +2124,10 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dt">Document 08 &middot; PTB-RES-001</span>
         <span class="dn">Resource Management Plan</span>
       </button>
+      <button data-doc="risk" onclick="switchDoc('risk')">
+        <span class="dt">Document 09 &middot; PTB-RISK-001</span>
+        <span class="dn">Risk Management Plan</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs">
@@ -2229,6 +2233,17 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#rs-gaps"><span class="num">04</span>Capacity Gaps &amp; Responses</a>
       <a href="#rs-controls"><span class="num">05</span>Resource Control &amp; Baseline</a>
       <a href="#rs-acceptance"><span class="num">06</span>Validation &amp; Baseline</a>
+    </nav>
+
+    <nav class="toc" id="toc-risk" style="display:none;">
+      <div class="toc-group">Planning &middot; Uncertainty and Control</div>
+      <a href="#rk-control"><span class="num">00</span>Document Control</a>
+      <a href="#rk-method"><span class="num">01</span>Risk Approach</a>
+      <a href="#rk-identification"><span class="num">02</span>Risk Identification</a>
+      <a href="#rk-assessment"><span class="num">03</span>Qualitative Assessment</a>
+      <a href="#rk-response"><span class="num">04</span>Risk Response Planning</a>
+      <a href="#rk-review"><span class="num">05</span>Review &amp; Reporting</a>
+      <a href="#rk-acceptance"><span class="num">06</span>Validation &amp; Baseline</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -3742,6 +3757,135 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-risk">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 09 &middot; PTB-RISK-001 &middot; Planning Baseline &middot; 2 August 2026</div>
+        <h1 class="hero-title">Risk Management Plan</h1>
+        <p class="hero-sub">A controlled risk management plan for the approved Pair 5 programme: how risk is planned, identified, assessed qualitatively, responded to and reviewed — with named owners and triggers for the top risks. The risk register itself (the scored list) is a separate artifact and is intentionally excluded here.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">4</div><div class="sl">Process Steps</div></div>
+          <div class="stat-card"><div class="sv em">P × I</div><div class="sl">Scoring Method</div></div>
+          <div class="stat-card"><div class="sv">Top 5</div><div class="sl">Focused Risks</div></div>
+          <div class="stat-card"><div class="sv">4</div><div class="sl">Response Strategies</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="rk-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Risk Baseline Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Plan, not register</h3><p>This plan covers risk management planning, identification, qualitative assessment, response planning and review. The risk register (the scored list of individual risks) is a separate artifact and is intentionally out of scope here.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-RISK-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / 2 August 2026</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">REFINED PLANNING BASELINE &mdash; SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-CHARTER-001 (approved Pair 5), PTB-SCOPE-001 (seven deliverables and 48-work-package WBS), PTB-SCHED-001 (24-month critical path) and PTB-COST-001 (USD 11.5M CAPEX / USD 27.5M TCO); included in the Sponsor-approved four-document pack with the WBS correction incorporated 3 August 2026</td></tr>
+              <tr><td><b>Approval rule</b></td><td>Sponsor approval constitutes pertinent internal stakeholder approval for presented material; specialist functions assess residual risk and the Sponsor records the consolidated internal accept, conditional-accept or reject decision</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Risk acceptance authority</b></td><td>Project Sponsor; specialist risk acceptance outside delegated tolerance routes to the Sponsor (DEC-11)</td></tr>
+              <tr><td><b>Open-decision control</b></td><td>PTB-DEC-001 assigns the consolidated residual-risk decision (DEC-11), KPI measurement rules (DEC-08) and regulatory applicability (DEC-09) to interim controls with accountable roles, evidence and closure gates</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="rk-method">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Risk Approach, Purpose &amp; Methodology</h2></div>
+        <div class="card-grid">
+          <div class="glass-card"><h3>Purpose</h3><p>Identify, assess, respond to and review the risks that could affect the approved Pair 5 programme, so management attention is spent where it matters and no risk is silently absorbed. The plan follows the PMBoK Plan Risk Management process.</p></div>
+          <div class="glass-card"><h3>Methodology</h3><p>Risk is managed through four steps: identify, assess, respond and review. Risk is explicitly linked to scope, schedule, cost, the WBS and the decision register. Scoring is qualitative: probability &times; impact, ranked, with the top five receiving real attention and the rest given review dates.</p></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Operating rule:</b> every top risk gets a named owner and a trigger. No risk is closed without evidence; no register update is made without the accountable owner and the Sponsor's consolidated decision where acceptance is required.</p></div>
+      </section>
+
+      <section class="panel" id="rk-identification">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Risk Identification</h2></div>
+        <p class="panel-lede">Risk identification covers the full approved scope and the customer-facing AI assistant in particular. The starting set comes from the approved scope, schedule and stakeholder baselines; it is not exhaustive and is reopened at every gate and review.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Risk area</th><th>Example risk</th><th>Source</th></tr></thead>
+            <tbody>
+              <tr><td><b>Customer impact</b></td><td>Hallucination to a customer — the assistant gives an incorrect or fabricated answer</td><td>Customer assistant MVP (D4)</td></tr>
+              <tr><td><b>People / adoption</b></td><td>Staff resistance — agents or users reject the assistant or the change</td><td>Change &amp; adoption (D3–D7)</td></tr>
+              <tr><td><b>Vendor / supply</b></td><td>Vendor slip — platform delivery or support delays the critical path</td><td>Vendor &amp; platform (D2, DEC-07)</td></tr>
+              <tr><td><b>Integration</b></td><td>Integration failure — APIs, data or systems do not connect as assumed</td><td>Enterprise foundation (D2, DEC-10)</td></tr>
+              <tr><td><b>Regulatory</b></td><td>Regulator concern — applicable obligations are not met or evidence is missing</td><td>Regulatory applicability (DEC-09)</td></tr>
+              <tr><td><b>Model / AI control</b></td><td>Model error, bias or over-reliance on AI output without human authority</td><td>Responsible-AI &amp; model risk (D2–D6)</td></tr>
+              <tr><td><b>Data</b></td><td>Data quality, classification or lawful-use gap blocks a pilot</td><td>Data foundation (D2, DEC-10)</td></tr>
+              <tr><td><b>Security / privacy</b></td><td>Privacy or security incident involving customer data</td><td>Security &amp; privacy controls (D2–D6)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Prompt applied:</b> acting as a risk officer for a bank deploying a customer-facing AI assistant, the identification above answers "What have I missed?" by adding model, data, security and regulatory risks beyond the five starter examples on the instruction slide.</p></div>
+      </section>
+
+      <section class="panel" id="rk-assessment">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Qualitative Risk Assessment</h2></div>
+        <p class="panel-lede">Risks are scored by probability &times; impact on a scale, then ranked. The top five receive real attention with owners and triggers; the remainder receive review dates. Severity bands give an indicative financial view of impact.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score band</th><th>Indicative impact</th><th>Attention</th></tr></thead>
+            <tbody>
+              <tr><td>1–5</td><td>USD 500</td><td>Review date</td></tr>
+              <tr><td>6–10</td><td>USD 1,000</td><td>Review date</td></tr>
+              <tr><td>11–15</td><td>USD 1,500</td><td>Real attention</td></tr>
+              <tr><td>16–20</td><td>USD 5,000</td><td>Top five / real attention</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Scoring rule:</b> probability and impact are each scored on a 1–5 scale; the product (e.g., 4 &times; 5 = 20) ranks the risk. Impact is assessed against the approved schedule, cost, regulatory and customer-outcome baselines. The risk impact matrix (2–5, Low = 1R) is the reference grid.</p></div>
+      </section>
+
+      <section class="panel" id="rk-response">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Risk Response Planning</h2></div>
+        <p class="panel-lede">Every top risk receives a response strategy and a named owner with a trigger. The four response strategies are avoid, mitigate, transfer and accept. Responses align with the resource plan's gap responses and the schedule's riskiest dependencies.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Risk</th><th>Response</th><th>Owner</th><th>Trigger</th></tr></thead>
+            <tbody>
+              <tr><td>Hallucination to a customer</td><td>Mitigate — approved retrieval, confidence thresholds, human handoff</td><td>Digital Product Owner</td><td>First high-severity wrong answer in pilot</td></tr>
+              <tr><td>Staff resistance</td><td>Mitigate — early communication, co-design, training, listening sessions</td><td>Change Lead / HR</td><td>Adoption below target or union concern</td></tr>
+              <tr><td>Vendor slip</td><td>Transfer / mitigate — contract SLAs, early sourcing, exit rights</td><td>Procurement Lead</td><td>Missed vendor milestone</td></tr>
+              <tr><td>Integration failure</td><td>Mitigate — API-first design, data profiling, fallback procedures</td><td>CIO / Architecture</td><td>Interface test failure at foundation gate</td></tr>
+              <tr><td>Regulator concern</td><td>Avoid / mitigate — legal &amp; compliance validation, evidence pack</td><td>Legal / Compliance</td><td>Regulatory inquiry or applicability finding</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Response rule:</b> avoid removes the exposure, mitigate reduces probability or impact, transfer shifts it to a third party, and accept records it with an owner and review date. Every response is evidence-backed and routed to the Sponsor where acceptance is required (DEC-11).</p></div>
+      </section>
+
+      <section class="panel" id="rk-review">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Review &amp; Reporting</h2></div>
+        <p class="panel-lede">A risk plan nobody reopens is decoration. Risks are reviewed at every phase gate and in the monthly status report, tied to the schedule's critical path and the decision register. The register updates in the status report, not in isolation.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Review cadence</h3><ul><li>Monthly status report review</li><li>Every phase gate</li><li>After a material event or trigger</li><li>Top five reviewed every cycle</li></ul></div>
+          <div class="glass-card"><h3>Reporting</h3><ul><li>Risk status in the monthly status report</li><li>Escalation outside tolerance to Sponsor</li><li>Residual-risk decision at DEC-11</li><li>Evidence recorded for every update</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Owner and trigger named for every top risk</li><li>No silent closure or absorption</li><li>Register updates versioned and communicated</li><li>Links to scope, schedule, cost and resource baselines</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Control rule:</b> a risk is closed only when its trigger is resolved with evidence and the accountable owner records the decision. No risk is downgraded without a Sponsor decision where acceptance is required.</p></div>
+      </section>
+
+      <section class="panel" id="rk-acceptance">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Risk Validation, Control &amp; Baseline</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Identification covers the full approved scope</li><li>Every top risk has an owner and a trigger</li><li>Scoring uses the approved probability &times; impact grid</li><li>Responses use avoid, mitigate, transfer or accept</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Monthly and gate-based review</li><li>Escalation outside tolerance to Sponsor</li><li>Residual-risk decision at DEC-11</li><li>Links to scope, schedule, cost, resource and comms baselines</li></ul></div>
+          <div class="glass-card"><h3>Baseline definition</h3><ul><li>Risk approach, scoring grid and response strategies frozen</li><li>Owners confirmed through DEC-05</li><li>Review cadence integrated with status reporting</li><li>Plan integrates with decision register and resource plan</li></ul></div>
+        </div>
+        <h3 class="section-title">Definition of a valid risk baseline</h3>
+        <div class="definition-grid">
+          <div class="definition-item"><b>Process-led</b><span>Identify, assess, respond and review are defined and owned.</span></div>
+          <div class="definition-item"><b>Qualitative</b><span>Probability &times; impact scoring ranks the top five for real attention.</span></div>
+          <div class="definition-item"><b>Controlled</b><span>Owners and triggers are named; acceptance routes to the Sponsor through PTB-DEC-001.</span></div>
+        </div>
+        <div class="doc-footer"><span>PTB-RISK-001 &middot; Version 1.0 &middot; Planning baseline</span><span>Aligned to PTB-SCOPE-001, PTB-SCHED-001, PTB-COST-001, PTB-RES-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -4054,7 +4198,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope','schedule','cost','communications','resources'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -4070,7 +4214,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -4171,7 +4315,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('page-risk'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
