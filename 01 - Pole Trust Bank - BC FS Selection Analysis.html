@@ -155,6 +155,22 @@ h1.hero-title{
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .hero-sub{font-size:16.5px;line-height:1.7;color:var(--text-dim);max-width:720px;margin-bottom:34px;}
+.hero-insights-link{
+  display:inline-flex;align-items:center;gap:7px;
+  margin:0 0 26px;padding:8px 14px;border-radius:999px;
+  font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;text-decoration:none;color:#0F2A4A;
+  border:1px solid rgba(20,107,110,.28);background:linear-gradient(135deg,rgba(20,107,110,.10),rgba(11,76,89,.06));
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+.hero-insights-link:hover,.hero-insights-link:focus-visible{
+  transform:translateY(-1px);border-color:rgba(20,107,110,.5);
+  background:linear-gradient(135deg,rgba(20,107,110,.18),rgba(11,76,89,.10));
+  box-shadow:0 6px 16px rgba(20,107,110,.16);outline:none;
+}
+.hero-insights-link svg{width:13px;height:13px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;}
+html[data-theme="dark"] .hero-insights-link{color:#cfe3e2;border-color:rgba(96,190,190,.34);background:linear-gradient(135deg,rgba(34,108,110,.22),rgba(14,66,74,.18));}
+html[data-theme="dark"] .hero-insights-link:hover,html[data-theme="dark"] .hero-insights-link:focus-visible{border-color:rgba(130,215,215,.5);box-shadow:0 6px 18px rgba(0,0,0,.3);}
 .hero-sub b{color:var(--text);font-weight:600;}
 
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
@@ -2281,6 +2297,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Project Selection Analysis &middot; Source-Locked Edition &middot; 31 July 2026</div>
         <h1 class="hero-title">Pole Trust Bank<br>AI Project Selection</h1>
         <p class="hero-sub">A traceable comparison of all five Business Case/Feasibility Study pairs. The complete four-document pack is Sponsor approved; the sole requested WBS correction was incorporated on 3 August 2026 without resubmission.</p>
+        <a class="hero-insights-link" href="01 - Pole Trust Bank - Business Case and Feasibility Study - 4 Pages.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Business Case and Feasibility Study insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Business Case &amp; Feasibility Study — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">5 / 5</div><div class="sl">Options Assessed</div></div>
           <div class="stat-card"><div class="sv em">92 / 100</div><div class="sl">Pair 5 Weighted Score</div></div>
@@ -2609,6 +2626,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Project Charter &middot; Approved Baseline 1.0 &middot; Local Control Overlay 2 August 2026</div>
         <h1 class="hero-title">Integrated AI Banking<br>Implementation Ecosystem</h1>
         <p class="hero-sub">The Sponsor-approved charter is treated as consolidated approval by all pertinent internal stakeholders for its submitted content. Salman Zaman’s formal delegation, mandatory delivery evidence and the specific initial funding release remain controlled prerequisites to execution.</p>
+        <a class="hero-insights-link" href="02 - Pole Trust Bank - Project Charter - 2 Pages.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Project Charter insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Project Charter — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">$11.5M</div><div class="sl">Approved Planning CAPEX</div></div>
           <div class="stat-card"><div class="sv em">$27.5M</div><div class="sl">Approved Planning TCO</div></div>
@@ -2858,6 +2876,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 03 &middot; PTB-STK-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Stakeholder Register<br>&amp; Analysis</h1>
         <p class="hero-sub">A living, evidence-aware register that identifies who can affect or is affected by Pair 5, maps power and interest, records stance without invention, and assigns one concrete engagement action to every key stakeholder.</p>
+        <a class="hero-insights-link" href="03 - Pole Trust Bank - Stakeholder Register and Analysis.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Stakeholder Register and Analysis insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Stakeholder Register &amp; Analysis — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">29</div><div class="sl">Relevant Stakeholder Groups</div></div>
           <div class="stat-card"><div class="sv em">19</div><div class="sl">Manage Closely</div></div>
@@ -3032,6 +3051,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 04 &middot; PTB-SCOPE-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Scope Management Plan<br>&amp; Detailed Scope Statement</h1>
         <p class="hero-sub">The controlled boundary for the complete Pair 5 ecosystem: seven deliverables, an eight-branch / 16-deliverable / 48-work-package WBS, measurable acceptance evidence and a disciplined route for validating scope and authorizing change.</p>
+        <a class="hero-insights-link" href="04 - Pole Trust Bank - Scope Management Plan and Scope Statement.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Scope Management Plan and Scope Statement insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Scope Management Plan — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">7</div><div class="sl">Controlled Deliverables</div></div>
           <div class="stat-card"><div class="sv em">8 / 16 / 48</div><div class="sl">L1 / L2 / Work Packages</div></div>
@@ -3239,6 +3259,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 05 &middot; PTB-SCHED-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Schedule Management Plan<br>&amp; Work-Package Sequencing</h1>
         <p class="hero-sub">Converts the 48-work-package WBS and the sponsor-approved 24-month roadmap into a dependency-sequenced schedule: the zero-slack critical path, board-visible milestones, the two riskiest dependencies and the schedule baseline against which progress is measured.</p>
+        <a class="hero-insights-link" href="05 - Pole Trust Bank - Schedule Management Plan.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Schedule Management Plan insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Schedule Management Plan — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">24 mo.</div><div class="sl">Approved Roadmap</div></div>
           <div class="stat-card"><div class="sv em">1</div><div class="sl">Critical Path</div></div>
@@ -3382,6 +3403,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 06 &middot; PTB-COST-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Cost Estimate &amp; Budget<br>Planning</h1>
         <p class="hero-sub">Converts the 48-work-package WBS and the Sponsor-approved financial envelope into a controlled cost baseline: per-work-package estimates rolled up, explicit contingency, a reconciliated budget and Earned Value control against which progress is measured.</p>
+        <a class="hero-insights-link" href="06 - Pole Trust Bank - Cost Estimate and Budget Planning.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Cost Estimate and Budget Planning insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Cost Estimate &amp; Budget — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">USD 11.5M</div><div class="sl">CAPEX Ceiling</div></div>
           <div class="stat-card"><div class="sv em">USD 27.5M</div><div class="sl">Five-Year TCO</div></div>
@@ -3524,6 +3546,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 07 &middot; PTB-COMM-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Communications Management Plan</h1>
         <p class="hero-sub">A governed, audience-by-audience communications plan for the approved Pair 5 programme: what each stakeholder needs to know, how often, through which channel, and who is accountable — including the early, carefully drafted announcement for contact-centre agents whose Tier-1 work the assistant absorbs.</p>
+        <a class="hero-insights-link" href="07 - Pole Trust Bank - Communications Management Plan.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Communications Management Plan insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Communications Management Plan — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">5</div><div class="sl">Core Audiences</div></div>
           <div class="stat-card"><div class="sv em">3</div><div class="sl">Comms Objectives</div></div>
@@ -3661,6 +3684,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 08 &middot; PTB-RES-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Resource Management Plan<br>&amp; Deliverable RACI</h1>
         <p class="hero-sub">A controlled resource plan for the approved Pair 5 programme: the people, roles, skills and capacity every major deliverable needs — with a deliverable-level RACI that names real roles, enforces exactly one accountable per row, and says clearly where the bank has not yet freed the people the plan requires.</p>
+        <a class="hero-insights-link" href="08 - Pole Trust Bank - Resource Management Plan.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Resource Management Plan insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Resource Management Plan — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">7</div><div class="sl">Controlled Deliverables</div></div>
           <div class="stat-card"><div class="sv em">1 A</div><div class="sl">Per RACI Row</div></div>
@@ -3789,6 +3813,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="hero-eyebrow">Document 09 &middot; PTB-RISK-001 &middot; Planning Baseline &middot; 2 August 2026</div>
         <h1 class="hero-title">Risk Management Plan</h1>
         <p class="hero-sub">A controlled risk management plan for the approved Pair 5 programme: how risk is planned, identified, assessed qualitatively, responded to and reviewed — with named owners and triggers for the top risks. The risk register itself (the scored list) is a separate artifact and is intentionally excluded here.</p>
+        <a class="hero-insights-link" href="09 - Pole Trust Bank - Risk Management Plan.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Risk Management Plan insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Risk Management Plan — Insights</a>
         <div class="stat-grid">
           <div class="stat-card"><div class="sv gold">4</div><div class="sl">Process Steps</div></div>
           <div class="stat-card"><div class="sv em">P × I</div><div class="sl">Scoring Method</div></div>
