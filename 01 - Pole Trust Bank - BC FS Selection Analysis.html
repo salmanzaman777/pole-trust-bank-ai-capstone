@@ -4152,6 +4152,16 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
           </table>
         </div>
         <div class="glass-card quote"><p style="margin:0;"><b>Bottom line:</b> the programme is 40% complete but running behind — ~10% behind plan on the critical path and ~12% over the planned phase budget. Immediate Sponsor decisions (DEC-01, DEC-02, DEC-03) are required to fund and authorise recovery.</p></div>
+        <h3 class="section-title">Planned vs Actual — Root Cause &amp; Recovery</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Variance (P / A)</th><th>Root cause / reason</th><th>Recovery action</th><th>Owner / route</th></tr></thead>
+            <tbody>
+              <tr><td><b>Schedule &minus;10%</b> (SV &minus;10%, SPI &asymp; 0.80)</td><td>Late start to D2 foundation (data/vendor readiness opened after the window); D3 copilot single-threaded with no parallelism — D2 slip flows one-for-one</td><td>Crash D2/D3 (parallelise + COTS-first + added staffing); overlap D3 with M4 design; fast-track vendor/data sourcing; controlled rebaseline via CR-002</td><td>PM / Delivery lead; DEC-01/02/03</td></tr>
+              <tr><td><b>Cost +12%</b> (CV &minus;12%, CPI &asymp; 0.89)</td><td>Heavier-than-estimated D2/D3 foundation work; extended windows hold resources longer; contingency drawn early to protect the end-state</td><td>Release funded DEC-02 recovery; apply contingency only under approved CR-002 rebaseline; COTS-first + price-lock; weekly EVM / contingency-burn check</td><td>CFO / Sponsor; PM / Finance</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="panel" id="st-progress">
@@ -4188,7 +4198,13 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
             </tbody>
           </table>
         </div>
-        <div class="glass-card quote"><p style="margin:0;"><b>Recovery focus:</b> the ~10% delay is concentrated on the critical path / heavy activities (D2 foundation, D3 copilot). Approving DEC-01/DEC-02/DEC-03 lets the PM fund and coordinate catch-up before it compounds.</p></div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Root cause of schedule variance (Planned vs Actual):</b> the ~10% delay on the critical path is driven by <b>(1)</b> late start to foundation D2 — data/build integration and vendor readiness were opened after the D2 window opened, not before it, and <b>(2)</b> the D3 copilot pilot is a single-thread, heavy engineering activity with no parallelism in the baseline, so every D2 slip flows one-for-one to D3. Milestone lag (M2 ≈ M04, M3 ≈ M07–M08) is elapsed-effect of these two causes, not a milestone-tracking artefact.</p></div>
+        <div class="glass-card"><h4>Recovery actions — trigger &rarr; action &rarr; owner</h4><ul>
+          <li><b>Crash the critical path:</b> parallelise D2/D3 heavy work with additional staffing and a COTS-first stack — fast-tracks M3 back toward M07. Owner: PM / Delivery lead.</li>
+          <li><b>Run D3 pilot and M4 design concurrently</b> (overlap adjacent windows) so the D4 pilot is de-risked from the D3 slip. Owner: Delivery lead (with PM authorisation, DEC-03).</li>
+          <li><b>Front-load and fast-track vendor / data sourcing</b> to close the D2 data-readiness gap; procurement starts ahead of the build window (DEC-07 / DEC-10). Owner: Procurement + Data.</li>
+          <li><b>Replan the affected schedule windows via CR-002</b> once the CCB / BOG approves the rebaseline, so the new milestone dates are the controlled baseline, not a moving target. Owner: PM / CCB.</li>
+        </ul></div>
       </section>
 
       <section class="panel" id="st-cost">
@@ -4207,6 +4223,13 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
           </table>
         </div>
         <div class="glass-card quote"><p style="margin:0;"><b>Variance relation:</b> the ~12% cost variance tracks the ~10% schedule delay — heavy/critical-path work is costing more than planned. This stays governed by the approved envelope and routes to the Sponsor (DEC-02/DEC-03) rather than being absorbed silently.</p></div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Root cause of budget variance (Planned vs Actual):</b> Actual Cost exceeds the Planned phase budget by ~12% because <b>(1)</b> foundational D2 data/build integration is heavier than the baseline estimate — the front-loaded critical-path work consumes more specialist-effort and vendor cost than was planned at PTB-COST-001, <b>(2)</b> extended D2/D3 windows hold resources in place for longer than planned, and <b>(3)</b> contingency is being drawn earlier than intended (early-burn flag) to keep the slip from widening. The variance is a deliberate spend to protect the end-state, funded within the approved USD 11.5M CAPEX / 27.5M TCO envelope.</p></div>
+        <div class="glass-card"><h4>Cost recovery actions — trigger &rarr; action &rarr; owner</h4><ul>
+          <li><b>Confirm funded recovery path:</b> release the CFO-supported DEC-02 phase funding and formalise the tolerance, so recovery spend is pre-funded rather than silently absorbed. Owner: CFO / Sponsor.</li>
+          <li><b>Apply contingency under a controlled rebaseline (CR-002):</b> draw the reserve against the confirmed variance only via an approved change, keeping the envelope and audit trail intact. Owner: PM / Finance.</li>
+          <li><b>Contain continuing cost growth:</b> COTS-first stack and additional staffing (crashed D2/D3) replaces more-costly maturing engineering; vendor early-sourcing locks price. Owner: Delivery lead / Procurement.</li>
+          <li><b>Weekly EVM check on CPI (≈ 0.89) and contingency burn</b> so further overrun is flagged at trigger, not at quarter-end. Owner: PMO / Finance.</li>
+        </ul></div>
       </section>
 
       <section class="panel" id="st-risks">
