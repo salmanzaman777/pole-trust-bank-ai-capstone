@@ -4069,14 +4069,14 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
             <thead><tr><th>Measure</th><th>Value</th><th>Baseline</th><th>Variance (numbers)</th><th>Status</th></tr></thead>
             <tbody>
               <tr><td><b>Elapsed</b></td><td>≈ Month 10</td><td>24-month roadmap</td><td>40% elapsed vs 24-month</td><td>OK</td></tr>
-              <tr><td><b>Planned Value (PV)</b></td><td>planned completion ≈ 50%</td><td>Time-phased baseline</td><td>&mdash;</td><td>OK</td></tr>
-              <tr><td><b>Earned Value (EV)</b></td><td>40% complete</td><td>PV ≈ 50%</td><td><b>SV = &minus;10%</b> (behind plan)</td><td><span class="badge go">RED</span></td></tr>
-              <tr><td><b>Schedule Performance Index (SPI)</b></td><td>≈ 0.80</td><td>SPI = 1.00</td><td>&minus;20% against plan</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Planned Value (PV)</b></td><td>≈ 50% planned by Month 10</td><td>Time-phased baseline (front-loaded critical-path profile — heavy D1/D2 work is scheduled early, not elapsed-proportional)</td><td>&mdash;</td><td>OK</td></tr>
+              <tr><td><b>Earned Value (EV)</b></td><td>40% complete</td><td>Percent earned vs PV ≈ 50%</td><td><b>SV = &minus;10%</b> (behind plan)</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Schedule Performance Index (SPI)</b></td><td>≈ 0.80</td><td>EV &divide; PV = 40/50</td><td>&minus;20% against plan</td><td><span class="badge go">RED</span></td></tr>
               <tr><td><b>Critical-path status</b></td><td>D1/D2 partial, D3 slipping</td><td>D1&rarr;D2&rarr;D3 windows</td><td>~10% slip on heavy activities</td><td><span class="badge go">RED</span></td></tr>
             </tbody>
           </table>
         </div>
-        <div class="glass-card quote"><p style="margin:0;"><b>Variance rule:</b> 40% done should be ~50% per the baseline. The ~10% gap on the critical path means the programme is behind plan — reported in numbers, not adjectives.</p></div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Variance rule (basis):</b> the ~50% planned value at Month 10 comes from the time-phased baseline's front-loaded critical-path profile (D1/D2 heavy foundation work is scheduled early), not from elapsed-proportional phasing. Earned progress of 40% is therefore ~10% behind that ~50% planned — SV = &minus;10%, SPI &asymp; 0.80 — reported in numbers, not adjectives.</p></div>
       </section>
 
       <section class="panel" id="st-schedule">
