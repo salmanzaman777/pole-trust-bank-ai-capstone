@@ -1701,6 +1701,7 @@ html[data-theme="dark"] .nav-scrim{background:linear-gradient(90deg,rgba(0,4,12,
 .table-wrap th,.table-wrap td{white-space:normal!important;overflow-wrap:anywhere;word-break:normal;hyphens:auto;padding:10px clamp(7px,1vw,14px);line-height:1.48;}
 .table-wrap thead th{font-size:clamp(8px,.66vw,10.2px);}
 .table-wrap .badge{max-width:100%;white-space:normal;text-align:center;justify-content:center;line-height:1.25;}
+.table-wrap .badge.red,.table-wrap .badge.amber,.table-wrap .badge.green,.table-wrap .badge.go,.table-wrap .status-pill{white-space:nowrap;}
 
 @media(max-width:1180px) and (min-width:921px){
   .app-header-inner{grid-template-columns:72px minmax(220px,1.1fr) minmax(180px,.7fr) minmax(190px,.8fr);gap:10px;padding:7px 74px 7px 14px;}
@@ -4068,8 +4069,8 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
           <table>
             <thead><tr><th>Measure</th><th>Value</th><th>Baseline</th><th>Variance (numbers)</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td><b>Elapsed</b></td><td>≈ Month 10</td><td>24-month roadmap</td><td>40% elapsed vs 24-month</td><td>OK</td></tr>
-              <tr><td><b>Planned Value (PV)</b></td><td>≈ 50% planned by Month 10</td><td>Time-phased baseline (front-loaded critical-path profile — heavy D1/D2 work is scheduled early, not elapsed-proportional)</td><td>&mdash;</td><td>OK</td></tr>
+              <tr><td><b>Elapsed</b></td><td>≈ Month 10</td><td>24-month roadmap</td><td>40% elapsed vs 24-month</td><td><span class="badge green">Green</span></td></tr>
+              <tr><td><b>Planned Value (PV)</b></td><td>≈ 50% planned by Month 10</td><td>Time-phased baseline (front-loaded critical-path profile — heavy D1/D2 work is scheduled early, not elapsed-proportional)</td><td>&mdash;</td><td><span class="badge green">Green</span></td></tr>
               <tr><td><b>Earned Value (EV)</b></td><td>40% complete</td><td>Percent earned vs PV ≈ 50%</td><td><b>SV = &minus;10%</b> (behind plan)</td><td><span class="badge red">RED</span></td></tr>
               <tr><td><b>Schedule Performance Index (SPI)</b></td><td>≈ 0.80</td><td>EV &divide; PV = 40/50</td><td>&minus;20% against plan</td><td><span class="badge red">RED</span></td></tr>
               <tr><td><b>Critical-path status</b></td><td>D1/D2 partial, D3 slipping</td><td>D1&rarr;D2&rarr;D3 windows</td><td>~10% slip on heavy activities</td><td><span class="badge red">RED</span></td></tr>
@@ -4086,8 +4087,8 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
           <table>
             <thead><tr><th>Milestone / deliverable</th><th>Baseline date</th><th>Actual / status</th><th>Variance</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td>M0 Schedule baseline approved</td><td>Month 1</td><td>Approved (baseline)</td><td>On track</td><td>OK</td></tr>
-              <tr><td>M1 Charter &amp; funding gate</td><td>End M02</td><td>Approved baseline; funding release open (DEC-02)</td><td>0</td><td>OK</td></tr>
+              <tr><td>M0 Schedule baseline approved</td><td>Month 1</td><td>Approved (baseline)</td><td>On track</td><td><span class="badge green">Green</span></td></tr>
+              <tr><td>M1 Charter &amp; funding gate</td><td>End M02</td><td>Approved baseline; funding release open (DEC-02)</td><td>0</td><td><span class="badge green">Green</span></td></tr>
               <tr><td>M2 Foundation accepted (D2)</td><td>End M04</td><td>Partially complete; data/vendor readiness open</td><td>~2 months late</td><td><span class="badge red">RED</span></td></tr>
               <tr><td>M3 Copilot pilot live (D3)</td><td>End M07</td><td>Slipping &mdash; heavy activity, behind plan</td><td>~2&ndash;3 months late</td><td><span class="badge red">RED</span></td></tr>
               <tr><td>M4 Customer assistant pilot (D4)</td><td>End M11</td><td>At risk of slipping with D3</td><td>Attributable</td><td><span class="badge amber">AMBER</span></td></tr>
@@ -4105,7 +4106,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
           <table>
             <thead><tr><th>Measure</th><th>Value</th><th>Basis</th><th>Variance (numbers)</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td><b>Planned Budget (phase)</b></td><td>100% plan</td><td>PTB-COST-001 phased baseline</td><td>&mdash;</td><td>OK</td></tr>
+              <tr><td><b>Planned Budget (phase)</b></td><td>100% plan</td><td>PTB-COST-001 phased baseline</td><td>&mdash;</td><td><span class="badge green">Green</span></td></tr>
               <tr><td><b>Actual Cost (AC)</b></td><td>&mdash;</td><td>Actuals from Finance</td><td>~12% over plan</td><td><span class="badge red">RED</span></td></tr>
               <tr><td><b>Cost Variance (CV)</b></td><td>EV &minus; AC</td><td>Earned Value</td><td>~12% negative</td><td><span class="badge red">RED</span></td></tr>
               <tr><td><b>Cost Performance Index (CPI)</b></td><td>≈ 0.89</td><td>EV &divide; AC</td><td>&minus;11%</td><td><span class="badge red">RED</span></td></tr>
