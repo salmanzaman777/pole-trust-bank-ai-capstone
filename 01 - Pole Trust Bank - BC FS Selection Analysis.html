@@ -2435,6 +2435,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#cg-impact"><span class="num">02</span>Reason &amp; Impact Assessment</a>
       <a href="#cg-justify"><span class="num">03</span>Justification</a>
       <a href="#cg-decision"><span class="num">04</span>Approval &amp; Decision</a>
+      <a href="#cg-request-actual"><span class="num">04A</span>CR-002 &middot; Submitted Request</a>
       <a href="#cg-log"><span class="num">05</span>Change Log &amp; Baseline Control</a>
       <a href="#cg-acceptance"><span class="num">06</span>Validation &amp; Control</a>
     </nav>
@@ -4331,6 +4332,25 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <div class="glass-card quote"><p style="margin:0;"><b>Decision rule:</b> the CCB (Sponsor-led) has unambiguous authority; the recorded decision is the only one that counts — not who speaks loudest.</p></div>
       </section>
 
+      <section class="panel" id="cg-request-actual">
+        <div class="panel-head"><span class="pn">Section 4A</span><h2>Change Request CR-002 — Submitted for CCB / BOG Decision</h2></div>
+        <p class="panel-lede">A live, fully-completed change request raised from execution, submitted for Change Control Board / Board of Governance review. This is not a template — it is CR-002 as actually raised in the current status period, with all six change-log ingredients filled in and ready for decision.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Change-log element</th><th>Filled entry for CR-002</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td><b>Change identification</b></td><td>CR-002 · Requester: Salman Zaman (Project/Program Manager) · Date: current reporting period · Source: PTB-STS-001 status finding · Affected baselines: PTB-SCHED-001 (D2 foundation, D3 copilot windows) and PTB-COST-001 (phase budget) · WBS: 2.0 / 3.0</td></tr>
+              <tr><td>2</td><td><b>Reason of change</b></td><td>Programme is running ~10% behind plan on the critical path / heavy activities (D2 foundation, D3 copilot) and ~12% over the planned phase budget. This change authorises the DEC-02 phase-funding release and a controlled rebaseline of the affected schedule and cost windows so recovery can be funded and executed.</td></tr>
+              <tr><td>3</td><td><b>Impact of change</b></td><td><b>Schedule:</b> improvements expected — funds the D2/D3 catch-up and rebaselines the affected windows (critical-path recovery). <b>Cost:</b> releases DEC-02 phase funding against the approved USD 11.5M CAPEX / 27.5M TCO envelope and calls contingency. <b>Risk:</b> reduces integration &amp; vendor-slip likelihood if funded. <b>Benefit:</b> protects the approved KPI/NPV timeline; no change to approved objectives.</td></tr>
+              <tr><td>4</td><td><b>Justification</b></td><td>Evidenced by PTB-STS-001 variance numbers (SV -10%, SPI ~0.80; CV -12%, CPI ~0.89). Recovery keeps the approved 35% inquiry-reduction KPI and five-year NPV on track. This is a funding / rebaseline change only — it adds no scope (module-3 test: nothing excluded by name is reintroduced).</td></tr>
+              <tr><td>5</td><td><b>Approval</b></td><td>Status: <b>FOR CCB / BOG DECISION</b> · Decision authority: Project Sponsor (Sheikh Moeen Akhtar) · Advised by: PM (Salman Zaman), Finance/CFO, CIO/Architecture, Risk/Compliance · Outcome: pending Sponsor decision, to be recorded here</td></tr>
+              <tr><td>6</td><td><b>Log</b></td><td>Logged in the change log as CR-002 · Status: FOR CCB DECISION · Linked to DEC-02 (initial funding release) · Rebaseline ref: pending CCB-approved change</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Execution note:</b> CR-002 is the change request the Status Report's "Decisions needed" (DEC-01/DEC-02/DEC-03) routes through. It enters the log before any decision — approved or not — and the baseline moves only through this door.</p></div>
+      </section>
+
       <section class="panel" id="cg-log">
         <div class="panel-head"><span class="pn">Section 5</span><h2>Change Log &amp; Baseline Control</h2></div>
         <p class="panel-lede">Approved or not, every change enters the change log. The baseline only moves through this door — a controlled, recorded, traceable change. The change log is the single record of all change decisions.</p>
@@ -4353,7 +4373,7 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
             <thead><tr><th>CR</th><th>Identification</th><th>Impact</th><th>Decision</th><th>Status</th></tr></thead>
             <tbody>
               <tr><td>CR-001</td><td>"Add module 3 mid-flight" (writeen out by scope)</td><td>Schedule +, cost +, risk +</td><td>Pending CCB</td><td><span class="badge amber">IN EVALUATION</span></td></tr>
-              <tr><td>CR-002</td><td>Recovery catch-up for D2/D3 (10% lag)</td><td>Cost vs envelope, contingency</td><td>Sponsor decision linked to DEC-02</td><td><span class="badge amber">IN EVALUATION</span></td></tr>
+              <tr><td>CR-002</td><td>DEC-02 phase-funding release + D2/D3 recovery rebaseline (fully-filled in Section 4A)</td><td>Schedule recovery, cost release, risk reduction, benefit protected</td><td>Sponsor-led CCB / BOG decision</td><td><span class="badge amber">FOR CCB DECISION</span></td></tr>
             </tbody>
           </table>
         </div>
