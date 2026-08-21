@@ -2197,6 +2197,11 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dn">Risk Management Plan</span>
         <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
+      <button data-doc="status" onclick="switchDoc('status')">
+        <span class="dt">Document 10 &middot; PTB-STS-001</span>
+        <span class="dn">Project Health &amp; Status Report</span>
+        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs" hidden>
@@ -2313,6 +2318,17 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#rk-response"><span class="num">04</span>Risk Response Planning</a>
       <a href="#rk-review"><span class="num">05</span>Review &amp; Reporting</a>
       <a href="#rk-acceptance"><span class="num">06</span>Validation &amp; Baseline</a>
+    </nav>
+
+    <nav class="toc" id="toc-status" style="display:none;">
+      <div class="toc-group">Executing &middot; Monitoring &amp; Controlling</div>
+      <a href="#sts-control"><span class="num">00</span>Report Control</a>
+      <a href="#st-overview"><span class="num">01</span>Project Overview</a>
+      <a href="#st-executive"><span class="num">02</span>Executive Summary</a>
+      <a href="#st-progress"><span class="num">03</span>Progress vs Baseline</a>
+      <a href="#st-schedule"><span class="num">04</span>Schedule &amp; Critical Path</a>
+      <a href="#st-cost"><span class="num">05</span>Cost &amp; Variance</a>
+      <a href="#st-risks"><span class="num">06</span>Risks, Issues &amp; Decisions</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -3964,6 +3980,156 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-status">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 10 &middot; PTB-STS-001 &middot; Live Status &middot; 40% Complete</div>
+        <h1 class="hero-title">Project Health &amp; Status Report</h1>
+        <p class="hero-sub">A one-page status report the leaders actually read: red, amber or green against the approved schedule and budget baseline, with the variance in numbers — not adjectives. Progress is 40%; the programme is lagging ~10% on the critical path and ~12% over the planned phase budget.</p>
+        <a class="hero-insights-link" href="10 - Pole Trust Bank - Project Health and Status Report.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Project Health and Status Report key insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg><span class="hero-insights-grad">Project Health &amp; Status Report — Key Insights</span></a>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">40%</div><div class="sl">Complete (of 24 mo.)</div></div>
+          <div class="stat-card"><div class="sv">-10%</div><div class="sl">Schedule Variance (critical path)</div></div>
+          <div class="stat-card"><div class="sv">+12%</div><div class="sl">Budget Variance (actual vs plan)</div></div>
+          <div class="stat-card"><div class="sv amber">AMBER</div><div class="sl">Overall Health</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="sts-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Report Control &amp; Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Report, not a plan</h3><p>This is a living status report against the approved baselines (PTB-SCHED-001, PTB-COST-001, PTB-RISK-001). It reports progress, variance and decisions required — it does not change the baselines. The baseline moves only through an approved change (PTB-CHG-001).</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-STS-001</td></tr>
+              <tr><td><b>Reporting period</b></td><td>Monthly / phase-gate cadence; report covers the current review window</td></tr>
+              <tr><td><b>Status / RAG</b></td><td><span class="badge amber">AMBER — LAGGING</span> schedule and cost red, others amber</td></tr>
+              <tr><td><b>Progress</b></td><td>40% overall complete against the 24-month roadmap (≈ month 9&ndash;10 elapsed)</td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-SCHED-001 (critical path D1&rarr;D7), PTB-COST-001 (USD 11.5M CAPEX / USD 27.5M TCO), PTB-RISK-001, PTB-SCOPE-001</td></tr>
+              <tr><td><b>Prepared by</b></td><td>Salman Zaman (working Project/Program Manager role)</td></tr>
+              <tr><td><b>Reported to</b></td><td>Project Sponsor (Sheikh Moeen Akhtar) and Executive Steering</td></tr>
+              <tr><td><b>Decision route</b></td><td>Decisions needed route to the Sponsor under DEC-01/DEC-02/DEC-03; the report recommends but does not decide</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="st-overview">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Project Overview</h2></div>
+        <p class="panel-lede">Phased execution of the approved Pair 5 Integrated AI Banking Ecosystem across the 24-month roadmap, reporting on a weekly / bi-weekly cadence with status shown as Stop / Yellow / Red (S/Y/R) per area. The programme is at 40% completion but behind plan.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Scope</h3><ul><li>7 controlled deliverables (D1&ndash;D7) per PTB-SCOPE-001</li><li>48 work packages across 8 WBS branches</li><li>No unapproved scope change; change route is controlled</li></ul></div>
+          <div class="glass-card"><h3>Schedule</h3><ul><li>24-month critical path D1&rarr;D7</li><li>~40% elapsed, behind plan on heavy/critical activities</li><li>Milestones D1/D2 partially delivered; D3 copilot slipping</li></ul></div>
+          <div class="glass-card"><h3>Budget / funding</h3><ul><li>Approved envelope USD 11.5M CAPEX / 27.5M TCO</li><li>~12% variance of actual against planned phase budget</li><li>USD 0 released until DEC-02 funding decision</li></ul></div>
+        </div>
+      </section>
+
+      <section class="panel" id="st-executive">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Executive Summary</h2></div>
+        <p class="panel-lede">Main concerns, decisions and problems in plain language. Bad news first — the Sponsor should not have to hunt for it.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Concern</th><th>Status</th><th>Recommended action</th></tr></thead>
+            <tbody>
+              <tr><td><b>Schedule lag ~10%</b> on the critical path / heavy activities (D2 foundation, D3 copilot)</td><td><span class="badge go">RED</span></td><td>Approve recovery plan; release funding (DEC-02)</td></tr>
+              <tr><td><b>Budget variance +12%</b> of actual vs planned phase budget</td><td><span class="badge go">RED</span></td><td>CFO validate; contingency plan; route to Sponsor</td></tr>
+              <tr><td><b>Effective date &amp; delegation open</b> (DEC-01 / DEC-03)</td><td><span class="badge amber">AMBER</span></td><td>Sponsor records effective date; delegate PM limits</td></tr>
+              <tr><td><b>Data / vendor readiness open</b> (DEC-07 / DEC-10)</td><td><span class="badge amber">AMBER</span></td><td>Front-load sourcing and data readiness</td></tr>
+              <tr><td><b>Risks trending red</b> (integration, vendor slip, staffing)</td><td><span class="badge amber">AMBER</span></td><td>Activate response owners; monitor triggers</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Bottom line:</b> the programme is 40% complete but running behind — ~10% behind plan on the critical path and ~12% over the planned phase budget. Immediate Sponsor decisions (DEC-01, DEC-02, DEC-03) are required to fund and authorise recovery.</p></div>
+      </section>
+
+      <section class="panel" id="st-progress">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Progress vs Baseline</h2></div>
+        <p class="panel-lede">Progress is reported as Stop / Yellow / Red (S/Y/R) against the approved schedule and budget baseline, with variance given in numbers — not adjectives. Earned Value measures (PV, EV, SV, SPI) quantify where the programme stands.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Measure</th><th>Value</th><th>Baseline</th><th>Variance (numbers)</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><b>Elapsed</b></td><td>≈ Month 10</td><td>24-month roadmap</td><td>40% elapsed vs 24-month</td><td>OK</td></tr>
+              <tr><td><b>Planned Value (PV)</b></td><td>planned completion ≈ 50%</td><td>Time-phased baseline</td><td>&mdash;</td><td>OK</td></tr>
+              <tr><td><b>Earned Value (EV)</b></td><td>40% complete</td><td>PV ≈ 50%</td><td><b>SV = &minus;10%</b> (behind plan)</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Schedule Performance Index (SPI)</b></td><td>≈ 0.80</td><td>SPI = 1.00</td><td>&minus;20% against plan</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Critical-path status</b></td><td>D1/D2 partial, D3 slipping</td><td>D1&rarr;D2&rarr;D3 windows</td><td>~10% slip on heavy activities</td><td><span class="badge go">RED</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Variance rule:</b> 40% done should be ~50% per the baseline. The ~10% gap on the critical path means the programme is behind plan — reported in numbers, not adjectives.</p></div>
+      </section>
+
+      <section class="panel" id="st-schedule">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Schedule, Milestones &amp; Critical Path</h2></div>
+        <p class="panel-lede">Milestones, deliverables, deadlines and the baseline are reported against the critical path D1&rarr;D7 (zero slack). A ~10% schedule delay on the critical path / heavy activities extends delivery one-for-one.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Milestone / deliverable</th><th>Baseline date</th><th>Actual / status</th><th>Variance</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>M0 Schedule baseline approved</td><td>Month 1</td><td>Approved (baseline)</td><td>On track</td><td>OK</td></tr>
+              <tr><td>M1 Charter &amp; funding gate</td><td>End M02</td><td>Approved baseline; funding release open (DEC-02)</td><td>0</td><td>OK</td></tr>
+              <tr><td>M2 Foundation accepted (D2)</td><td>End M04</td><td>Partially complete; data/vendor readiness open</td><td>~2 months late</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td>M3 Copilot pilot live (D3)</td><td>End M07</td><td>Slipping &mdash; heavy activity, behind plan</td><td>~2&ndash;3 months late</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td>M4 Customer assistant pilot (D4)</td><td>End M11</td><td>At risk of slipping with D3</td><td>Attributable</td><td><span class="badge amber">AMBER</span></td></tr>
+              <tr><td>M5&ndash;M7 Lending / Fraud / Scale</td><td>M15&ndash;M24</td><td>Future; depend on critical path recovery</td><td>Forward impact</td><td><span class="badge amber">AMBER</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Recovery focus:</b> the ~10% delay is concentrated on the critical path / heavy activities (D2 foundation, D3 copilot). Approving DEC-01/DEC-02/DEC-03 lets the PM fund and coordinate catch-up before it compounds.</p></div>
+      </section>
+
+      <section class="panel" id="st-cost">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Cost, Budget &amp; Variance</h2></div>
+        <p class="panel-lede">Cost is reported against the approved cost baseline with the variance in numbers. Actual Cost exceeds the planned phase budget by ~12%, driven by the heavier-than-planned foundational and heavy-activity work.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Measure</th><th>Value</th><th>Basis</th><th>Variance (numbers)</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><b>Planned Budget (phase)</b></td><td>100% plan</td><td>PTB-COST-001 phased baseline</td><td>&mdash;</td><td>OK</td></tr>
+              <tr><td><b>Actual Cost (AC)</b></td><td>&mdash;</td><td>Actuals from Finance</td><td>~12% over plan</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Cost Variance (CV)</b></td><td>EV &minus; AC</td><td>Earned Value</td><td>~12% negative</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Cost Performance Index (CPI)</b></td><td>≈ 0.89</td><td>EV &divide; AC</td><td>&minus;11%</td><td><span class="badge go">RED</span></td></tr>
+              <tr><td><b>Contingency use</b></td><td>Being consumed</td><td>Risk-based reserve</td><td>Flag: early burn</td><td><span class="badge amber">AMBER</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Variance relation:</b> the ~12% cost variance tracks the ~10% schedule delay — heavy/critical-path work is costing more than planned. This stays governed by the approved envelope and routes to the Sponsor (DEC-02/DEC-03) rather than being absorbed silently.</p></div>
+      </section>
+
+      <section class="panel" id="st-risks">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Risks, Issues &amp; Decisions Needed</h2></div>
+        <p class="panel-lede">What moved on the risk register, what fired, and what was done — no surprises saved for meetings. Decisions needed: only the calls the Sponsor can make, stated plainly with a recommendation.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Risk / issue</th><th>Current (status)</th><th>Action taken</th><th>Recommendation</th></tr></thead>
+            <tbody>
+              <tr><td>Integration failure (D2)</td><td>FIRED &mdash; foundation slip</td><td>Front-loaded API/data profiling</td><td>Approve DEC-10 data-readiness catch-up</td></tr>
+              <tr><td>Vendor / platform slip</td><td>RISING &mdash; no vendor yet</td><td>Early sourcing initiated</td><td>Sponsor decision DEC-07</td></tr>
+              <tr><td>Staff / capacity</td><td>RISING &mdash; staffing open</td><td>PMO coordination interim</td><td>DEC-05 / DEC-06 appointments</td></tr>
+              <tr><td>Hallucination / model risk</td><td>MONITORING</td><td>Retrieval + handoff controls</td><td>Keep gates; pilot evidence</td></tr>
+              <tr><td>Regulator concern</td><td>MONITORING</td><td>Compliance evidence pack</td><td>Route DEC-09</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="section-title">Decisions needed — Sponsor only</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Decision</th><th>Recommendation</th></tr></thead>
+            <tbody>
+              <tr><td>DEC-01</td><td>Record the effective start date (the 24-month clock anchor)</td><td>Approve now; unblocks schedule recovery</td></tr>
+              <tr><td>DEC-02</td><td>Release initial phase funding to fund the catch-up</td><td>Release the CFO-supported amount; confirm variance tolerance</td></tr>
+              <tr><td>DEC-03</td><td>Delegate PM / programme authority to act on the recovery</td><td>Approve the delegation instrument with defined limits</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="doc-footer"><span>PTB-STS-001 &middot; Live status &middot; Reporting period current</span><span>Aligned to PTB-SCHED-001, PTB-COST-001, PTB-RISK-001, PTB-SCOPE-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -4276,7 +4442,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk','status'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -4292,7 +4458,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk','status'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -4393,7 +4559,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('page-risk'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('page-risk'),document.getElementById('page-status'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
