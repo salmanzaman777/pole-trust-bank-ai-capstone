@@ -128,6 +128,65 @@ html[data-theme="dark"] .doc-switch .doc-review-badge{background:linear-gradient
   50%{opacity:1;transform:scale(1.15);}
 }
 
+/* ---- Alive status pills (Projects 10 & 11 RAG indicators) ---- */
+#page-status .table-wrap .badge.red,
+#page-status .table-wrap .badge.amber,
+#page-status .table-wrap .badge.green{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:4px 14px 4px 20px;border-radius:999px;letter-spacing:.06em;
+  font-weight:700;text-transform:uppercase;line-height:1.15;white-space:nowrap;
+  animation:status-pill-breathe 2.8s ease-in-out infinite;
+}
+#page-status .table-wrap .badge.green{
+  color:#0b6b42;background:linear-gradient(135deg,#bff3d6 0%,#eaffe9 55%,#c5f5d8 100%);
+  border:1px solid rgba(27,160,96,.45);
+  box-shadow:0 0 0 1px rgba(27,160,96,.10),0 4px 12px rgba(27,160,96,.22),inset 0 1px 0 rgba(255,255,255,.85);
+}
+#page-status .table-wrap .badge.amber{
+  color:#8a5a00;background:linear-gradient(135deg,#ffe6a6 0%,#fff6db 55%,#ffe9b0 100%);
+  border:1px solid rgba(214,158,39,.5);
+  box-shadow:0 0 0 1px rgba(214,158,39,.12),0 4px 12px rgba(214,158,39,.24),inset 0 1px 0 rgba(255,255,255,.85);
+}
+#page-status .table-wrap .badge.red{
+  color:#a32517;background:linear-gradient(135deg,#ffcfc9 0%,#ffe8e5 55%,#ffd2cc 100%);
+  border:1px solid rgba(217,54,43,.5);
+  box-shadow:0 0 0 1px rgba(217,54,43,.12),0 4px 12px rgba(217,54,43,.24),inset 0 1px 0 rgba(255,255,255,.85);
+}
+#page-status .table-wrap .badge.red::before,
+#page-status .table-wrap .badge.amber::before,
+#page-status .table-wrap .badge.green::before{
+  content:'';position:absolute;top:9px;left:8px;width:5px;height:5px;border-radius:50%;
+  background:currentColor;opacity:.85;animation:status-pill-dot 2.8s ease-in-out infinite;
+  box-shadow:0 0 7px 1px currentColor;
+}
+#page-status .table-wrap .badge.red::after,
+#page-status .table-wrap .badge.amber::after,
+#page-status .table-wrap .badge.green::after{
+  content:'';position:absolute;top:0;bottom:0;width:46%;left:-70%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);
+  transform:skewX(-20deg);animation:status-pill-sheen 3.6s ease-in-out infinite;
+}
+@keyframes status-pill-breathe{
+  0%,100%{transform:scale(1);filter:brightness(1);}
+  50%{transform:scale(1.045);filter:brightness(1.05);box-shadow:0 0 0 2px rgba(255,255,255,.4),0 6px 16px rgba(60,60,60,.18),inset 0 1px 0 rgba(255,255,255,.9);}
+}
+@keyframes status-pill-dot{
+  0%,100%{opacity:.7;transform:scale(.9);}
+  50%{opacity:1;transform:scale(1.22);}
+}
+@keyframes status-pill-sheen{
+  0%,60%{left:-70%;}
+  80%,100%{left:130%;}
+}
+html[data-theme="dark"] #page-status .table-wrap .badge.green{color:#8ff0be;background:linear-gradient(135deg,#0d3d28 0%,#123d2c 55%,#0b4429 100%);border-color:rgba(64,210,140,.5);box-shadow:0 0 0 1px rgba(64,210,140,.15),0 4px 14px rgba(20,180,110,.3),inset 0 1px 0 rgba(255,255,255,.08);}
+html[data-theme="dark"] #page-status .table-wrap .badge.amber{color:#ffdc8a;background:linear-gradient(135deg,#3d2d06 0%,#40301a 55%,#3a2a06 100%);border-color:rgba(226,180,70,.55);box-shadow:0 0 0 1px rgba(226,180,70,.18),0 4px 14px rgba(214,158,39,.32),inset 0 1px 0 rgba(255,255,255,.08);}
+html[data-theme="dark"] #page-status .table-wrap .badge.red{color:#ffb3ac;background:linear-gradient(135deg,#3d120d 0%,#3d1a16 55%,#3a100b 100%);border-color:rgba(232,84,70,.55);box-shadow:0 0 0 1px rgba(232,84,70,.18),0 4px 14px rgba(217,54,43,.34),inset 0 1px 0 rgba(255,255,255,.08);}
+@media (prefers-reduced-motion:reduce){
+  #page-status .table-wrap .badge.red,#page-status .table-wrap .badge.amber,#page-status .table-wrap .badge.green,
+  #page-status .table-wrap .badge.red::before,#page-status .table-wrap .badge.amber::before,#page-status .table-wrap .badge.green::before,
+  #page-status .table-wrap .badge.red::after,#page-status .table-wrap .badge.amber::after,#page-status .table-wrap .badge.green::after{animation:none;}
+}
+
 nav.toc{display:flex;flex-direction:column;gap:1px;}
 nav.toc .toc-group{margin-top:16px;margin-bottom:2px;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mute);padding:0 12px;}
 nav.toc a{
@@ -2181,22 +2240,18 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <button data-doc="cost" onclick="switchDoc('cost')">
         <span class="dt">Document 06 &middot; PTB-COST-001</span>
         <span class="dn">Cost Estimate &amp; Budget</span>
-        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="communications" onclick="switchDoc('communications')">
         <span class="dt">Document 07 &middot; PTB-COMM-001</span>
         <span class="dn">Communications Management Plan</span>
-        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="resources" onclick="switchDoc('resources')">
         <span class="dt">Document 08 &middot; PTB-RES-001</span>
         <span class="dn">Resource Management Plan</span>
-        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="risk" onclick="switchDoc('risk')">
         <span class="dt">Document 09 &middot; PTB-RISK-001</span>
         <span class="dn">Risk Management Plan</span>
-        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
       <button data-doc="status" onclick="switchDoc('status')">
         <span class="dt">Document 10 &middot; PTB-STS-001</span>
