@@ -2303,6 +2303,11 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
         <span class="dn">Project Change Control</span>
         <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
       </button>
+      <button data-doc="closure" onclick="switchDoc('closure')">
+        <span class="dt">Document 12 &middot; PTB-CLS-001</span>
+        <span class="dn">Project Closure</span>
+        <span class="doc-review-badge" aria-label="New document for review">New Doc for Review</span>
+      </button>
     </div>
 
     <section class="presentation-access" aria-label="Executive presentation outputs" hidden>
@@ -2442,6 +2447,19 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       <a href="#cg-request-actual"><span class="num">04A</span>CR-002 &middot; Submitted Request</a>
       <a href="#cg-log"><span class="num">05</span>Change Log &amp; Baseline Control</a>
       <a href="#cg-acceptance"><span class="num">06</span>Validation &amp; Control</a>
+    </nav>
+
+    <nav class="toc" id="toc-closure" style="display:none;">
+      <div class="toc-group">Closing &middot; Project Closure</div>
+      <a href="#cl-control"><span class="num">00</span>Closure Control</a>
+      <a href="#cl-process"><span class="num">01</span>Process Closure</a>
+      <a href="#cl-deliver"><span class="num">02</span>Deliverable Accepted</a>
+      <a href="#cl-accept"><span class="num">03</span>Final Acceptance</a>
+      <a href="#cl-review"><span class="num">04</span>Review of the Document</a>
+      <a href="#cl-done"><span class="num">05</span>Definition of Done</a>
+      <a href="#cl-lessons"><span class="num">06</span>Lessons Learned</a>
+      <a href="#cl-celebrate"><span class="num">07</span>Celebrate &amp; Recognition</a>
+      <a href="#cl-close"><span class="num">08</span>Validation &amp; Closure Record</a>
     </nav>
   </aside>
   <button class="nav-scrim" type="button" onclick="setNavigation(false,true)" aria-label="Close document navigation" tabindex="-1"></button>
@@ -4419,6 +4437,153 @@ html[data-theme="dark"] .app-nav-toggle:hover,html[data-theme="dark"] .app-nav-t
       </section>
     </div>
 
+    <div class="doc-page" id="page-closure">
+      <div class="hero">
+        <div class="hero-eyebrow">Document 12 &middot; PTB-CLS-001 &middot; Closing Baseline &middot; End of Programme</div>
+        <h1 class="hero-title">Project Closure</h1>
+        <p class="hero-sub">The formal closing record of the approved Pair 5 programme: how the project is closed through a defined process, evidence that every deliverable is accepted, the Sponsor's final acceptance, a documented review, a clear definition of done, captured lessons learned and a closing celebration. Closure happens only through the approved acceptance gate &mdash; no scope, schedule or cost baseline moves without it.</p>
+        <a class="hero-insights-link" href="12 - Pole Trust Bank - Project Closure.docx" target="_blank" rel="noopener noreferrer" aria-label="Open Project Closure key insights document"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg><span class="hero-insights-grad">Project Closure — Key Insights</span></a>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="sv gold">7</div><div class="sl">Closure Steps (Process · Accept · Review · Done · Lessons · Celebrate)</div></div>
+          <div class="stat-card"><div class="sv em">D1–D7</div><div class="sl">Deliverables to Accept</div></div>
+          <div class="stat-card"><div class="sv">24<small>mo</small></div><div class="sl">Approved Roadmap</div></div>
+          <div class="stat-card"><div class="sv">1</div><div class="sl">Closing Gate &amp; Record</div></div>
+        </div>
+      </div>
+
+      <section class="panel" id="cl-control">
+        <div class="panel-head"><span class="pn">Control</span><h2>Project Closure Authority</h2></div>
+        <div class="control-banner">
+          <div class="control-mark" aria-hidden="true">✓</div>
+          <div><h3>Close, don't drift</h3><p>This record implements the PMBoK Closing process group. The project closes through a defined process with evidence that every deliverable was accepted, a documented review, a clear definition of done, captured lessons and a recorded celebration. No deliverable is accepted, and no phase closes, without the Sponsor's consolidated decision.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:220px;"><b>Document ID</b></td><td>PTB-CLS-001</td></tr>
+              <tr><td><b>Version / date</b></td><td>1.0 / End of programme</td></tr>
+              <tr><td><b>Status</b></td><td><span class="badge amber">CLOSING BASELINE &mdash; PREPARED FOR SPONSOR REVIEW</span></td></tr>
+              <tr><td><b>Parent baselines</b></td><td>PTB-CHARTER-001 (approved Pair 5), PTB-SCOPE-001 (seven deliverables and 48-work-package WBS), PTB-SCHED-001 (24-month critical path), PTB-COST-001 (USD 11.5M CAPEX / USD 27.5M TCO) and PTB-CHG-001 acceptance and change records</td></tr>
+              <tr><td><b>Closing authority</b></td><td>Project Sponsor (Sheikh Moeen Akhtar) records the consolidated final-acceptance decision; the PM (Salman Zaman) assembles the closure evidence pack and coordinates the review; specialist functions validate evidence before the Sponsor decides</td></tr>
+              <tr><td><b>Project Sponsor</b></td><td>Sheikh Moeen Akhtar</td></tr>
+              <tr><td><b>Project/Program Manager</b></td><td>Salman Zaman &mdash; working role accepted; formal delegated authority subject to Sponsor approval</td></tr>
+              <tr><td><b>Acceptance gate</b></td><td>Each deliverable D1&ndash;D7 closes through its defined acceptance evidence and the Sponsor's consolidated decision; the programme closes only through PTB-CLS-001's final-acceptance gate with all seven deliverables accepted and lessons captured</td></tr>
+              <tr><td><b>Open-decisions / change control</b></td><td>Physical closure routes through PTB-DEC-001 decisions and any outstanding change falls under PTB-CHG-001 (CCB); the change log is the traceable record of what entered the baseline on the way to closure</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="cl-process">
+        <div class="panel-head"><span class="pn">Section 1</span><h2>Process Closure</h2></div>
+        <p class="panel-lede">The formal process by which the programme moves from execution to closed. Closure is a defined, sequential process &mdash; it does not happen by silence or drift. The PMBoK Close Project or Phase process governs: verify the work is complete and accepted, capture lessons, and hand over the durable records.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Step 1 &middot; Verify</h3><ul><li>Confirm all scope is delivered against PTB-SCOPE-001</li><li>Confirm every deliverable D1&ndash;D7 passed its acceptance evidence</li><li>Close open decisions and route any residual change to the CCB</li></ul></div>
+          <div class="glass-card"><h3>Step 2 &middot; Record</h3><ul><li>Complete the closure evidence pack and the review</li><li>Capture lessons learned while they are fresh</li><li>Hand over operational knowledge, controls and benefits to owners</li></ul></div>
+          <div class="glass-card"><h3>Step 3 &middot; Decide</h3><ul><li>Sponsor records the consolidated final-acceptance decision</li><li>Record the outcome in the closure log (accepted / conditional / rejected)</li><li>Only then close the programme and celebrate</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Process rule:</b> closure is a gate, not a gradual fade. Nothing is closed without evidence and the Sponsor's recorded decision; no open change or decision is silently absorbed at closure &mdash; it is logged and resolved or explicitly carried to operations.</p></div>
+      </section>
+
+      <section class="panel" id="cl-deliver">
+        <div class="panel-head"><span class="pn">Section 2</span><h2>Deliverable Accepted</h2></div>
+        <p class="panel-lede">Every controlled deliverable D1&ndash;D7 must be formally accepted before the project can close. Acceptance is evidenced, validated by the functional owner, and recorded as the Sponsor's consolidated decision &mdash; consistent with the acceptance criteria in PTB-SCOPE-001.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Deliverable</th><th>Window</th><th>Acceptance evidence required</th><th>Functional evidence owner</th></tr></thead>
+            <tbody>
+              <tr><td><b>D1</b> Initiation &amp; planning baselines</td><td>M1&ndash;2</td><td>Sponsor-approved decision and charter; named governance actions; baselines accepted</td><td>PM assembles; Sponsor approves</td></tr>
+              <tr><td><b>D2</b> Enterprise AI governance &amp; architecture foundation</td><td>M3&ndash;4</td><td>Governance model, target architecture, data/control design, roadmap and gate checklist accepted</td><td>CIO / control functions validate</td></tr>
+              <tr><td><b>D3</b> Internal productivity copilot MVP</td><td>M5&ndash;7</td><td>Controlled pilot, approved knowledge/prompt library, access controls, human-verification guidance, training and measurement evidence</td><td>Copilot Product Owner + Risk/Security validate</td></tr>
+              <tr><td><b>D4</b> Customer digital assistant MVP</td><td>M8&ndash;11</td><td>Approved knowledge, service journeys, human handoff, privacy/security controls, audit trail, pilot and measurement evidence</td><td>Retail / Contact Centre PO + controls validate</td></tr>
+              <tr><td><b>D5</b> Lending decision-support MVP</td><td>M12&ndash;15</td><td>Completeness/risk summaries only, explainability, override/audit records, human decision authority and pilot evidence</td><td>Lending PO + Credit Risk/Compliance validate</td></tr>
+              <tr><td><b>D6</b> Fraud investigator-assist MVP</td><td>M16&ndash;18</td><td>Alert-prioritization pilot, calibrated thresholds, investigator review, audit records and no automatic account action</td><td>Fraud PO + Financial Crime/Risk validate</td></tr>
+              <tr><td><b>D7</b> Scale, operational transition &amp; closure</td><td>M19&ndash;24</td><td>Gate-approved scale decisions, support model, knowledge transfer, benefit review, lessons learned and closure report</td><td>Operations owners validate transition</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Acceptance rule:</b> a deliverable is accepted only when its evidence is complete, the functional owner validates it (validate / validate-with-conditions / not validated, with reasons) and the Sponsor records the consolidated decision. No deliverable is assumed accepted because the work looks finished.</p></div>
+      </section>
+
+      <section class="panel" id="cl-accept">
+        <div class="panel-head"><span class="pn">Section 3</span><h2>Final Acceptance</h2></div>
+        <p class="panel-lede">The consolidated Sponsor decision that closes the programme once all seven deliverables are individually accepted and the benefits/transition evidence is in place. Final acceptance is the single recorded gate that turns accepted deliverables into a closed project.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Pre-conditions</h3><ul><li>All D1&ndash;D7 accepted on the record</li><li>KPIs, benefits and transition targets reviewed</li><li>Any residual change / decision logged or carried</li></ul></div>
+          <div class="glass-card"><h3>The decision</h3><ul><li>Sponsor records: Accept / Conditional / Reject</li><li>Conditions stated in writing with an owner and date</li><li>Recorded in the closure log with the decision maker</li></ul></div>
+          <div class="glass-card"><h3>Effect</h3><ul><li>Programme closes; operations own the live service</li><li>Benefits ownership transfers to Finance / operations</li><li>Post-implementation review scheduled (D7)</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Final-acceptance rule:</b> final acceptance is the Sponsor's recorded decision and the only one that counts &mdash; not the best lane or the loudest voice. It is the last gate before celebration and the formal closure record.</p></div>
+      </section>
+
+      <section class="panel" id="cl-review">
+        <div class="panel-head"><span class="pn">Section 4</span><h2>Review of the Document</h2></div>
+        <p class="panel-lede">A deliberate, documented review of the closure records themselves before final acceptance &mdash; completeness of the evidence pack, correctness of the acceptance and closure log, and readiness of the records for archive and handover.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Review check</th><th>What is verified</th><th>Evidence / outcome</th></tr></thead>
+            <tbody>
+              <tr><td><b>Deliverable completeness</b></td><td>All seven deliverables D1&ndash;D7 present with acceptance evidence</td><td>PTB-SCOPE-001 acceptance records</td></tr>
+              <tr><td><b>Records completeness</b></td><td>Change log closed or carried; decisions logged; risk register finalised</td><td>PTB-CHG-001, PTB-DEC-001, PTB-RISK-001</td></tr>
+              <tr><td><b>Closure record accuracy</b></td><td>Final-acceptance decision, conditions, owner and date recorded</td><td>PTB-CLS-001 closure log</td></tr>
+              <tr><td><b>Handover readiness</b></td><td>Operational knowledge, support model, SLA owners and benefits accountability transferred</td><td>PTB-RES-001 / PTB-COMM-001 handover pack</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Review rule:</b> the review is independent of the work delivered &mdash; it checks that the closure documents are true and complete before the Sponsor signs final acceptance. A review that finds gaps defers final acceptance until they are closed.</p></div>
+      </section>
+
+      <section class="panel" id="cl-done">
+        <div class="panel-head"><span class="pn">Section 5</span><h2>Definition of Done</h2></div>
+        <p class="panel-lede">The explicit, agreed checklist that a deliverable &mdash; and then the whole programme &mdash; must satisfy to be called "done". Nothing is closed without every item on the definition of done being evidenced and recorded.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Deliverable done when&hellip;</h3><ul><li>Meets its acceptance criteria in PTB-SCOPE-001</li><li>Evidence validated by the functional owner</li><li>Recorded in the acceptance log with a decision</li></ul></div>
+          <div class="glass-card"><h3>Programme done when&hellip;</h3><ul><li>All seven deliverables accepted</li><li>Benefits / KPI evidence reviewed with Finance</li><li>Operations and support handed over</li></ul></div>
+          <div class="glass-card"><h3>Closure done when&hellip;</h3><ul><li>Review passes with no open critical gaps</li><li>Lessons learned captured and archived</li><li>Sponsor records final acceptance</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Definition of Done rule:</b> if any item is not done, the deliverable or programme is not closed &mdash; it stays open with a recorded owner and date. "Done" is a definition, not a feeling.</p></div>
+      </section>
+
+      <section class="panel" id="cl-lessons">
+        <div class="panel-head"><span class="pn">Section 6</span><h2>Lessons Learned</h2></div>
+        <p class="panel-lede">A structured, honest capture of what went well and what could improve &mdash; captured at closure while still fresh, recorded for the organisation, and fed forward to future initiatives. Lessons are captured, not performed.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Lesson</th><th>What happened</th><th>What was learned</th><th>Recommendation for the organisation</th></tr></thead>
+            <tbody>
+              <tr><td><b>Plan updates &amp; acceptance</b></td><td>Scope, schedule and cost baselines were reviewed through the change-control firewall before closure</td><td>A controlled baseline keeps closure evidence trustworthy; uncontrolled movement erodes trust</td><td>Always gate baseline changes through PTB-CHG-001 before closure</td></tr>
+              <tr><td><b>Sponsor alignment</b></td><td>Consolidated Sponsor decisions at each gate kept closure single-voiced</td><td>One decision authority prevents acceptance drift</td><td>Keep the Sponsor-led decision gate through to the end</td></tr>
+              <tr><td><b>Operational handover</b></td><td>Support model, SLA owners and benefits accountability transferred at D7</td><td>Handover is part of delivery, not an afterthought</td><td>Start operational transition planning before the last phase</td></tr>
+              <tr><td><b>Benefits measurement</b></td><td>KPI and benefits evidence reviewed with Finance before closure</td><td>Evidence-backed acceptance is stronger than opinion</td><td>Freeze benefit baselines early and measure to closure</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Lessons rule:</b> capture lessons while fresh, quantify the impact, assign an owner and feed them forward. A lessons register that is not used by the next initiative is collection, not learning.</p></div>
+      </section>
+
+      <section class="panel" id="cl-celebrate">
+        <div class="panel-head"><span class="pn">Section 7</span><h2>Celebrate &amp; Recognition</h2></div>
+        <p class="panel-lede">A deliberate, documented recognition milestone after final acceptance &mdash; the programme closes on a positive, acknowledged note, and the people who delivered it are recognised. Celebration is earned by a real, evidenced definition of done; it is never a substitute for closure.</p>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Why celebrate</h3><ul><li>Reinforces the behaviours that made delivery possible</li><li>Closes the emotional arc of a long programme</li><li>Leaves a positive record for the team and Sponsor</li></ul></div>
+          <div class="glass-card"><h3>How it is recorded</h3><ul><li>Recognition and thanks recorded in the closure pack</li><li>Named product owners and control functions acknowledged</li><li>Shared with stakeholders through the comms plan cadence</li></ul></div>
+          <div class="glass-card"><h3>Not before done</h3><ul><li>Celebration happens only after final acceptance is recorded</li><li>It does not mask open deliverables, gaps or rejected items</li><li>It is the closing note, not the decision</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Celebration rule:</b> celebrate after the Sponsor's recorded final acceptance &mdash; never before. Recognition is earned by a complete, evidenced definition of done, and it marks the disciplined end of the programme.</p></div>
+      </section>
+
+      <section class="panel" id="cl-close">
+        <div class="panel-head"><span class="pn">Section 8</span><h2>Validation &amp; Closure Record</h2></div>
+        <div class="card-grid g3">
+          <div class="glass-card"><h3>Validation</h3><ul><li>Every deliverable accepted on the record</li><li>Review completed with no open critical gaps</li><li>Final acceptance recorded by the Sponsor</li></ul></div>
+          <div class="glass-card"><h3>Control</h3><ul><li>Closure log records the decision and conditions</li><li>Residual changes/decisions logged or carried to operations</li><li>Records archived for audit and post-implementation review</li></ul></div>
+          <div class="glass-card"><h3>Closure outcome</h3><ul><li>Programme formally closed on the record</li><li>Operations own the live service and benefits</li><li>Post-implementation review scheduled (D7)</li></ul></div>
+        </div>
+        <div class="glass-card quote"><p style="margin:0;"><b>Closure baseline rule:</b> the programme is closed only through this record &mdash; process closure, deliveries accepted, final acceptance, review, definition of done, lessons and celebrate. The baseline moves to closed through the Sponsor's recorded decision and the closure log; nothing is assumed.</p></div>
+        <div class="doc-footer"><span>PTB-CLS-001 &middot; Project closure &middot; End of programme</span><span>Aligned to PTB-SCOPE-001, PTB-SCHED-001, PTB-COST-001, PTB-CHG-001, PTB-STS-001 and sponsor-approved PTB-CHARTER-001</span><span>Prepared by: <a href="https://www.linkedin.com/in/samzam" target="_blank" rel="noopener noreferrer">Salman Zaman</a></span></div>
+      </section>
+    </div>
+
     <section class="revision-appendix" id="revision-appendix" aria-label="Revision and requirements traceability appendix">
       <details id="revision-details">
         <summary>Appendix A &middot; Revision and Requirements Traceability</summary>
@@ -4731,7 +4896,7 @@ function switchDoc(doc,shouldScroll){
     if(isActive){button.setAttribute('aria-current','page');}
     else{button.removeAttribute('aria-current');}
   });
-  ['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk','status','change'].forEach(function(name){
+  ['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk','status','change','closure'].forEach(function(name){
     var toc=document.getElementById('toc-'+name);
     if(toc){toc.style.display=doc===name?'flex':'none';}
   });
@@ -4747,7 +4912,7 @@ function activateLocationDocument(){
     var containingPage=target&&target.closest('.doc-page');
     if(containingPage){requested=containingPage.id.replace('page-','');}
   }
-  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk','status','change'].indexOf(requested)>=0){
+  if(['business','charter','stakeholders','scope','schedule','cost','communications','resources','risk','status','change','closure'].indexOf(requested)>=0){
     switchDoc(requested,false);
     if(target){requestAnimationFrame(function(){setTimeout(function(){target.scrollIntoView({block:'start'});},80);});}
   }
@@ -4848,7 +5013,7 @@ function performSearch(jump){
     document.getElementById('search-next').disabled=true;
     return;
   }
-  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('page-risk'),document.getElementById('page-status'),document.getElementById('page-change'),document.getElementById('revision-appendix')].forEach(function(root){
+  [document.querySelector('.app-header'),document.getElementById('page-business'),document.getElementById('page-charter'),document.getElementById('page-stakeholders'),document.getElementById('page-scope'),document.getElementById('page-schedule'),document.getElementById('page-cost'),document.getElementById('page-communications'),document.getElementById('page-resources'),document.getElementById('page-risk'),document.getElementById('page-status'),document.getElementById('page-change'),document.getElementById('page-closure'),document.getElementById('revision-appendix')].forEach(function(root){
     searchableTextNodes(root).forEach(function(node){highlightTextNode(node,query);});
   });
   searchHits=Array.from(document.querySelectorAll('mark.search-hit'));
